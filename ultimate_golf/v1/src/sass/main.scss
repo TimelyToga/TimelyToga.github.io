@@ -1,0 +1,410 @@
+$c_light_text: #EDF0F2;
+$c_bg: #1F3347;
+$c_footer: #1F3347;
+$c_dark_presenter: #031D38;
+$c_light_presenter: #86D1A6;
+
+$c_contact_dark: #065657;
+$c_contact_bg: #17BABD;
+$c_contact_light: #93F3F5;
+
+
+$panel_height: 600px;
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+html, body {
+  background-color: white;
+}
+
+.jumbotron {
+  border-radius: 0;
+  margin: 0;
+}
+
+#root {
+  //margin-top: 60px;
+}
+
+#navbar {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-top-color: red;
+  border-top-style: solid;
+  border-top-width: 2pt;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 50pt;
+  width: 100%;
+
+
+  #logo {
+    width: 8%;
+    height: 100%;
+    border-color: rgba(255, 0, 0, 0.3);
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 15px;
+  }
+
+  #navButtons{
+    flex: 100;
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    border-color: transparent;
+    color: inherit;
+    transition: all .5s;
+    margin-left: 2%;
+    border-bottom-width: 2pt;
+    border-right-width: 0pt;
+    border-left-width: 0pt;
+  }
+
+  .btn-success.btn-outline {
+    color: white;
+  }
+
+  .btn-success.btn-outline:hover {
+    border-bottom-color: white;
+    border-radius: 0;
+    border-bottom-width: 2pt;
+    border-right-width: 0pt;
+    border-left-width: 0pt;
+    // background-color: rgba(255, 255, 255, 0.8);
+    color: white;
+  }
+}
+
+.main {
+  // margin-top: 300px;
+  color: white;
+  border-radius: 16px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+  margin: 30px 0;
+}
+
+#gc_wr {
+  .col-sm-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.light_presenter {
+  background-color: $c_light_presenter;
+}
+
+.presenter {
+  height: $panel_height;
+}
+
+.main_welcome {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.0),
+      rgba(0, 0, 0, 0.7)
+    ), url('../img/green_woods.jpg');
+  background-position: center;
+  background-origin: border-box;
+  background-size: cover;
+  padding: 40px;
+}
+
+$m_play_button: 50px;
+
+.play_button {
+  fill: ivory;
+  display: block;
+  position: absolute;
+  width: $m_play_button;
+  height: $m_play_button;
+  z-index: 999;
+  transition: 200ms;
+  transition-timing-function: cubic-bezier(.3, .2, .7);
+}
+
+.play_button_hover {
+  cursor: pointer;
+  width: $m_play_button * 1.2;
+  height: $m_play_button * 1.2;
+}
+
+.video_holder_wr {
+  #video_holder {
+    margin: 30px auto;
+    min-width: 300px;
+    width: 80%;
+    // height: 100%;
+
+    #main_video {
+      position: relative;
+      background-color: ivory;
+      @include aspect-ratio(16, 9);
+      border: 4px solid ivory;
+      border-radius: 8px;
+      box-shadow: 0 0 30px 0 green;
+      background-image: url("../img/ocean.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}
+
+#gc_wr {
+  min-height: 300px;
+
+  .col-sm-6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.bg_gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#19457f+1,3bbf60+100 */
+  background: #19457f; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #19457f 1%, #3bbf60 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #19457f 1%,#3bbf60 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #19457f 1%,#3bbf60 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19457f', endColorstr='#3bbf60',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.pb_gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#31869b+0,2f4f93+57,000000+99 */
+  background: #31869b; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #31869b 0%, #2f4f93 57%, #000000 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #31869b 0%,#2f4f93 57%,#000000 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #31869b 0%,#2f4f93 57%,#000000 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31869b', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.ob_gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4b44e+0,00e2df+99 */
+  background: #f4b44e; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #f4b44e 0%, #00e2df 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #f4b44e 0%,#00e2df 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #f4b44e 0%,#00e2df 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4b44e', endColorstr='#00e2df',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.dark_presenter {
+  @extend .pb_gradient;
+  // background-color: $c_dark_presenter;
+}
+
+.light_presenter {
+  background-color: $c_light_presenter;
+}
+
+.presenter {
+  height: $panel_height;
+}
+
+.inverted {
+  color: $c_light_text;
+}
+
+.ch {
+  text-align: center;
+}
+
+.xxl {
+  @extend .ch;
+  font-size: 4em;
+}
+
+#golf_course {
+  float: left;
+  left: 20px;
+  top: 10px;
+  position: absolute;
+  height: 300px;
+  // background-color: red;
+  margin-bottom: 20px;
+}
+
+.text_block {
+  width: 60%;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.vcenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#contact {
+  background-color: $c_contact_bg;
+  text-align: center;
+  color: $c_contact_dark;
+  padding: 40px;
+
+  h1 {
+    font-weight: 200;
+    font-size: 5em;
+  }
+
+  #i_email {
+    display: block;
+    font-size: 1.4em;
+    padding: 10px;
+    width: 100%;
+    margin: 20px 0;
+    border: 2px solid $c_contact_dark;
+    background-color: $c_contact_light;
+    color: $c_contact_dark;
+    border-radius: 4px;
+  }
+
+  button {
+    background-color: $c_contact_dark;
+    color: $c_contact_light;
+    border: 1px solid $c_contact_light;
+    border-radius: 4px;
+    font-size: 1.2em;
+    font-weight: 200;
+    padding: 4px 40px;
+    transition: 400ms;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $c_contact_light;
+    color: $c_contact_dark;
+    border-color: $c_contact_dark;
+  }
+}
+
+.center_presenter {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#movement {
+  background-color: #C3DDF7;
+}
+
+#phone_preview {
+  @extend .center_presenter;
+  @extend .ob_gradient;
+}
+
+#anim {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  #animation {
+    display: inline-block;
+    margin: 0 auto;
+    // width: 420px;
+    // height: 300px;
+  }
+}
+
+.iphone_x_wr {
+  position: relative;
+}
+
+$iphone_w: 230px;
+$iphone_h: 430px;
+
+.absolute_pos {
+  position: relative;
+  height: 440px;
+  width: 260px;
+
+  #iphone_x_frame {
+    position: absolute;
+    height: $iphone_h;
+    width: $iphone_w;
+    z-index: 999;
+  }
+
+  #screen_video {
+    -webkit-mask-image: url(../img/iphone_x_mask_2.png);
+    -webkit-mask-type: alpha;
+    -webkit-mask-size: $iphone_w $iphone_h;
+    -webkit-mask-repeat: no-repeat;
+    // mask: url(../img/iphone_x_mask.png) exclude;
+    // width: $iphone_w;
+    height: 418px;
+  }
+}
+
+
+footer {
+  background-color: $c_footer;
+  padding: 20px;
+  color: #B8B8BF;
+  font-size: 0.8em;
+
+  #copyright {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    padding-left: 0;
+    li {
+      font-weight: bold;
+      list-style: none;
+      box-sizing: border-box;
+      margin: 0 20px;
+      a {
+        margin: 4px auto;
+        color: inherit;
+        border-radius: 4px;
+        padding: 4px 8px;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: white;
+        // border: 1px solid white;
+      }
+    }
+  }
+}

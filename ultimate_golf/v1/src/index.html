@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="stylesheet" href="vendor/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <title>Ultimate Golf Program</title>
+    <script src="vendor/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script src="vendor/canvasjs.min.js"></script>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <ul class="navbar pull-right fixed-top" id="navbar">
+      <img class="media-object" id="logo" src="img/logo.jpeg" />
+      <div id="navButtons">
+        <a href="#contact" class="btn btn-success btn-outline btn-lg pull-right">Contact</a>
+        <a href="#section4" class="btn btn-success btn-outline btn-lg pull-right">Movement Analysis</a>
+        <a href="#section3" class="btn btn-success btn-outline btn-lg pull-right">Live Stats</a>
+        <a href="#section2" class="btn btn-success btn-outline btn-lg pull-right">Track Your Shots</a>
+        <a href="#section1" class="btn btn-success btn-outline btn-lg pull-right">Ultimate Golf Program</a>
+      </div>
+    </ul>
+    <div id="root">
+      <div class="inverted main_welcome jumbotron" id="section1">
+        <div class="row">
+          <div class="col-sm-4 vcenter main">
+            <h1 class="main_announcement">Ultimate Golf Program</h1>
+            <p id="intro_para">
+              Ultimate Golf is defining a new paradigm in golf. Make the game
+              your own and make yourself the best that you can be.
+            </p>
+          </div>
+          <div class="video_holder_wr col-sm-8">
+            <div id="video_holder">
+                <div id="main_video">
+                  <img id="play_button" class="play_button" src="img/play.svg" />
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron dark_presenter inverted" id="section2">
+        <div id="gc_wr" class="row">
+          <div class="col-sm-6">
+            <div>
+              <img id="golf_course" src="img/golf_course_3d_shopped.png" />
+            </div>
+          </div>
+          <div class="col-sm-6 vcenter">
+            <div class="text_block">
+              <h1 class="ch">Track Your Shots.</h1>
+              <p>
+                This is some sample text so that we can get an idea of
+                what the page will look like whenever we do finally have
+                the product pitch all sorted out. Currently it's just
+                one long self-referential ramble.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="jumbotron light_presenter" id="section3">
+        <div id="gc_wr" class="row">
+          <div class="col-sm-4 vcenter">
+            <h1 class="ch">Live Stats</h1>
+            <p>
+              This is some sample text so that we can get an idea of
+              what the page will look like whenever we do finally have
+              the product pitch all sorted out. Currently it's just
+              one long self-referential ramble.
+            </p>
+          </div>
+          <div class="col-sm-8">
+            <img id="golf_course" />
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center_presenter jumbotron" id="movement">
+        <div class="text_block">
+          <h1 class="ch">Movement Analysis</h1>
+          <h4>Try moving your mouse back and forth on the image!</h4>
+          <p id="anim_text">
+            This is some sample text so that we can get an idea of
+            what the page will look like whenever we do finally have
+            the product pitch all sorted out. Currently it's just
+            one long self-referential ramble.
+          </p>
+        </div>
+        <div id="anim">
+          <video width="500" height="400" loop="false" id="animation">
+              <source src="img/swing.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    <div id="phone_preview" class="jumbotron">
+      <div class="text_block center">
+        <h1>Your Game, Anywhere</h1>
+        <p>
+          All your data is synced automatically so you can analyze your
+          performance from anywhere.
+        </p>
+      </div>
+      <div id="iphone_x_wr">
+        <div class="absolute_pos">
+          <img id="iphone_x_frame" src="img/iphone_x.png" />
+          <video id="screen_video" loop=true autoplay="autoplay">
+            <source src="video/movie_without_borders.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="images">
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="jumbotron">
+      <div class="row">
+        <div class="center">
+          <h1>Interested?</h1>
+          <p>
+            Enter your email for pertinent product announcements.
+          </p>
+          <input id="i_email" type="email" placeholder="your.name@example.com"/>
+          <button id="email_signup">Submit</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="bottom_links">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div id="copyright">
+        Copyright © Ultimate Golf 2017
+      </div>
+    </footer>
+  </body>
+</html>
