@@ -185,6 +185,6 @@ This is a big list of all the places I've worked as well as noteworthy projects 
 <div class="timeline">
 <div id="timeline_line"></div>
 {% for item in page.resume_items %}
-{% include resume_content.html item=item%}
+{% include resume_content.html item=item %}
 {% endfor %}
 </div>
