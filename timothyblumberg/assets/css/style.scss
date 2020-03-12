@@ -2,4 +2,117 @@
 ---
 
 @import "{{ site.theme }}";
-@import "assets/resume"
+.timeline {
+    margin: 70px 20px;
+    overflow:auto;
+    height: 100%;
+    position: relative;
+}
+
+#timeline_line {
+    position: absolute;
+    left: 60px;
+    width: 4px;
+    background: #d7e4ed;
+    height: 100%;
+}
+
+.timeline_dot {
+    position: relative;
+    left: 55px;
+    bottom: -45px;
+    width: 14px;
+	height: 14px;
+	background: #619AC2;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+.year_tag {
+    color: #9DB1BF;
+    margin-bottom: 0px;
+    margin-top: 60px;
+    margin-left: 75px;
+}
+
+.entry_title {
+    margin-top: 0px;
+}
+
+.timeline_content_wrapper {
+    overflow: visible;
+    padding: 0 10px 10px 10px;
+    margin: 0 50px 0 80px;
+    border: #d7e4ed solid 1px;
+    border-radius: 3px;
+    position: relative;
+    display: block;
+    overflow: visible;
+    background-color: white;
+}
+
+.timeline_content_wrapper:after,
+.timeline_content_wrapper:before{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+/* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
+.timeline_content_wrapper:after {
+    top: 27px;
+    border-color: transparent white transparent transparent;
+    border-width: 10px;
+}
+
+.timeline_content_wrapper:before {
+    top: 26px;
+    border-color: transparent #d7e4ed transparent transparent;
+    border-width: 11px;
+}
+
+.timeline_content > h2:hover {
+    color: slategray;
+    cursor: pointer;
+}
+
+.timeline_entry_description{
+    display: none;
+    overflow:hidden
+}
+
+.link_box {
+    margin: 20px 0 10px 0;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+
+        li {
+            margin: 0 10px;
+            padding: 6px 14px;
+            display: block;
+            border-radius: 3px;
+            background-color: #7f8c97;
+            color: white;
+            font-size: 12pt;
+            
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: 300;
+            }
+        }
+
+        li:hover {
+            cursor: pointer;
+            background-color: #A4B1BD;
+        }
+    }
+}
