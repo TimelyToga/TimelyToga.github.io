@@ -30,7 +30,7 @@ twitter_username: timelytoga
 github_username: timelytoga
 
 # Build settings
-theme: cayman
+theme: minima
 plugins:
   - jekyll-feed
 # Exclude from processing.
