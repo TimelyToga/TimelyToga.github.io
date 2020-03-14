@@ -9,6 +9,12 @@ I'm Timothy Blumberg. At time of writing I'm 25 years old and thrilled about all
 ## What I do 
 I'm an avid learner and programmer.
 
+### Online Profiles
+
+* [Behance](https://www.behance.net/timothyblumberg)
+* [YouTube](https://www.youtube.com/channel/UCmeld6xHD6zqdtko-i-o1kQ)
+
+
 ## Philosophy
 I like to think that life is intrinsically meaningless and that the fact that we have found ourselves conscious
 is a rather delightful accident. The fun part about being alive is that we alone have the power to define a 
