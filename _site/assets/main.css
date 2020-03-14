@@ -223,3 +223,5 @@ table td { border: 1px solid #e8e8e8; }
 .link_box ul li { margin: 0 10px; padding: 6px 14px; display: block; border-radius: 3px; background-color: #7f8c97; color: white; font-size: 12pt; }
 .link_box ul li a { text-decoration: none; color: white; font-weight: 300; }
 .link_box ul li:hover { cursor: pointer; background-color: #A4B1BD; }
+
+.poetry-date { font-size: 1.3rem; font-weight: 200; font-style: italic; }
