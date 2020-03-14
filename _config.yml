@@ -30,10 +30,18 @@ twitter_username: tim_blumberg
 github_username: timelytoga
 medium: https://medium.com/@Tim_Blumberg
 
-# Navbar
-Navigation:
-  - title: Medium
-    url: https://medium.com/@Tim_Blumberg
+# Collections
+collections:
+  poetry:
+    output: true
+
+# Layout assignment
+defaults:
+  - scope:
+      path: ""
+      type: "poetry"
+    values:
+      layout: "poetry"
 
 # Build settings
 theme: minima
