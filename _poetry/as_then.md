@@ -1,7 +1,7 @@
 ---
 title: As Then
 date: July, 2020
-description: This one is a bit dramatic, but love is a very dramatic condition. It's nonsense and the outcome is strident irrationality.
+description: I find myself feeling the need to defend the drama of this poem. But I think it's poignant in it's naivity. 
 
 layout: poetry
 --- 
