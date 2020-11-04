@@ -37,6 +37,8 @@ environment: production
 collections:
   poetry:
     output: true
+  scifi:
+    output: true
 
 # Layout assignment
 defaults:
@@ -50,6 +52,10 @@ defaults:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-compose
+
+jekyll_compose:
+    auto_open: true
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
