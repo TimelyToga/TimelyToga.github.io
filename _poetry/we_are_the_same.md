@@ -6,159 +6,159 @@ description: I often find myself deeply proud of the amazing things that humanit
 layout: poetry
 --- 
 
-We are the <br>
-same creatures <br>
-that sealed <br>
-men in <br>
-metal cans <br>
-atop of <br>
-chemical bombs<br>
-and hung<br>
-them above <br>
-our atmosphere<br>
-so they could <br>
-show us <br>
-what they saw<br>
-<br>
-We are the<br>
-same creatures <br>
-that <br>
-cornered <br>
-wild horses <br>
-on the<br>
-desolate<br>
-plains of<br>
-pre-history <br>
-so we <br>
-could unite <br>
-ourselves<br>
-with the <br>
-destinations <br>
-at the end <br>
-of vast distances<br>
-<br>
-We are the <br>
-same creatures <br>
-that pulled<br>
-back the <br>
-curtain on <br>
-the dynamics <br>
-of the <br>
-natural world <br>
-<br>
-We are the<br>
-same creatures <br>
-that built <br>
-entire societies <br>
-upon the <br>
-understanding <br>
-that because <br>
-our high technology<br>
-allows us <br>
-to walk onto <br>
-distant beaches <br>
-and leave<br>
-the owner <br>
-of equals <br>
-believed <br>
-to be<br>
-animals.<br>
-<br>
-We are the<br>
-same creatures <br>
-that unleashed<br>
-balls of <br>
-fire and flame <br>
-large enough <br>
-to <br>
-erase cities <br>
-from reality <br>
-all over <br>
-lines on  <br>
-maps<br>
-<br>
-Our<br>
-civilizations <br>
-have risen and <br>
-fallen with <br>
-a comedic <br>
-periodicity <br>
-as we <br>
-strive<br>
-to define <br>
-the act of <br>
-being human.<br>
-<br>
-Our history<br>
-is ferociously <br>
-upsetting. <br>
-We have <br>
-committed acts<br>
-too heinous <br>
-to fathom <br>
-given our <br>
-current <br>
-paved roads,<br>
-movie theatres,<br>
-and puppy stores. <br>
-<br>
-Dare not remove <br>
-yourself from <br>
-this "We"<br>
-as <br>
-Countless times <br>
-we have proved <br>
-to ourselves <br>
-that our savagery<br>
-is infinite <br>
-in its ingenuity<br>
-and it can <br>
-take as little <br>
-as 6 days <br>
-for anyone<br>
-to transform <br>
-into Cruelty<br>
-herself. <br>
-<br>
-We are<br>
-a young<br>
-species<br>
-with many <br>
-mistakes yet <br>
-to make,<br>
-but I am <br>
-proud to be <br>
-alive and to <br>
-know that <br>
-<br>
-I <br>
-am human<br>
-<br>
-You<br>
-are human <br>
-<br>
-The progress <br>
-we have made <br>
-points me <br>
-only to <br>
-the glory <br>
-we can <br>
-achieve <br>
-beyond the present. <br>
-<br>
-Gather close <br>
-with a stranger now <br>
-and rejoice<br>
-<br>
-in all that<br>
-we <br>
-are in common<br>
-and are different<br>
-<br>
-in all that<br>
-we<br>
-have overcome <br>
-and all the <br>
-higher we <br>
-will streak<br>
+We are the   
+same creatures   
+that sealed   
+men in   
+metal cans   
+atop of   
+chemical bombs  
+and hung  
+them above   
+our atmosphere  
+so they could   
+show us   
+what they saw  
+  
+We are the  
+same creatures   
+that   
+cornered   
+wild horses   
+on the  
+desolate  
+plains of  
+pre-history   
+so we   
+could unite   
+ourselves  
+with the   
+destinations   
+at the end   
+of vast distances  
+  
+We are the   
+same creatures   
+that pulled  
+back the   
+curtain on   
+the dynamics   
+of the   
+natural world   
+  
+We are the  
+same creatures   
+that built   
+entire societies   
+upon the   
+understanding   
+that because   
+our high technology  
+allows us   
+to walk onto   
+distant beaches   
+and leave  
+the owner   
+of equals   
+believed   
+to be  
+animals.  
+  
+We are the  
+same creatures   
+that unleashed  
+balls of   
+fire and flame   
+large enough   
+to   
+erase cities   
+from reality   
+all over   
+lines on    
+maps  
+  
+Our  
+civilizations   
+have risen and   
+fallen with   
+a comedic   
+periodicity   
+as we   
+strive  
+to define   
+the act of   
+being human.  
+  
+Our history  
+is ferociously   
+upsetting.   
+We have   
+committed acts  
+too heinous   
+to fathom   
+given our   
+current   
+paved roads,  
+movie theatres,  
+and puppy stores.   
+  
+Dare not remove   
+yourself from   
+this "We"  
+as   
+Countless times   
+we have proved   
+to ourselves   
+that our savagery  
+is infinite   
+in its ingenuity  
+and it can   
+take as little   
+as 6 days   
+for anyone  
+to transform   
+into Cruelty  
+herself.   
+  
+We are  
+a young  
+species  
+with many   
+mistakes yet   
+to make,  
+but I am   
+proud to be   
+alive and to   
+know that   
+  
+I   
+am human  
+  
+You  
+are human   
+  
+The progress   
+we have made   
+points me   
+only to   
+the glory   
+we can   
+achieve   
+beyond the present.   
+  
+Gather close   
+with a stranger now   
+and rejoice  
+  
+in all that  
+we   
+are in common  
+and are different  
+  
+in all that  
+we  
+have overcome   
+and all the   
+higher we   
+will streak  
 upwards. 
