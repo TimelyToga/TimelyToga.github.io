@@ -6,63 +6,63 @@ description: At the beginning of my sophomore year of college, I lost a dear fri
 layout: poetry
 --- 
 
-I’m here, trapped in a bad day.<br>
-Tumbling about in my misery<br>
-similarly to the occasional child<br>
-that we all hear about<br>
-on the news.<br>
-<br>
-commercial<br>
-washing machine<br>
-inattentive parent<br>
-unfortunate <br>
-Tragedy<br>
-<br>
-why did this happen?<br>
-how can this be?<br>
-<br>
-I can imagine the suds<br>
-stinging my eyes,<br>
-My vision tunneling<br>
-from the rotation,<br>
-Sound dulling<br>
-Senses softening<br>
-Choking for breath<br>
-<br>
-All the while,<br>
-wondering,<br>
-why did this happen?<br>
-how can this be?<br>
-<br>
-Struggling with the door<br>
-prying with slippery fingers<br>
-Desperately bargaining<br>
-with the powers that be<br>
-for my freedom<br>
-<br>
-Temporary blindness<br>
-from a particularly rough<br>
-bang on the head<br>
-as I am inverted again<br>
-and<br>
-again<br>
-<br>
-As my panic consumes me,<br>
-there is but one salient thought:<br>
-<br>
-why did this happen?<br>
-how can this be?<br>
-<br>
-Such is this day.<br>
-My serving of grief is inescapable<br>
-It will be extolled<br>
-no matter to where I flee<br>
-no matter the company I hold.<br>
-It will strike<br>
-I will suffer<br>
-and this thought<br>
-this fucking thought<br>
-will be the only thing in my brain:<br>
-<br>
-why did this happen?<br>
+I’m here, trapped in a bad day.  
+Tumbling about in my misery  
+similarly to the occasional child  
+that we all hear about  
+on the news.  
+  
+commercial  
+washing machine  
+inattentive parent  
+unfortunate   
+Tragedy  
+  
+why did this happen?  
+how can this be?  
+  
+I can imagine the suds  
+stinging my eyes,  
+My vision tunneling  
+from the rotation,  
+Sound dulling  
+Senses softening  
+Choking for breath  
+  
+All the while,  
+wondering,  
+why did this happen?  
+how can this be?  
+  
+Struggling with the door  
+prying with slippery fingers  
+Desperately bargaining  
+with the powers that be  
+for my freedom  
+  
+Temporary blindness  
+from a particularly rough  
+bang on the head  
+as I am inverted again  
+and  
+again  
+  
+As my panic consumes me,  
+there is but one salient thought:  
+  
+why did this happen?  
+how can this be?  
+  
+Such is this day.  
+My serving of grief is inescapable  
+It will be extolled  
+no matter to where I flee  
+no matter the company I hold.  
+It will strike  
+I will suffer  
+and this thought  
+this fucking thought  
+will be the only thing in my brain:  
+  
+why did this happen?  
 how can this be?

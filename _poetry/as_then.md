@@ -6,53 +6,53 @@ description: I find myself feeling the need to defend the drama of this poem. Bu
 layout: poetry
 --- 
 
-She’s right here <br>
-I feel her <br>
-as I felt her then. <br>
-<br>
-My heart <br>
-my skin<br>
-my face <br>
-feel her <br>
-<br>
-And yet, <br>
-I see her <br>
-standing on <br>
-the far edge of <br>
-a canyon<br>
-In its volume<br>
-a fierce storm <br>
-is fomenting <br>
-<br>
-Over the thunder<br>
-I hear her breath <br>
-Despite the wind<br>
-I smell her hair <br>
-Regardless of the distance<br>
-I feel her hand in mine<br>
-<br>
-Her silhouette<br>
-painting the sky is<br>
-overshadowed <br>
-by a setting sun <br>
-<br>
-I see her <br>
-hair whipping<br>
-her face an infinite <br>
-distance away<br>
- <br>
- And moment by moment<br>
- she travels farther <br>
- she’s harder to make out<br>
- <br>
-But she’s right here <br>
-I feel her <br>
-as I felt her then. <br>
-<br>
- the moments of<br>
- togetherness <br>
- were sweet <br>
- and will fade gently<br>
- from body <br>
- from mind<br>
- from me<br>
+She’s right here   
+I feel her   
+as I felt her then.   
+  
+My heart   
+my skin  
+my face   
+feel her   
+  
+And yet,   
+I see her   
+standing on   
+the far edge of   
+a canyon  
+In its volume  
+a fierce storm   
+is fomenting   
+  
+Over the thunder  
+I hear her breath   
+Despite the wind  
+I smell her hair   
+Regardless of the distance  
+I feel her hand in mine  
+  
+Her silhouette  
+painting the sky is  
+overshadowed   
+by a setting sun   
+  
+I see her   
+hair whipping  
+her face an infinite   
+distance away  
+   
+ And moment by moment  
+ she travels farther   
+ she’s harder to make out  
+   
+But she’s right here   
+I feel her   
+as I felt her then.   
+  
+ the moments of  
+ togetherness   
+ were sweet   
+ and will fade gently  
+ from body   
+ from mind  
+ from me  
