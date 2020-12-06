@@ -5,7 +5,7 @@
     <div class="timeline_dot"></div>
     <div class="timeline_content_wrapper">
         <div class="timeline_content">
-            <h2>{{ include.item.title }}</h2>
+            <h2 class="timeline-title">{{ include.item.title }}</h2>
             <div class="timeline_entry_description">
                 <h4>{{ include.item.place }}; {{include.item.time}}</h4>
                 {% for p in include.item.content %}
@@ -14,7 +14,7 @@
                 <div class="link_box">
                     <ul>
                         {% for link in include.item.links %}
-                        <li><a href="{{ link.url}}">{{ link.name }}</a></li>
+                        <li><a href="{{ link.url}}" target="_blank">{{ link.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>

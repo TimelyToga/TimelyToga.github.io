@@ -11,4 +11,10 @@
     {% include google-analytics.html %}
     {% endif %}
 
+    {% comment %}
+        This will import a css file if the page states one in their header
+    {% endcomment %}
+    {% if page.style %}
+        <link rel="stylesheet" href="{{ "/assets/css/" | append: page.style | append: ".css" | relative_url }}">
+    {% endif %}
 </head>

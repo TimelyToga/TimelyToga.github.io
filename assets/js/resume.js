@@ -3,14 +3,16 @@
  */
 $(window).load(function () {
     var line = $('#timeline_line');
-    $('.timeline_content').click(function () {
-        var p = jQuery(this).children('.timeline_entry_description');
+
+    // Open + close the resume item tiles when you click on the title
+    $('.timeline-title').click(function (e) {
+        console.log(e);
+        var p = jQuery(this).siblings('.timeline_entry_description');
         var thisthis = this;
 
         p.slideToggle(function () {
             // Increase line height
             var newHeight = 0;
-            // alert(p.css("display"))
             if (p.css("display") == "none") {
                 newHeight = line.outerHeight() - $('.timeline_entry_description', thisthis).outerHeight();
             } else {

@@ -25,7 +25,8 @@ In college, I got the idea that it would be fun to learn how to use Adobe Illust
 that featured poetry quotes.
 
 ## My Poems
-{% for poem in site.poetry %}
+{% assign sorted_poetry = site.poetry | sort: 'date' | reverse %}
+{% for poem in sorted_poetry %}
 <h3>
     <a href="{{ poem.url}}">
     {{poem.title}}
