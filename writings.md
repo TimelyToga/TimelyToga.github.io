@@ -12,7 +12,8 @@ Your words remind you of a moment in your life to inspire embarrassment and prid
 
 I read more science fiction than anything else. I encourage you to check out my read list on [Goodreads](https://www.goodreads.com/user/show/7414236-tim-blumberg) and occasionally I will attempt to have my hand at writing my own short stories.
 
-{% for story in site.scifi %}
+{% assign sorted_scifi = site.scifi | sort: 'date' | reverse %}
+{% for story in sorted_scifi %}
 
 <h3>
     <a href="{{ story.url}}">
