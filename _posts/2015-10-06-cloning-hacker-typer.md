@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cloning Hacker Typer
-date: 2020-11-19 11:01 -0800
+date: 2015-10-06 11:01 -0800
 ---
 
 I created a clone of the [HackerTyper](http://hackertyper.com/) project in 2015 and wrote a little blog post about it on [Medium](https://medium.com/@Tim_Blumberg/how-to-clone-hackertyper-db0a472212f6).
