@@ -25,7 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   for me to talk about things I'm interested in as well as let you know how 
   to get in contact with me.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://timothyblumberg.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: tim_blumberg
 github_username: timelytoga
 linkedin_username: timothy-blumberg-72489589
@@ -53,6 +53,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-compose
+  - jekyll-sitemap
 
 jekyll_compose:
     auto_open: true
