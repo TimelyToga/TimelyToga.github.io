@@ -1,5 +1,7 @@
 ---
 ---
+@charset 'UTF-8';
+
 @import "{{ site.theme }}";
 .timeline {
     margin: 70px 20px;
@@ -121,3 +123,4 @@
     font-weight: 200;
     font-style: italic;
 }
+
