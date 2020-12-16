@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {%- seo -%}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
     {%- feed_meta -%}
 
     {% if jekyll.environment == 'production' %}
@@ -12,8 +11,11 @@
     {% endif %}
 
     {% comment %}
-        This will import a css file if the page states one in their header
+        The default CSS file is style.css, but the if statement will import a css file only if 
+        the page states they want one in the header. If the page has `style: something` in 
+        the header, then the `/assets/css/something.css` will be imported
     {% endcomment %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
     {% if page.style %}
         <link rel="stylesheet" href="{{ "/assets/css/" | append: page.style | append: ".css" | relative_url }}">
     {% endif %}
