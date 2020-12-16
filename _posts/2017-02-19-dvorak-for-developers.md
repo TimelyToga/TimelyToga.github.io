@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dvorak for Developers
-date: 2020-12-15 17:34 -0800
+date: 2017-02-19 17:34 -0800
 ---
 
 
