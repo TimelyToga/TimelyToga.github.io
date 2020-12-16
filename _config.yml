@@ -58,6 +58,7 @@ jekyll_compose:
     auto_open: true
 
 sass:
+  sass_dir: assets/css
   style: compressed
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,5 +1,6 @@
 ---
 ---
+@charset 'UTF-8';
 
 @import "{{ site.theme }}";
 .timeline {
@@ -114,5 +115,19 @@
             cursor: pointer;
             background-color: #A4B1BD;
         }
+    }
+}
+
+html {
+    background-color: red;
+}
+
+.blog-nav {
+    .previous {
+    }
+
+    .next {
+        display: inline-block;
+        float: right;
     }
 }
