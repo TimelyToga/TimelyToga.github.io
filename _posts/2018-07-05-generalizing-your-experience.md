@@ -19,7 +19,7 @@ To put things in perspective, it helps to look back over your journey as a stude
 
 It’s a marvelous moment for all of us struggling to learn new things to recognize how far you’ve come already!
 
-## Living in a New Place
+# Living in a New Place
 After I graduated in 2017, I moved to Shanghai for 8 months to work at a Chinese 3D mapping company. My coworkers did not speak English and I was forced to put my Chinese minor to work everyday to communicate. Despite my intensive preparations before going to China, I was rather overwhelmed by the total lack of familiarity in this new place. This alienness is even more overwhelming when it includes the language you use to interface with the world around you. In general, language is tool of basic social interactions that is so fundamental that native speakers rarely have need to contemplate it. The problems we spend most of our time thinking about take place at a higher plane of abstraction. We talk about and discuss problems using language. We ask clarifying questions to eliminate ambiguity using specialized jargon. We argue, tell jokes, and discuss ideas that excite us.
 
 But in China, I was distanced from comfort–constantly backpedalling as I struggled to make sense of the rules that govern this new place. Things took place that delighted, shocked, offended, and surprised me, and yet, seemed entirely unremarkable to the many thousands that surround me on those Shanghai streets. It required me to take a hard look at the things that I thought I knew about what a modern society ought to do. I was being shown a vibrant counter-example to my long-held belief that Western Society is the theoretically optimal form of human society. (For a great book on the subject, please read Mahbubani’s brilliant tome).
