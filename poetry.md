@@ -25,6 +25,11 @@ My favorite poets are:
 In college, I got the idea that it would be fun to learn how to use Adobe Illustrator, so I made [a desktop wallpaper every week](https://www.behance.net/gallery/19454861/Wallpapers) 
 that featured poetry quotes.
 
+## What does Love Look Like to You? 
+I sent submitted [a video of me](https://www.youtube.com/watch?v=9FL1r_oIhJU) reciting a small poem I wrote answering the question "What does love look like to you?" for Rain Wilson's SoulPancake. 
+
+My submission was selected and serves as what is essentially the voiceover track for the [final video](https://www.youtube.com/watch?v=ZpR84MoyjnY).
+
 ## My Poems
 {% assign sorted_poetry = site.poetry | sort: 'date' | reverse %}
 {% for poem in sorted_poetry %}
