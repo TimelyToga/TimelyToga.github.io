@@ -128,7 +128,7 @@ book_count: 31
   <img src="https://covers.openlibrary.org/b/isbn/9780593135204-M.jpg" alt="Project Hail Mary" class="book-cover-small">
   <div class="book-info">
     <h3>14. Project Hail Mary</h3>
-    <div class="book-author">Andy Weir <em>(sci-fi)</em></div>
+    <div class="book-author">Andy Weir</div>
     <p class="book-notes">The Martian was an instant classic, 2nd book was boring, but this 3rd title from Weir is fantastic. Fresh and fascinating scifi. First contact stories are my favorite and this one contains two!</p>
   </div>
 </div>
@@ -137,7 +137,7 @@ book_count: 31
   <img src="https://covers.openlibrary.org/b/isbn/9780060512804-M.jpg" alt="Cryptonomicon" class="book-cover-small">
   <div class="book-info">
     <h3>15. Cryptonomicon</h3>
-    <div class="book-author">Neal Stephenson <em>(sci-fi)</em></div>
+    <div class="book-author">Neal Stephenson</div>
     <p class="book-notes">Cryptography is a powerful tool for both harm and for good. Doesn't top Snowcrash or Seveneves, but is one of Stephenson's best.</p>
   </div>
 </div>
@@ -146,44 +146,312 @@ book_count: 31
 
 ## Unfinished Books
 
-- **Termination Shock** — Neal Stephenson
-- **Reframing Healthcare: A Roadmap for Creating Disruptive Change** — Zeev E. Neuwirth MD
-- **New Eden** — Kishore Tipirneni
-- **Inhibitor Phase** — Alastair Reynolds
-- **The Hydrogen Sonata** — Iain M. Banks
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780063028050-M.jpg" alt="Termination Shock" class="book-cover-small">
+  <div class="book-info">
+    <h3>Termination Shock</h3>
+    <div class="book-author">Neal Stephenson</div>
+    <p class="book-notes">Did not finish.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9781260455380-M.jpg" alt="Reframing Healthcare" class="book-cover-small">
+  <div class="book-info">
+    <h3>Reframing Healthcare: A Roadmap for Creating Disruptive Change</h3>
+    <div class="book-author">Zeev E. Neuwirth MD</div>
+    <p class="book-notes">Did not finish.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780316212373-M.jpg" alt="The Hydrogen Sonata" class="book-cover-small">
+  <div class="book-info">
+    <h3>The Hydrogen Sonata</h3>
+    <div class="book-author">Iain M. Banks</div>
+    <p class="book-notes">Did not finish (in 2022—completed in 2023).</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780316462761-M.jpg" alt="Inhibitor Phase" class="book-cover-small">
+  <div class="book-info">
+    <h3>Inhibitor Phase</h3>
+    <div class="book-author">Alastair Reynolds</div>
+    <p class="book-notes">Did not finish.</p>
+  </div>
+</div>
 
 ---
 
 ## Full Chronological List
 
-1. Cryptonomicon — Neal Stephenson
-2. The Freeze Frame Revolution — Peter Watts
-3. The Gripping Hand — Jerry Pournelle, Larry Niven
-4. The Hydrogen Sonata — Iain M. Banks
-5. Project Hail Mary — Andy Weir
-6. Inhibitor Phase — Alastair Reynolds *(unfinished)*
-7. The Dealmaker — Guy Hands
-8. The First 90 Days — Michael Watkins
-9. Trillion Dollar Coach
-10. Termination Shock — Neal Stephenson *(unfinished)*
-11. The Metaverse — Matthew Ball
-12. So You Want to Start a Hedgefund
-13. New Eden — Kishore Tipirneni *(unfinished)*
-14. The Outsiders — William N. Thorndike
-15. Anomaly — Peter Cawdron
-16. The Name of the Wind — Patrick Rothfuss
-17. 7 Powers — Hamilton Helmer
-18. Zero to One — Blake Masters
-19. Notes On Nursing — Florence Nightingale
-20. Reframing Healthcare — Zeev E. Neuwirth MD *(unfinished)*
-21. The Shift — Theresa Brown
-22. Founders Pocket Guide: Convertible Debt
-23. Hardball — Chris Matthews
-24. Liar's Poker — Michael Lewis
-25. The Big Short — Michael Lewis
-26. Flash Boys — Michael Lewis
-27. Monetizing Innovation — Georg Tacke
-28. The Smartest Guys in the Room — Bethany McLean
-29. High Output Management — Andy S. Grove
-30. When Genius Failed — Roger Lowenstein
-31. Barbarians at the Gate — Bryan Burrough, John Helyar
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780060512804-M.jpg" alt="Cryptonomicon" class="book-cover-small">
+  <div class="book-info">
+    <h3>1. Cryptonomicon</h3>
+    <div class="book-author">Neal Stephenson</div>
+    <p class="book-notes">Cryptography is a powerful tool for both harm and for good.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780765379528-M.jpg" alt="The Freeze Frame Revolution" class="book-cover-small">
+  <div class="book-info">
+    <h3>2. The Freeze Frame Revolution</h3>
+    <div class="book-author">Peter Watts</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780671795733-M.jpg" alt="The Gripping Hand" class="book-cover-small">
+  <div class="book-info">
+    <h3>3. The Gripping Hand</h3>
+    <div class="book-author">Jerry Pournelle, Larry Niven</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780316212373-M.jpg" alt="The Hydrogen Sonata" class="book-cover-small">
+  <div class="book-info">
+    <h3>4. The Hydrogen Sonata</h3>
+    <div class="book-author">Iain M. Banks</div>
+    <p class="book-notes">Did not finish (in 2022).</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780593135204-M.jpg" alt="Project Hail Mary" class="book-cover-small">
+  <div class="book-info">
+    <h3>5. Project Hail Mary</h3>
+    <div class="book-author">Andy Weir</div>
+    <p class="book-notes">Fresh and fascinating scifi. First contact stories are my favorite and this one contains two!</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780316462761-M.jpg" alt="Inhibitor Phase" class="book-cover-small">
+  <div class="book-info">
+    <h3>6. Inhibitor Phase</h3>
+    <div class="book-author">Alastair Reynolds</div>
+    <p class="book-notes">Did not finish.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780241357866-M.jpg" alt="The Dealmaker" class="book-cover-small">
+  <div class="book-info">
+    <h3>7. The Dealmaker</h3>
+    <div class="book-author">Guy Hands</div>
+    <p class="book-notes">Lessons from a life in private equity.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9781591391821-M.jpg" alt="The First 90 Days" class="book-cover-small">
+  <div class="book-info">
+    <h3>8. The First 90 Days</h3>
+    <div class="book-author">Michael Watkins</div>
+    <p class="book-notes">A playbook for effective leadership.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780062839268-M.jpg" alt="Trillion Dollar Coach" class="book-cover-small">
+  <div class="book-info">
+    <h3>9. Trillion Dollar Coach</h3>
+    <div class="book-author">Eric Schmidt, Jonathan Rosenberg, Alan Eagle</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780063028050-M.jpg" alt="Termination Shock" class="book-cover-small">
+  <div class="book-info">
+    <h3>10. Termination Shock</h3>
+    <div class="book-author">Neal Stephenson</div>
+    <p class="book-notes">Did not finish.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9781324092032-M.jpg" alt="The Metaverse" class="book-cover-small">
+  <div class="book-info">
+    <h3>11. The Metaverse</h3>
+    <div class="book-author">Matthew Ball</div>
+    <p class="book-notes">Exploration of what a metaverse could be.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9781118428719-M.jpg" alt="So You Want to Start a Hedge Fund" class="book-cover-small">
+  <div class="book-info">
+    <h3>12. So You Want to Start a Hedge Fund</h3>
+    <div class="book-author">Ted Seides</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9781591845638-M.jpg" alt="The Outsiders" class="book-cover-small">
+  <div class="book-info">
+    <h3>13. The Outsiders</h3>
+    <div class="book-author">William N. Thorndike</div>
+    <p class="book-notes">Portraits of iconoclasts innovating business.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780316399845-M.jpg" alt="Anomaly" class="book-cover-small">
+  <div class="book-info">
+    <h3>14. Anomaly</h3>
+    <div class="book-author">Peter Cawdron</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780756404741-M.jpg" alt="The Name of the Wind" class="book-cover-small">
+  <div class="book-info">
+    <h3>15. The Name of the Wind</h3>
+    <div class="book-author">Patrick Rothfuss</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780998116310-M.jpg" alt="7 Powers" class="book-cover-small">
+  <div class="book-info">
+    <h3>16. 7 Powers</h3>
+    <div class="book-author">Hamilton Helmer</div>
+    <p class="book-notes">Business strategy framework.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780804139298-M.jpg" alt="Zero to One" class="book-cover-small">
+  <div class="book-info">
+    <h3>17. Zero to One</h3>
+    <div class="book-author">Peter Thiel, Blake Masters</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9781979723367-M.jpg" alt="Notes On Nursing" class="book-cover-small">
+  <div class="book-info">
+    <h3>18. Notes On Nursing</h3>
+    <div class="book-author">Florence Nightingale</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9781260455380-M.jpg" alt="Reframing Healthcare" class="book-cover-small">
+  <div class="book-info">
+    <h3>19. Reframing Healthcare</h3>
+    <div class="book-author">Zeev E. Neuwirth MD</div>
+    <p class="book-notes">Did not finish.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9781616202811-M.jpg" alt="The Shift" class="book-cover-small">
+  <div class="book-info">
+    <h3>20. The Shift</h3>
+    <div class="book-author">Theresa Brown</div>
+    <p class="book-notes">Beautiful book about a nurse's shift at a hospital.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780991183579-M.jpg" alt="Founders Pocket Guide: Convertible Debt" class="book-cover-small">
+  <div class="book-info">
+    <h3>21. Founders Pocket Guide: Convertible Debt</h3>
+    <div class="book-author">Stephen R. Poland</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780684845593-M.jpg" alt="Hardball" class="book-cover-small">
+  <div class="book-info">
+    <h3>22. Hardball</h3>
+    <div class="book-author">Chris Matthews</div>
+    <p class="book-notes">How political power is fought for, won, and leveraged.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780393338690-M.jpg" alt="Liar's Poker" class="book-cover-small">
+  <div class="book-info">
+    <h3>23. Liar's Poker</h3>
+    <div class="book-author">Michael Lewis</div>
+    <p class="book-notes">High-flying tales of chaotic bond trading in the 1980s.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780393338829-M.jpg" alt="The Big Short" class="book-cover-small">
+  <div class="book-info">
+    <h3>24. The Big Short</h3>
+    <div class="book-author">Michael Lewis</div>
+    <p class="book-notes">A timeless masterpiece about the 2008 financial crisis.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780393351590-M.jpg" alt="Flash Boys" class="book-cover-small">
+  <div class="book-info">
+    <h3>25. Flash Boys</h3>
+    <div class="book-author">Michael Lewis</div>
+    <p class="book-notes">Discover HFT with a kindly Canadian protagonist.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9781119240860-M.jpg" alt="Monetizing Innovation" class="book-cover-small">
+  <div class="book-info">
+    <h3>26. Monetizing Innovation</h3>
+    <div class="book-author">Madhavan Ramanujam, Georg Tacke</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9781591846604-M.jpg" alt="The Smartest Guys in the Room" class="book-cover-small">
+  <div class="book-info">
+    <h3>27. The Smartest Guys in the Room</h3>
+    <div class="book-author">Bethany McLean, Peter Elkind</div>
+    <p class="book-notes">The Enron story.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780679762881-M.jpg" alt="High Output Management" class="book-cover-small">
+  <div class="book-info">
+    <h3>28. High Output Management</h3>
+    <div class="book-author">Andrew S. Grove</div>
+    <p class="book-notes"></p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780375758256-M.jpg" alt="When Genius Failed" class="book-cover-small">
+  <div class="book-info">
+    <h3>29. When Genius Failed</h3>
+    <div class="book-author">Roger Lowenstein</div>
+    <p class="book-notes">The rise and fall of Long-Term Capital Management.</p>
+  </div>
+</div>
+
+<div class="book-entry">
+  <img src="https://covers.openlibrary.org/b/isbn/9780061655555-M.jpg" alt="Barbarians at the Gate" class="book-cover-small">
+  <div class="book-info">
+    <h3>30. Barbarians at the Gate</h3>
+    <div class="book-author">Bryan Burrough, John Helyar</div>
+    <p class="book-notes">The origin story of KKR.</p>
+  </div>
+</div>
