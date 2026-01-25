@@ -4,7 +4,24 @@ title: Writing
 permalink: /writing/
 ---
 
-<p>These posts are old, but I keep them around as a reminder to write more.</p>
+## Sci-Fi
+
+Short stories exploring consciousness, artificial intelligence, and humanity's future.
+
+{% assign sorted_scifi = site.scifi | sort: 'date' | reverse %}
+{% for story in sorted_scifi %}
+<div class="story-item">
+    <h3><a href="{{ story.url }}">{{ story.title }}</a></h3>
+    <div class="story-meta">{{ story.date | date: "%B %Y" }}</div>
+    <p class="story-description">{{ story.description }}</p>
+</div>
+{% endfor %}
+
+---
+
+## Blog
+
+These posts are old, but I keep them around as a reminder to write more.
 
 <ul class="post-list">
 {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
