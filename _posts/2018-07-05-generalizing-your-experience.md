@@ -2,9 +2,12 @@
 layout: post
 title: Generalizing Your Experience
 date: 2018-07-05 12:49 -0800
+description: Reflections on mathematical thinking, living abroad in Shanghai, and seeking novel experiences.
+retrospective: I still believe strongly in seeking unfamiliar experiences. Living in Shanghai fundamentally changed how I see the world, and I'm grateful I took that leap. The math appreciation has only grown.
+retrospective_date: "2025"
 ---
 
-# Mathematical Thinking
+## Mathematical Thinking
 I am currently taking Dr. Keith Devlin’s Introduction to Mathematical Thinking with my sister in high school. We are talking about a great many number of the core ideas about mathematics that make the field truly interesting.
 
 I count myself as a recent convert to the joys of mathematics. Like many students, my first introductions to mathematics were dreadfully boring problem sets applying algorithms and numerical tricks to solve equations for hour after hour. This charade was repeated for 2 more segments of calculus in college at which point I was fully convinced scholars of math are actually masochists. I think many people never progress past this stage, because there has never been a proper presentation of what Mathematics can really be. Recently, I’ve discovered math is less about solving for a particular number or value and more about using the things you know to reason about things that you don’t know. It’s about building and applying abstractions to problems that you would have previously never considered tractable.

@@ -1,10 +1,11 @@
 ---
 layout: default
 ---
+<article class="poem">
+    <h1 class="page-title">{{ page.title }}</h1>
+    <p class="poem-meta">{{ page.date | date: "%B %Y" }}</p>
 
-<h1>Introduction</h1>
-<p>{{page.description}}</p>
-
-<h1>{{page.title}}</h1>
-<p class="poetry-date">{{page.date | date: "%Y.%m.%d"}}</p>
-{{content}}
+    <div class="poetry-content">
+{{ content }}
+    </div>
+</article>

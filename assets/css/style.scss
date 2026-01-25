@@ -2,128 +2,877 @@
 ---
 @charset 'UTF-8';
 
-@import "{{ site.theme }}";
+// Color palette - warm, minimal
+$bg-color: #faf8f5;
+$bg-darker: #f5f2ed;
+$text-color: #2d2d2d;
+$text-muted: #666;
+$text-light: #888;
+$accent-color: #8b4513;
+$accent-hover: #a0522d;
+$border-color: #e8e4df;
+$link-color: #5a3d2b;
+$link-hover: #8b4513;
+
+// Typography
+$font-serif: 'Merriweather', 'Georgia', 'Times New Roman', serif;
+$font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+
+// Spacing
+$spacing-unit: 1.5rem;
+$max-width: 800px;
+$max-width-wide: 1000px;
+
+// Base reset and styles
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-serif;
+  color: $text-color;
+  background-color: $bg-color;
+}
+
+// Layout
+.wrapper {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}
+
+.wrapper-wide {
+  max-width: $max-width-wide;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}
+
+// Header
+.site-header {
+  padding: $spacing-unit 0;
+  border-bottom: 1px solid $border-color;
+  background: $bg-color;
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    max-width: $max-width-wide;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
+  }
+}
+
+.site-title {
+  font-family: $font-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $text-color;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  .chinese-name {
+    font-weight: 400;
+    font-size: 0.75em;
+    color: $text-light;
+    margin-left: 0.3rem;
+    opacity: 0.5;
+  }
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+
+  a {
+    font-family: $font-sans;
+    font-size: 0.85rem;
+    color: $text-muted;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+
+    &:hover, &.active {
+      color: $accent-color;
+    }
+  }
+}
+
+// Mobile nav toggle
+.nav-trigger {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .site-header .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+// Main content
+.page-content {
+  padding: $spacing-unit * 2 0;
+  min-height: calc(100vh - 200px);
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  color: $text-color;
+  margin-top: $spacing-unit * 1.5;
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin-bottom: $spacing-unit;
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+blockquote {
+  margin: $spacing-unit 0;
+  padding-left: $spacing-unit;
+  border-left: 3px solid $border-color;
+  color: $text-muted;
+  font-style: italic;
+}
+
+code {
+  font-family: $font-mono;
+  font-size: 0.85em;
+  background: $bg-darker;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: $spacing-unit;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: $spacing-unit 0;
+
+  code {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+}
+
+ul, ol {
+  margin-bottom: $spacing-unit;
+  padding-left: $spacing-unit * 1.2;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $border-color;
+  margin: $spacing-unit * 2 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Homepage styles
+.home-hero {
+  text-align: center;
+  padding: $spacing-unit * 2 0;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: $spacing-unit;
+  border: 4px solid $bg-darker;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.home-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0;
+}
+
+.home-subtitle {
+  font-size: 1.3rem;
+  color: $text-muted;
+  font-weight: 400;
+  margin-bottom: $spacing-unit;
+}
+
+.home-intro {
+  font-size: 1.1rem;
+  color: $text-muted;
+  max-width: 540px;
+  margin: 0 auto $spacing-unit * 0.75;
+}
+
+.company-feature {
+  background: $bg-darker;
+  border-radius: 12px;
+  padding: $spacing-unit * 1.5;
+  margin: $spacing-unit 0;
+  text-align: left;
+
+  h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+
+  p {
+    margin-bottom: 0.75rem;
+    color: $text-muted;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a.company-link {
+    display: inline-block;
+    font-family: $font-sans;
+    font-size: 0.9rem;
+    color: $accent-color;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Navigation cards on homepage
+.nav-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: $spacing-unit;
+  margin-top: $spacing-unit * 2;
+}
+
+.nav-card {
+  background: white;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: $spacing-unit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: $accent-color;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+  }
+
+  h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: $text-color;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: $text-muted;
+  }
+}
+
+// Post list
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-item {
+  margin-bottom: $spacing-unit * 1.5;
+  padding-bottom: $spacing-unit * 1.5;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.post-meta {
+  font-family: $font-sans;
+  font-size: 0.85rem;
+  color: $text-light;
+  margin-bottom: 0.25rem;
+}
+
+.post-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.post-excerpt {
+  color: $text-muted;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+// Category/tag badges
+.category-badge {
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $text-light;
+  background: $bg-darker;
+  padding: 0.2em 0.6em;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
+
+// Retrospective notes for old posts
+.retrospective-note {
+  background: #fff9e6;
+  border-left: 4px solid #d4a900;
+  padding: $spacing-unit;
+  margin: $spacing-unit 0;
+  border-radius: 0 6px 6px 0;
+
+  .note-header {
+    font-family: $font-sans;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #8a6d00;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: $text-muted;
+  }
+}
+
+// Footer
+.site-footer {
+  border-top: 1px solid $border-color;
+  padding: $spacing-unit * 1.5 0;
+  margin-top: $spacing-unit * 2;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+.footer-text {
+  font-family: $font-sans;
+  font-size: 0.85rem;
+  color: $text-light;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+
+  a {
+    color: $text-muted;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+// Background/Timeline page
 .timeline {
-    margin: 70px 20px;
-    overflow:auto;
-    height: 100%;
-    position: relative;
+  margin: $spacing-unit * 2 0;
+  position: relative;
+  padding-left: 48px;
 }
 
-#timeline_line {
-    position: absolute;
-    left: 60px;
-    width: 4px;
-    background: #d7e4ed;
-    height: 100%;
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 9px;  // Positions center of 2px line at 10px
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: $border-color;
 }
 
-.timeline_dot {
-    position: relative;
-    left: 55px;
-    bottom: -45px;
-    width: 14px;
-	height: 14px;
-	background: #619AC2;
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px;
-}
+.timeline-item {
+  position: relative;
+  margin-bottom: $spacing-unit * 2;
 
-.year_tag {
-    color: #9DB1BF;
-    margin-bottom: 0px;
-    margin-top: 60px;
-    margin-left: 75px;
-}
-
-.entry_title {
-    margin-top: 0px;
-}
-
-.timeline_content_wrapper {
-    overflow: visible;
-    padding: 0 10px 10px 10px;
-    margin: 0 50px 0 80px;
-    border: #d7e4ed solid 1px;
-    border-radius: 3px;
-    position: relative;
-    display: block;
-    overflow: visible;
-    background-color: white;
-}
-
-.timeline_content_wrapper:after,
-.timeline_content_wrapper:before{
+  &::before {
     content: '';
-    display: block;
     position: absolute;
-    right: 100%;
-    width: 0;
-    height: 0;
-    border-style: solid;
+    left: -48px;  // Aligns left edge of circle at timeline's left edge
+    top: 0.25rem;
+    width: 20px;
+    height: 20px;
+    background: $bg-color;
+    border: 3px solid $accent-color;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 3px $bg-color, inset 0 0 0 6px $accent-color;
+  }
 }
 
-/* this border color controlls the color of the triangle (what looks like the fill of the triangle) */
-.timeline_content_wrapper:after {
-    top: 27px;
-    border-color: transparent white transparent transparent;
-    border-width: 10px;
+.timeline-move {
+  position: relative;
+  margin-bottom: $spacing-unit * 1.5;
+  padding: 0.5rem 0;
+  color: $text-light;
+  font-family: $font-sans;
+  font-size: 0.9rem;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: -44px;  // Centered: -48px + (20px - 12px)/2 = -44px
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    background: $bg-color;
+    border: 2px solid $text-light;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    color: $text-light;
+  }
 }
 
-.timeline_content_wrapper:before {
-    top: 26px;
-    border-color: transparent #d7e4ed transparent transparent;
-    border-width: 11px;
+.timeline-date {
+  font-family: $font-sans;
+  font-size: 0.85rem;
+  color: $text-light;
+  margin-bottom: 0.25rem;
 }
 
-.timeline_content > h2:hover {
-    color: slategray;
-    cursor: pointer;
+.timeline-title {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
 }
 
-.timeline_entry_description{
-    display: none;
-    overflow:hidden
+.timeline-place {
+  font-family: $font-sans;
+  font-size: 0.9rem;
+  color: $text-muted;
+  margin-bottom: 0.5rem;
 }
 
-.link_box {
-    margin: 20px 0 10px 0;
+.timeline-content {
+  color: $text-muted;
 
-    ul {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
+  p {
+    margin-bottom: 0.75rem;
+  }
+}
 
-        li {
-            margin: 0 10px;
-            padding: 6px 14px;
-            display: block;
-            border-radius: 3px;
-            background-color: #7f8c97;
-            color: white;
-            font-size: 12pt;
-            
-            a {
-                text-decoration: none;
-                color: white;
-                font-weight: 300;
-            }
-        }
+.timeline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
 
-        li:hover {
-            cursor: pointer;
-            background-color: #A4B1BD;
-        }
+  a {
+    font-family: $font-sans;
+    font-size: 0.8rem;
+    color: $accent-color;
+    text-decoration: none;
+    padding: 0.3em 0.8em;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $bg-darker;
+      border-color: $accent-color;
     }
+  }
 }
 
+// Poetry layout
+.poetry-content {
+  font-style: italic;
+  white-space: pre-line;
+  line-height: 1.9;
+}
+
+.poem-meta {
+  font-family: $font-sans;
+  font-size: 0.9rem;
+  color: $text-light;
+  margin-bottom: $spacing-unit;
+}
+
+// Blog navigation
 .blog-nav {
-    .previous {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $spacing-unit * 2;
+  padding-top: $spacing-unit;
+  border-top: 1px solid $border-color;
+  font-family: $font-sans;
+  font-size: 0.9rem;
+
+  a {
+    color: $text-muted;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  .next {
+    margin-left: auto;
+  }
+}
+
+// Responsive images in posts
+.post-content img {
+  display: block;
+  margin: $spacing-unit auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+// Section headers
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: $spacing-unit;
+
+  h2 {
+    margin: 0;
+  }
+
+  a {
+    font-family: $font-sans;
+    font-size: 0.9rem;
+  }
+}
+
+// Writings/Stories list
+.story-item {
+  margin-bottom: $spacing-unit * 1.5;
+
+  h3 {
+    margin: 0 0 0.25rem 0;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .story-meta {
+    font-family: $font-sans;
+    font-size: 0.85rem;
+    color: $text-light;
+    margin-bottom: 0.5rem;
+  }
+
+  .story-description {
+    color: $text-muted;
+    margin: 0;
+  }
+}
+
+// Book grid for reading lists
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin: $spacing-unit 0;
+}
+
+.book-item {
+  text-align: center;
+
+  .book-cover {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    margin-bottom: 0.5rem;
+    background: $bg-darker;
+  }
+
+  .book-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+  }
+
+  .book-author {
+    font-family: $font-sans;
+    font-size: 0.75rem;
+    color: $text-light;
+  }
+}
+
+// Book entry with cover (inline in reading list)
+.book-entry {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: $spacing-unit * 1.5;
+  padding-bottom: $spacing-unit;
+  border-bottom: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .book-cover-small {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    flex-shrink: 0;
+    background: $bg-darker;
+  }
+
+  .book-info {
+    flex: 1;
+
+    h3 {
+      margin: 0 0 0.25rem 0;
+      font-size: 1.1rem;
     }
 
-    .next {
-        display: inline-block;
-        float: right;
+    .book-author {
+      font-family: $font-sans;
+      font-size: 0.85rem;
+      color: $text-light;
+      margin-bottom: 0.5rem;
     }
+
+    .book-notes {
+      font-size: 0.95rem;
+      color: $text-muted;
+      margin: 0;
+    }
+  }
+}
+
+// Ranked list with numbers
+.ranked-list {
+  counter-reset: book-counter;
+  list-style: none;
+  padding: 0;
+
+  .book-entry {
+    counter-increment: book-counter;
+    position: relative;
+    padding-left: 2.5rem;
+
+    &::before {
+      content: counter(book-counter);
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-family: $font-sans;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $border-color;
+    }
+  }
+}
+
+// Page title styling
+.page-title {
+  margin-top: 0;
+  margin-bottom: $spacing-unit;
+}
+
+// About page
+.about-header {
+  display: flex;
+  gap: $spacing-unit * 1.5;
+  align-items: flex-start;
+  margin-bottom: $spacing-unit * 2;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.about-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.about-intro {
+  h1 {
+    margin-top: 0;
+  }
+}
+
+// Easter egg for ultra-wide monitors
+.big-monitor-message {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: $font-sans;
+  font-size: 0.85rem;
+  color: #ccc;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+
+  &.left {
+    left: 2rem;
+  }
+
+  &.right {
+    right: 2rem;
+  }
+}
+
+// Level 1: 2200px+ - "you need this much padding?"
+@media (min-width: 2200px) {
+  .big-monitor-message.msg-1 {
+    opacity: 1;
+  }
+}
+
+// Level 2: 2600px+ - "wow, rich man with the big monitor"
+@media (min-width: 2600px) {
+  .big-monitor-message.msg-1 {
+    opacity: 0;
+  }
+  .big-monitor-message.msg-2 {
+    opacity: 1;
+  }
+}
+
+// Level 3: 3200px+ - "WOW you have a HUGE monitor"
+@media (min-width: 3200px) {
+  .big-monitor-message.msg-2 {
+    opacity: 0;
+  }
+  .big-monitor-message.msg-3 {
+    opacity: 1;
+    font-size: 1rem;
+  }
+}
+
+// Level 4: 4000px+ - full unhinged
+@media (min-width: 4000px) {
+  .big-monitor-message.msg-3 {
+    opacity: 0;
+  }
+  .big-monitor-message.msg-4 {
+    opacity: 1;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
 }

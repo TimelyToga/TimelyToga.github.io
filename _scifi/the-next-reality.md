@@ -5,8 +5,6 @@ date: 2021-02-14 11:56 -0800
 description: This is a story that tries to imagine what a civilization would do if they 'finished' science. What else could they spend their time doing? What if they felt that our reality failed to be as interesting as it could have been?
 ---
 
-“
-
 Our childish dreams of fast interstellar travel never materialized. We sent ark ships of course. Self-sufficient goliaths that slithered out into the void. The expansion wasn’t what we hoped. The colonies lag painfully behind our scientific advances and their industrial capacity is dangerously low. They have never progressed beyond meagerly meeting the demands minimal for maintaining the lives of the colonists. 
 
 In our home system, our society had reached an effective terminus of forward progress. Our social structure was permissive and a short jaunt from post-scarcity. We achieved stability and prosperity for any that wished for it.
