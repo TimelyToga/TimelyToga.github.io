@@ -1,3 +1,19 @@
+# Jekyll build output
 _site/
 .sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundle dependencies
+vendor/
+Gemfile.lock
+
+# OS files
 .DS_Store
+*.swp
+*~
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*

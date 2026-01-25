@@ -1,0 +1,16 @@
+---
+layout: page
+title: Reading
+permalink: /reading/
+---
+
+<p>Yearly reading lists with notes on the books that stood out.</p>
+
+{% assign sorted_reading = site.reading | sort: 'date' | reverse %}
+{% for post in sorted_reading %}
+<div class="story-item">
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <div class="story-meta">{{ post.date | date: "%Y" }} &middot; {{ post.book_count }} books</div>
+    <p class="story-description">{{ post.description }}</p>
+</div>
+{% endfor %}

@@ -2,12 +2,11 @@
 layout: post
 title: Dvorak for Developers
 date: 2017-02-19 17:34 -0800
+description: My experience switching to Dvorak and why I think it's worth it for programmers.
+retrospective: Eight years later and I'm still using Dvorak. The speed gains have held up, and I've never regretted the switch. The Vim remapping approach I describe here is still what I use.
+retrospective_date: "2025"
 ---
 
-
-*I am in the process of moving all my blog posts from Medium to my personal site because Medium is turning into a very different platform than the one that I originally started blogging on back in 2014. Medium is now trying to empower creators to get paid for the content they create, which I endorse, but makes it annoying when you are just browsing content not made with this in mind. I blog because I like the process, so I'm moving it all here.*
-
-<br/>
 
 ![Dvorak Keyboard Layout](/assets/img/dvorak/KB_United_States_Dvorak.svg)
 [Dvorak Keyboard layout (Source: Wikipedia)](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/KB_United_States_Dvorak.svg/1280px-KB_United_States_Dvorak.svg.png)

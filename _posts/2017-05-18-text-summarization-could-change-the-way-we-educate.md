@@ -2,9 +2,12 @@
 layout: post
 title: Text Summarization Could Change the Way we Educate
 date: 2017-05-18 10:13 -0800
+description: Speculation on how AI-powered summarization could transform education.
+retrospective: This was written before the LLM revolution. Many of the things I speculated about—AI summarization, personalized learning, extracting key facts from text—are now real capabilities. The core thesis holds up, though the timeline was faster than I expected.
+retrospective_date: "2025"
 ---
 
-*This article presents no new research or novel innovations, but rather paints a picture of what we could achieve with the proper technology.*
+*This article presents no new research, but rather paints a picture of what we could achieve with the proper technology.*
 
 Historically, humans have found computers useful because they have offloaded the more tedious aspects of problem solving onto these machines. Humans have then been able to redistribute their efforts to where they are truly needed; to where they can make an impact. White collar labor has been reduced to thee set of tasks that are not easy for machines to do automatically (yet).
 

@@ -2,15 +2,16 @@
 layout: post
 title: Cloning Hacker Typer
 date: 2015-10-06 11:01 -0800
+description: A deep dive into how HackerTyper works and my procedurally-generated alternative.
+retrospective: This was a fun weekend project. The procedural generation approach still holds up, and the app still works on this site. Sometimes the best projects are the silly ones.
+retrospective_date: "2025"
 ---
 
-I created a clone of the [HackerTyper](http://hackertyper.com/) project in 2015 and wrote a little blog post about it that I have moved here from Medium.
+I created a clone of the [HackerTyper](http://hackertyper.com/) project and wrote a little blog post about it. It's a fun little website where you can type like crazy and it shows a bunch of text like you are hacking into the mainframe. I upgraded the original by generating random code instead of just printing and reprinting the same thing every time.
 
-It's a fun little website where you can just type like crazy and it shows a bunch of crazy text like you are hacking into the mainframe. I upgraded the original by generating random code instead of just printing and reprinting the same thing everytime.
+You can [try it out here](/hacker_typer).
 
-I just ported it over to my website so you can [find the app here](/hacker_typer).
-
-## Original Blogpost
+## How It Works
 If you have never stumbled upon the delightfully hilarious site, [HackerTyper](http://hackertyper.com/), I wonder indeed if you are a user of the internet. It is simple enough. You type anything at all, and a very complicated tangle of C code streams onto the screen at a blistering pace. A very accurate parody of what most of the world seems to think of what [hackers](https://imgur.com/f7rJAZ7) look like.
 
 ## HackerTyper Overview
