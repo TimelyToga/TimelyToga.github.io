@@ -253,7 +253,7 @@ _Coming soon - add your favorites here!_
   <div class="book-info">
     <h3>China's World View</h3>
     <div class="book-author">David Daokui Li</div>
-    <p class="book-notes"></p>
+    <p class="book-notes">I wanted to follow up my reading of Apple in China and The New Map with a book written about China, but with a pro-China voice. It's honestly quite interesting </p>
   </div>
 </div>
 
