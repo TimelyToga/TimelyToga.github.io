@@ -43,7 +43,7 @@ A timeline of places I've worked and things I've built over the years.
 
     <div class="timeline-move">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Moved to Austin, TX
+        Moved back to Austin, TX (Mar 2023)
     </div>
 
     <div class="timeline-item">
@@ -58,9 +58,26 @@ A timeline of places I've worked and things I've built over the years.
         </div>
     </div>
 
+    <div class="timeline-item">
+        <div class="timeline-date">Sep 2021 - Nov 2022</div>
+        <h3 class="timeline-title">royal.io</h3>
+        <div class="timeline-place">Austin, TX (later Jupiter, FL)</div>
+        <div class="timeline-content">
+            <p><strong>Smart Contract Engineer.</strong> Smart contracts != smartly written contracts. Wrote chain-facing services, smart contracts, and web services at a crypto music royalties company.</p>
+        </div>
+        <div class="timeline-links">
+            <a href="https://royal.io/" target="_blank">royal.io</a>
+        </div>
+    </div>
+
     <div class="timeline-move">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Moved to Mountain View, CA
+        Moved to Jupiter, FL (Dec 2021)
+    </div>
+
+    <div class="timeline-move">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Moved to Mountain View, CA (2019)
     </div>
 
     <div class="timeline-item">
