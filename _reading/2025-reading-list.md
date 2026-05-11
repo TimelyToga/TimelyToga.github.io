@@ -23,15 +23,6 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9780312851729-M.jpg" alt="Manhattan Transfer" class="book-cover-small">
-  <div class="book-info">
-    <h3>Manhattan Transfer</h3>
-    <div class="book-author">John E. Stith</div>
-    <p class="book-notes"></p>
-  </div>
-</div>
-
-<div class="book-entry">
   <img src="https://covers.openlibrary.org/b/isbn/9781476733951-M.jpg" alt="Wool" class="book-cover-small">
   <div class="book-info">
     <h3>Wool</h3>
@@ -108,7 +99,7 @@ _Coming soon - add your favorites here!_
   <div class="book-info">
     <h3>The Thinking Machine</h3>
     <div class="book-author">Stephen Witt</div>
-    <p class="book-notes">Fantastic account of history of Nvidia. Although, this is not the best book on Nvidia that I read in 2025.</p>
+    <p class="book-notes">Fantastic account of history of Nvidia. Although, this is not the best book on Nvidia that I read in 2025. Told some wonderful stories of the early days of Nvidia.</p>
   </div>
 </div>
 
@@ -191,6 +182,7 @@ _Coming soon - add your favorites here!_
     <h3>Seeing Like a State</h3>
     <div class="book-author">James C. Scott</div>
     <p class="book-notes">This is one of the densest books I've read in quite some time. I think the author really does have something remarkable to say throughout this book. I really enjoyed how fresh and interesting the examples that Scott presents are. He does have a fundamentally pessimistic perspective, but nonetheless he did expand my mind. He provides an excellent explaination for the internal motivations of beauracracies. They must make the economic activity of their citizens legible, so that they can levvy taxes. This has forced some unfortunate dislocations of previously acceptable ways of life, but modernization is not a great evil as Scott would have you believe. Weird, but I really did like it.</p>
+    <p class="book-notes">Despite not enjoying the experience of reading the book, as time marches forward I find myself referencing and considering the point of view of the author quite a bit. So I think for that reason it's worth reading. I love the idea that there are evolutionary forces acting on societies. Shaping behavior outside of culture and intention, but rather glacial, potent innate forces guiding the progress and shape of government. I find that quite a powerful idea.</p>
   </div>
 </div>
 
@@ -217,7 +209,10 @@ _Coming soon - add your favorites here!_
   <div class="book-info">
     <h3>The Power Broker</h3>
     <div class="book-author">Robert A. Caro</div>
-    <p class="book-notes"></p>
+    <p class="book-notes">The Power Broker is a book I originally bought in 2023 and spent a lot of time on and off pushing my way through. The book is so thoroughly researched that it can feel tedious at times. And truly, I found myself skipping entire chapters wholesale after I found the premise suitably monotonous. But Caro does sketch a fascinating arc of a man's life.</p>
+    <p class="book-notes">Robert Moses started his career as a true full-throated reformer who wanted to follow the rules and elevate public service. He felt it was truly the highest calling of mankind and wanted to promote that behavior into those that were career public service. However, the rat's nest he stumbled into was enough to completely break him and force him into a darker path.</p>
+    <p class="book-notes">By the time he ended his career, he was the single most important man in New York public life. So many governors and mayors tried to ice him out over the years, but he was an unfireable man. To the point, that his most oft-used trick was to flip the script and threaten to quit any time the opposing party seemed to be confused about how critical Robert Moses was _personally_ to progress. The mayors would winge and complain, but the inevitably would give him his way because otherwise nothing would get done. Truly a fanstastic book.</p>
+    <p>
   </div>
 </div>
 
@@ -253,7 +248,7 @@ _Coming soon - add your favorites here!_
   <div class="book-info">
     <h3>China's World View</h3>
     <div class="book-author">David Daokui Li</div>
-    <p class="book-notes">I wanted to follow up my reading of Apple in China and The New Map with a book written about China, but with a pro-China voice. It's honestly quite interesting </p>
+    <p class="book-notes">I wanted to follow up my reading of Apple in China and The New Map with a book written about China, but with a pro-China voice. It's honestly quite interesting. </p>
   </div>
 </div>
 
@@ -262,7 +257,7 @@ _Coming soon - add your favorites here!_
   <div class="book-info">
     <h3>Manias, Panics, and Crashes (Seventh Edition)</h3>
     <div class="book-author">Robert Z. Aliber, Charles P. Kindleberger</div>
-    <p class="book-notes"></p>
+    <p class="book-notes">Given the incredible heat in the stock market around AI investments, I thought it would be prudent just to get a historical perspective on some of the greatest historical momentes in finance. What are the dynamics of how a mania forms? What are the systemic factors that contribute to an eventual panic and crash? I really enjoyed this book.</p>
   </div>
 </div>
 
