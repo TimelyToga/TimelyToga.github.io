@@ -266,7 +266,8 @@ _Coming soon - add your favorites here!_
   <div class="book-info">
     <h3>The Accidental Superpower</h3>
     <div class="book-author">Peter Zeihan</div>
-    <p class="book-notes"></p>
+    <p class="book-notes">Zeihan comes across as rather narrow-mindedly jingoistic in his perspective of the overwhelming superiority of the United States, but I appreciated the diversity of opinions especially when considered alongside "China's World View" that I had read a few months earlier. I in particular read a 10-year anniversary edition of the book, where he came back to review the predictions he had made in the original edition and see how they had held up. I generally found his assessments and predictions to be rather accurate.</p>
+    <p class="book-notes">Overall, I enjoyed reading the book even if I don't agree completely with Zeihan's perspective. Nonetheless, I did find myself convinced on some of his arguments, especially around the strategic importance of America's waterways and overwhelming bounty of natural resources.</p>
   </div>
 </div>
 
@@ -275,7 +276,8 @@ _Coming soon - add your favorites here!_
   <div class="book-info">
     <h3>The Coming Wave</h3>
     <div class="book-author">Mustafa Suleyman, Michael Bhaskar</div>
-    <p class="book-notes"></p>
+    <p class="book-notes">Really despicably short-sighted perversion of current events in AI. I was personally offended by the grandiose and nonsensical positions the author takes in this book. If I had a physical copy of this book I would have chucked it across the room several times in the opening chapter. I find this breed of paternalism quite disgusting. If the same principles had been applied to the internet, the past 3 decades of progress would have looked very differently. The protocol itself would have been in a walled garden.</p>
+    <p class="book-notes">The core of Suleyman's arguments seem to rotate around the belief that AI technology can usher in a new era of human progress, but only in the hands of the trusted elite. It's too dangerous for the unwashed masses to ever have access to it. I trust few things less than the wisdom of an academic in doling out access to a beautiful future. I can't think of a clearer path to a totalitarian nightmare than through the policies Suleyman advocates for in this book.</p>
   </div>
 </div>
 
@@ -284,6 +286,6 @@ _Coming soon - add your favorites here!_
   <div class="book-info">
     <h3>Livesuit</h3>
     <div class="book-author">James S.A. Corey</div>
-    <p class="book-notes"></p>
+    <p class="book-notes">Marvelous novella set in the world of The Captive's War. It also ends up being a fantastic precursor to the events of the second book in the series. I'm looking forward to reading the next book in the series.</p>
   </div>
 </div>
