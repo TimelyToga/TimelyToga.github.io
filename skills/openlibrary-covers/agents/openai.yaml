@@ -1,0 +1,4 @@
+interface:
+  display_name: "OpenLibrary Covers"
+  short_description: "Find Open Library book cover URLs"
+  default_prompt: "Use $openlibrary-covers to find the best Open Library cover URL for a book."
