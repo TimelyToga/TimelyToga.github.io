@@ -36,7 +36,7 @@ sections:
       - book_id: "seeing-like-a-state"
         title: "Seeing Like a State"
         author: "James C. Scott"
-        cover: "https://covers.openlibrary.org/b/id/12242192-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/8290759-M.jpg"
         attempt: "restart"
       - book_id: "a-hole-in-the-sky"
         title: "A Hole in the Sky"
