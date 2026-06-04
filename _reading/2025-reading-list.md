@@ -14,7 +14,7 @@ _Coming soon - add your favorites here!_
 ## Full Chronological List
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9780316289399-M.jpg" alt="Alien Clay" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/14637729-M.jpg" alt="Alien Clay" class="book-cover-small">
   <div class="book-info">
     <h3>Alien Clay</h3>
     <div class="book-author">Adrian Tchaikovsky</div>
@@ -32,7 +32,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9781524711405-M.jpg" alt="The Money Trap" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/14802826-M.jpg" alt="The Money Trap" class="book-cover-small">
   <div class="book-info">
     <h3>The Money Trap</h3>
     <div class="book-author">Alok Sama</div>
@@ -50,7 +50,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9780575083158-M.jpg" alt="Machine Vendetta" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/13564806-M.jpg" alt="Machine Vendetta" class="book-cover-small">
   <div class="book-info">
     <h3>Machine Vendetta</h3>
     <div class="book-author">Alastair Reynolds</div>
@@ -86,7 +86,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9780575083141-M.jpg" alt="Eversion" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/13213939-M.jpg" alt="Eversion" class="book-cover-small">
   <div class="book-info">
     <h3>Eversion</h3>
     <div class="book-author">Alastair Reynolds</div>
@@ -95,7 +95,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9780593593882-M.jpg" alt="The Thinking Machine" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/15131358-M.jpg" alt="The Thinking Machine" class="book-cover-small">
   <div class="book-info">
     <h3>The Thinking Machine</h3>
     <div class="book-author">Stephen Witt</div>
@@ -149,7 +149,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9780316332866-M.jpg" alt="The Mercy of Gods" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/14649358-M.jpg" alt="The Mercy of Gods" class="book-cover-small">
   <div class="book-info">
     <h3>The Mercy of Gods</h3>
     <div class="book-author">James S.A. Corey</div>
@@ -159,7 +159,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9781594201943-M.jpg" alt="More Money Than God" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/7608213-M.jpg" alt="More Money Than God" class="book-cover-small">
   <div class="book-info">
     <h3>More Money Than God</h3>
     <div class="book-author">Sebastian Mallaby</div>
@@ -187,7 +187,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9781541703391-M.jpg" alt="Apple in China" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/15151586-M.jpg" alt="Apple in China" class="book-cover-small">
   <div class="book-info">
     <h3>Apple in China</h3>
     <div class="book-author">Patrick McGee</div>
@@ -225,7 +225,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9781481447935-M.jpg" alt="The Light Brigade" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/9115235-M.jpg" alt="The Light Brigade" class="book-cover-small">
   <div class="book-info">
     <h3>The Light Brigade</h3>
     <div class="book-author">Kameron Hurley</div>
@@ -243,7 +243,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9781324030249-M.jpg" alt="China's World View" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/14589166-M.jpg" alt="China's World View" class="book-cover-small">
   <div class="book-info">
     <h3>China's World View</h3>
     <div class="book-author">David Daokui Li</div>
@@ -261,7 +261,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9780593593011-M.jpg" alt="The Accidental Superpower" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/11355214-M.jpg" alt="The Accidental Superpower" class="book-cover-small">
   <div class="book-info">
     <h3>The Accidental Superpower</h3>
     <div class="book-author">Peter Zeihan</div>
@@ -271,7 +271,7 @@ _Coming soon - add your favorites here!_
 </div>
 
 <div class="book-entry">
-  <img src="https://covers.openlibrary.org/b/isbn/9780593593806-M.jpg" alt="The Coming Wave" class="book-cover-small">
+  <img src="https://covers.openlibrary.org/b/id/15104845-M.jpg" alt="The Coming Wave" class="book-cover-small">
   <div class="book-info">
     <h3>The Coming Wave</h3>
     <div class="book-author">Mustafa Suleyman, Michael Bhaskar</div>

@@ -1,13 +1,13 @@
 ---
 name: openlibrary-covers
-description: Find, validate, and format Open Library book cover URLs. Use when Codex needs to search Open Library for a book, choose the correct edition or cover, fix wrong Open Library cover images, generate covers.openlibrary.org URLs, or update reading-list HTML/Markdown book covers.
+description: Find, validate, and format Open Library book cover URLs for reading-list pages. Use when Codex needs to fix wrong book covers, replace stale ISBN cover URLs, choose the correct Open Library edition or cover_i, generate covers.openlibrary.org URLs, or update _reading/*.md book-cover image src values.
 ---
 
 # Open Library Covers
 
 ## Overview
 
-Use Open Library search results to identify the right book and cover, then build a `covers.openlibrary.org` image URL. Prefer cover IDs from search results when available because they avoid ISBN mismatch issues across editions.
+Use Open Library search results to identify the right book and cover, then build a `covers.openlibrary.org` image URL. Prefer `cover_i` cover IDs from search results when available because ISBN cover lookups can silently point to the wrong edition or an unrelated book.
 
 Official docs:
 
@@ -16,7 +16,40 @@ Official docs:
 
 ## Workflow
 
-1. Search for the book with enough fields to evaluate identity and cover data.
+1. Search by title and author; do not trust the current ISBN in the reading-list file.
+
+```sh
+python3 skills/openlibrary-covers/scripts/find_cover.py \
+  --title "The Power Broker" \
+  --author "Robert A. Caro"
+```
+
+2. Choose the first validated candidate that matches the local book title and author. Prefer identifiers in this order:
+
+- `cover_i` / `editions.cover_i` -> `https://covers.openlibrary.org/b/id/<cover_id>-M.jpg`
+- exact edition ISBN only when no matching `cover_i` exists -> `https://covers.openlibrary.org/b/isbn/<isbn>-M.jpg`
+- edition OLID only when both of the above fail -> `https://covers.openlibrary.org/b/olid/OL...M-M.jpg`
+
+3. Verify the chosen URL exists by appending `?default=false`. A final HTTP 200 image response means Open Library has an actual cover. A 404 means the normal URL would return a blank placeholder.
+
+```sh
+curl -L -s -o /dev/null -w '%{http_code} %{content_type}\n' \
+  'https://covers.openlibrary.org/b/id/240727-M.jpg?default=false'
+```
+
+4. Update only the `<img src="...">` unless the local title/author is also wrong. Preserve the existing `alt` text and `class="book-cover-small"` style.
+
+```html
+<img src="https://covers.openlibrary.org/b/id/240727-M.jpg" alt="Book Title" class="book-cover-small">
+```
+
+5. Rebuild the site after edits:
+
+```sh
+bundle exec jekyll build
+```
+
+## Manual Search
 
 ```sh
 curl -sG 'https://openlibrary.org/search.json' \
@@ -24,26 +57,6 @@ curl -sG 'https://openlibrary.org/search.json' \
   --data-urlencode 'author=Robert A. Caro' \
   --data-urlencode 'fields=key,title,author_name,first_publish_year,cover_i,isbn,editions,editions.key,editions.title,editions.isbn,editions.cover_i' \
   --data-urlencode 'limit=5'
-```
-
-2. Choose the result by matching title, author, and edition context. Do not blindly trust an ISBN already in a file; stale or wrong ISBNs can point to unrelated covers.
-
-3. Prefer identifiers in this order for final cover URLs:
-
-- `cover_i` / `editions.cover_i` -> `https://covers.openlibrary.org/b/id/<cover_id>-M.jpg`
-- exact ISBN for the edition -> `https://covers.openlibrary.org/b/isbn/<isbn>-M.jpg`
-- edition OLID from `/books/OL...M` -> `https://covers.openlibrary.org/b/olid/OL...M-M.jpg`
-
-4. Verify the chosen URL exists by appending `?default=false`. A 200 means Open Library has an actual cover. A 404 means the normal URL would return a blank placeholder.
-
-```sh
-curl -I 'https://covers.openlibrary.org/b/id/240727-M.jpg?default=false'
-```
-
-5. For site pages, use the display-size URL directly in the image source:
-
-```html
-<img src="https://covers.openlibrary.org/b/id/240727-M.jpg" alt="Book Title" class="book-cover-small">
 ```
 
 ## Cover URL Reference
@@ -72,7 +85,7 @@ Use `M` for reading-list covers unless the local page design requires a differen
 
 ## Practical Search Commands
 
-Search by title and author, returning compact rows:
+Search by title and author, returning compact rows when the helper script is not enough:
 
 ```sh
 curl -sG 'https://openlibrary.org/search.json' \
@@ -109,5 +122,6 @@ done
 - Prefer a `cover_i` from the matching work or edition when the current ISBN returns the wrong cover.
 - If search returns multiple plausible works, verify using the Open Library work page (`https://openlibrary.org/works/OL...W`) or edition page (`https://openlibrary.org/books/OL...M`) before editing files.
 - Keep `alt` text as the local book title, not the Open Library result title, if the local title is intentionally styled or expanded.
+- If no Open Library candidate can be validated with `?default=false`, do not switch to a random external cover without explicit user approval.
 - Do not crawl or bulk-download covers. The Covers API is rate-limited for non-cover-ID lookups and intended for public page display.
 - Include a courtesy link to Open Library when adding broader attribution surfaces; for simple existing reading-list image fixes, keep the established site style unless asked to redesign attribution.
