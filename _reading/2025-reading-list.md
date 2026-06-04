@@ -212,7 +212,6 @@ _Coming soon - add your favorites here!_
     <p class="book-notes">The Power Broker is a book I originally bought in 2023 and spent a lot of time on and off pushing my way through. The book is so thoroughly researched that it can feel tedious at times. And truly, I found myself skipping entire chapters wholesale after I found the premise suitably monotonous. But Caro does sketch a fascinating arc of a man's life.</p>
     <p class="book-notes">Robert Moses started his career as a true full-throated reformer who wanted to follow the rules and elevate public service. He felt it was truly the highest calling of mankind and wanted to promote that behavior into those that were career public service. However, the rat's nest he stumbled into was enough to completely break him and force him into a darker path.</p>
     <p class="book-notes">By the time he ended his career, he was the single most important man in New York public life. So many governors and mayors tried to ice him out over the years, but he was an unfireable man. To the point, that his most oft-used trick was to flip the script and threaten to quit any time the opposing party seemed to be confused about how critical Robert Moses was _personally_ to progress. The mayors would winge and complain, but the inevitably would give him his way because otherwise nothing would get done. Truly a fanstastic book.</p>
-    <p>
   </div>
 </div>
 
