@@ -718,6 +718,7 @@ img {
   margin-bottom: $spacing-unit * 1.5;
   padding-bottom: $spacing-unit;
   border-bottom: 1px solid $border-color;
+  scroll-margin-top: $spacing-unit;
 
   &:last-child {
     border-bottom: none;
@@ -736,9 +737,44 @@ img {
   .book-info {
     flex: 1;
 
+    .book-title-row {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.6rem;
+      margin-bottom: 0.25rem;
+    }
+
     h3 {
-      margin: 0 0 0.25rem 0;
+      margin: 0;
       font-size: 1.1rem;
+    }
+
+    .book-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    .book-badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.2rem;
+      padding: 0.08rem 0.38rem;
+      border: 1px solid $border-color;
+      border-radius: 3px;
+      font-family: $font-sans;
+      font-size: 0.68rem;
+      font-weight: 700;
+      line-height: 1;
+      color: $text-light;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .book-badge-dnf {
+      color: $text-color;
+      border-color: $text-light;
     }
 
     .book-author {
@@ -752,6 +788,22 @@ img {
       font-size: 0.95rem;
       color: $text-muted;
       margin: 0;
+    }
+
+    .book-previous {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.45rem;
+      font-family: $font-sans;
+      font-size: 0.78rem;
+
+      a {
+        color: $text-light;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+      }
     }
   }
 }

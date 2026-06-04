@@ -1,0 +1,22 @@
+{% assign year_key = include.year | append: "" -%}
+{% assign reading_year = site.data.reading[year_key] -%}
+{% if reading_year -%}
+{%- for section in reading_year.sections %}
+<h2>{{ section.heading }}</h2>
+{% if section.placeholder %}
+<p><em>{{ section.placeholder }}</em></p>
+{% endif -%}
+{% if section.entries %}
+<div class="reading-section reading-section-{{ section.key }}">
+{% for entry in section.entries -%}
+{% include reading_entry.html entry=entry year=year_key section=section.key index=forloop.index0 %}
+{% endfor -%}
+</div>
+{% endif -%}
+{% unless forloop.last %}
+<hr>
+{% endunless -%}
+{% endfor -%}
+{% else %}
+<p><em>No reading data found for {{ year_key }}.</em></p>
+{% endif %}

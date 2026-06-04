@@ -1,0 +1,231 @@
+sections:
+  - key: "favorites"
+    heading: "Ranked Favorites (Top 5)"
+    entries:
+      - book_id: "the-visual-display-of-quantitative-information"
+        title: "The Visual Display of Quantitative Information"
+        author: "Edward Tufte"
+        cover: "https://covers.openlibrary.org/b/isbn/9780961392147-M.jpg"
+        number: 1
+        notes:
+          - "Probably the best book I read all year. Was really surprised by how much I enjoyed it. But I see Throne as a UI company for a proprietary dataset, so communicating information to our customers is one of the most important jobs we have."
+      - book_id: "elon-musk"
+        title: "Elon Musk"
+        author: "Walter Isaacson"
+        cover: "https://covers.openlibrary.org/b/isbn/9781982181284-M.jpg"
+        number: 2
+        notes:
+          - "Stressful look at the life of one of the most stressed people. Isaacson does a great job of bringing you into Musk's world and does his best to draw a link between the events and situations that shaped him and his evolving approaches to problems over time."
+      - book_id: "build"
+        title: "Build"
+        author: "Tony Fadell"
+        cover: "https://covers.openlibrary.org/b/isbn/9780063046061-M.jpg"
+        number: 3
+        notes:
+          - "One of the best books about building hardware companies I have ever read. Really enjoyed this. Would recommend to anyone building a hardware business."
+      - book_id: "godel-escher-bach"
+        title: "Gödel, Escher, Bach"
+        author: "Douglas Hofstadter"
+        cover: "https://covers.openlibrary.org/b/isbn/9780465026562-M.jpg"
+        number: 4
+        notes:
+          - "Tough to start, hard to put down. I lamented that this author refused to sell a digital version of their book, but this is less of a novel and more of an enjoyable textbook. Lots of fun math ideas explained gently. \"Strange loops\" introduce a lot of interesting problems for formal systems! When reading this book, I would ruminate on 2-3 page sections for a long while to make sure I could play the ideas out. Really fun read."
+      - book_id: "a-mind-at-play"
+        title: "A Mind at Play"
+        author: "Rob Goodman"
+        cover: "https://covers.openlibrary.org/b/isbn/9781476766683-M.jpg"
+        number: 5
+        notes:
+          - "Wonderful biography of Claude Shannon, the \"Father of the Information Age\". Wanders in the middle a bit, but does a great job pulling the threads together around why Information Theory is non-obvious and an extremely useful underpinning of computer science."
+  - key: "books"
+    heading: "Full Chronological List"
+    entries:
+      - book_id: "billion-dollar-whale"
+        title: "Billion Dollar Whale"
+        author: "Bradley Hope"
+        cover: "https://covers.openlibrary.org/b/isbn/9780316436472-M.jpg"
+        notes:
+          - "Extremely sad train wreck in slow motion; stopped halfway because it made me sad."
+        outcome: "dnf"
+        stopped_at:
+          kind: "percent"
+          value: 50
+          estimated: true
+      - book_id: "gateway"
+        title: "Gateway"
+        author: "Frederik Pohl"
+        cover: "https://covers.openlibrary.org/b/isbn/9780345475831-M.jpg"
+        notes:
+          - "Scifi, enjoyable."
+      - book_id: "diaspora"
+        title: "Diaspora"
+        author: "Greg Egan"
+        cover: "https://covers.openlibrary.org/b/isbn/9780061052811-M.jpg"
+        notes:
+          - "Scifi re-read—one of my favorites."
+        attempt: "reread"
+      - book_id: "beyond-the-blue-event-horizon"
+        title: "Beyond the Blue Event Horizon"
+        author: "Frederick Pohl"
+        cover: "https://covers.openlibrary.org/b/isbn/9780345296122-M.jpg"
+        notes:
+          - "Choppy start, didn't finish."
+        outcome: "dnf"
+      - book_id: "the-man-who-solved-the-market"
+        title: "The Man Who Solved the Market"
+        author: "Gregory Zuckerman"
+        cover: "https://covers.openlibrary.org/b/isbn/9780735217980-M.jpg"
+        notes:
+          - "Really enjoyed this book about Renaissance Technologies."
+      - book_id: "the-hydrogen-sonata"
+        title: "The Hydrogen Sonata"
+        author: "Iain M. Banks"
+        cover: "https://covers.openlibrary.org/b/isbn/9780316212373-M.jpg"
+        notes:
+          - "Second attempt at reading this and it really sunk its hooks in. Kickstarted a re-read of my favorite Culture Series books."
+        attempt: "restart"
+      - book_id: "the-first-tycoon"
+        title: "The First Tycoon"
+        author: "TJ Stiles"
+        cover: "https://covers.openlibrary.org/b/isbn/9781400031740-M.jpg"
+        notes:
+          - "Super long and fascinating look at the life of Cornelius Vanderbilt."
+      - book_id: "the-collapsing-empire"
+        title: "The Collapsing Empire"
+        author: "John Scalzi"
+        cover: "https://covers.openlibrary.org/b/isbn/9780765388889-M.jpg"
+        notes:
+          - "Reasonable attempt at space opera, decline of the Roman Empire but in space."
+      - book_id: "sam-walton-made-in-america"
+        title: "Sam Walton: Made in America"
+        author: "Sam Walton, John Huey"
+        cover: "https://covers.openlibrary.org/b/isbn/9780553562835-M.jpg"
+      - book_id: "distress"
+        title: "Distress"
+        author: "Greg Egan"
+        cover: "https://covers.openlibrary.org/b/isbn/9780061053443-M.jpg"
+        notes:
+          - "Interesting concept that discovering a comprehensive theory of everything will cause the universe to unravel."
+      - book_id: "the-last-emperox"
+        title: "The Last Emperox"
+        author: "John Scalzi"
+        cover: "https://covers.openlibrary.org/b/isbn/9780765389152-M.jpg"
+        notes:
+          - "Fumbled the concept from The Collapsing Empire and quit halfway through."
+        outcome: "dnf"
+        stopped_at:
+          kind: "percent"
+          value: 50
+          estimated: true
+      - book_id: "starfish"
+        title: "Starfish"
+        author: "Peter Watts"
+        cover: "https://covers.openlibrary.org/b/isbn/9780765315960-M.jpg"
+        notes:
+          - "Surprisingly dark novel about criminals who serve their sentence by serving at geothermal farming stations on the bottom of the ocean floor. Really moody and fantastic."
+      - book_id: "the-player-of-games"
+        title: "The Player of Games"
+        author: "Iain M. Banks"
+        cover: "https://covers.openlibrary.org/b/isbn/9780316005401-M.jpg"
+        notes:
+          - "Reread of one of my favorite Culture novels. Entrapment of a games player to motivate him to take part in bringing a new civilization into The Culture."
+        attempt: "reread"
+      - book_id: "excession"
+        title: "Excession"
+        author: "Iain M. Banks"
+        cover: "https://covers.openlibrary.org/b/isbn/9780553575378-M.jpg"
+        notes:
+          - "Reread of my favorite Culture novel. This is the best picture of what a post-scarcity society run by superintelligences actually would look like. In this novel, The Culture encounter superior technology and they worry this could be the end of their galactic rise."
+        attempt: "reread"
+      - book_id: "multipliers"
+        title: "Multipliers"
+        author: "Liz Wiseman"
+        cover: "https://covers.openlibrary.org/b/isbn/9780062663078-M.jpg"
+        notes:
+          - "Interesting concept around how to be a better manager. Would have enjoyed more if it was a 6k word blogpost instead of a book."
+      - book_id: "the-algebraist"
+        title: "The Algebraist"
+        author: "Iain M. Banks"
+        cover: "https://covers.openlibrary.org/b/isbn/9781597800440-M.jpg"
+        notes:
+          - "I had read this one before, but I forgot massive sections of this story. Wonderful story of interacting with a society that is billions of years old and has incredibly advanced super-weapons lurking beneath the clouds of their gas giant homes."
+        attempt: "reread"
+      - book_id: "build"
+        title: "Build"
+        author: "Tony Fadell"
+        cover: "https://covers.openlibrary.org/b/isbn/9780063046061-M.jpg"
+        notes:
+          - "One of the best books about building hardware companies I have ever read. Really enjoyed this. Would recommend to anyone building a hardware business."
+      - book_id: "elon-musk"
+        title: "Elon Musk"
+        author: "Walter Isaacson"
+        cover: "https://covers.openlibrary.org/b/isbn/9781982181284-M.jpg"
+        notes:
+          - "Stressful look at the life of one of the most stressed people. Isaacson does a great job of bringing you into Musk's world and does his best to draw a link between the events and situations that shaped him and his evolving approaches to problems over time."
+      - book_id: "going-infinite"
+        title: "Going Infinite"
+        author: "Michael Lewis"
+        cover: "https://covers.openlibrary.org/b/isbn/9781324074335-M.jpg"
+        notes:
+          - "Bizarre story of justified lies that eventually come crashing down on SBF. Seems like this book had a really stunning lack of content, given that everything melted down shortly after Lewis signed on to write the book."
+      - book_id: "play-nice-but-win"
+        title: "Play Nice but Win"
+        author: "Michael Dell"
+        cover: "https://covers.openlibrary.org/b/isbn/9780593087749-M.jpg"
+        notes:
+          - "Fun enough anecdotes, but definitely feels like a billionaire justifying his actions with the help of more than a couple lawyer proof-readers. Most of the language is far too stilted for him to be an approachable character. Fun to hear the genesis of Dell from a college dorm room."
+      - book_id: "look-to-windward"
+        title: "Look to Windward"
+        author: "Iain M. Banks"
+        cover: "https://covers.openlibrary.org/b/isbn/9781857239980-M.jpg"
+        notes:
+          - "A severely underrated Culture novel that I hadn't read before. Protagonist is an assassin whose memories of the mission are slowly fading in to prevent detection by the superintelligent mind that runs a huge superstructure orbital."
+      - book_id: "transformer"
+        title: "Transformer"
+        author: "Nick Lane"
+        cover: "https://covers.openlibrary.org/b/isbn/9781324006480-M.jpg"
+        notes:
+          - "The Krebs Cycle has never been more interesting! A great history of science book leading you through the discoveries that guided our understanding of the Krebs Cycle. Hard to tell if the author is promulgating their own pet theory or if this is the new accepted conception of how critical the Krebs Cycle is to evolution."
+      - book_id: "red-rising"
+        title: "Red Rising"
+        author: "Pierce Brown"
+        cover: "https://covers.openlibrary.org/b/isbn/9780345539786-M.jpg"
+        notes:
+          - "Interesting setting, really clumsy world-building. I would have really enjoyed this book at 14, but I see it as too played out to even finish."
+        outcome: "dnf"
+      - book_id: "a-mind-at-play"
+        title: "A Mind at Play"
+        author: "Rob Goodman"
+        cover: "https://covers.openlibrary.org/b/isbn/9781476766683-M.jpg"
+        notes:
+          - "Wonderful biography of Claude Shannon, the \"Father of the Information Age\". Wanders in the middle a bit, but does a great job pulling the threads together around why Information Theory is non-obvious and an extremely useful underpinning of computer science."
+      - book_id: "the-hardware-startup"
+        title: "The Hardware Startup"
+        author: "Renee DiResta"
+        cover: "https://covers.openlibrary.org/b/isbn/9781449371036-M.jpg"
+        notes:
+          - "Pretty low-level (HS or college) introduction to what it takes to start a hardware company. Most of the hard things are skipped over."
+      - book_id: "the-visual-display-of-quantitative-information"
+        title: "The Visual Display of Quantitative Information"
+        author: "Edward Tufte"
+        cover: "https://covers.openlibrary.org/b/isbn/9780961392147-M.jpg"
+        notes:
+          - "Probably the best book I read all year. Was really surprised by how much I enjoyed it. But I see Throne as a UI company for a proprietary dataset, so communicating information to our customers is one of the most important jobs we have."
+      - book_id: "fundamentals-of-urine-and-body-fluid-analysis"
+        title: "Fundamentals of Urine and Body Fluid Analysis"
+        author: "Nancy Brunzel"
+        cover: "https://covers.openlibrary.org/b/isbn/9780323374798-M.jpg"
+        notes:
+          - "Really cool introduction to the kinds of information that can be gleaned from the careful analysis of urine."
+      - book_id: "eat-their-lunch"
+        title: "Eat Their Lunch"
+        author: "Anthony Iannarino"
+        cover: "https://covers.openlibrary.org/b/isbn/9780525537625-M.jpg"
+        notes:
+          - "High-testosterone sales hype book about the methods and tactics for stealing customers from your competitors."
+      - book_id: "godel-escher-bach"
+        title: "Gödel, Escher, Bach"
+        author: "Douglas Hofstadter"
+        cover: "https://covers.openlibrary.org/b/isbn/9780465026562-M.jpg"
+        notes:
+          - "Tough to start, hard to put down. I lamented that this author refused to sell a digital version of their book, but this is less of a novel and more of an enjoyable textbook. Lots of fun math ideas explained gently. \"Strange loops\" introduce a lot of interesting problems for formal systems! When reading this book, I would ruminate on 2-3 page sections for a long while to make sure I could play the ideas out. Really fun read."
