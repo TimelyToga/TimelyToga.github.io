@@ -1,0 +1,93 @@
+{% assign entry = include.entry -%}
+{% assign attempt = entry.attempt | default: "first_read" -%}
+{% assign outcome = entry.outcome | default: "finished" -%}
+{% assign entry_id = include.year | append: "-" | append: include.section | append: "-" | append: include.index | append: "-" | append: entry.book_id -%}
+<div class="book-entry" id="{{ entry_id }}">
+  <img src="{{ entry.cover }}" alt="{{ entry.alt | default: entry.title }}" class="book-cover-small">
+  <div class="book-info">
+    <div class="book-title-row">
+      <h3>{% if entry.number %}{{ entry.number }}. {% endif %}{{ entry.title }}</h3>
+
+      {% if attempt != "first_read" or outcome != "finished" %}
+      <div class="book-badges">
+        {% if attempt == "reread" %}
+        <span class="book-badge">Reread</span>
+        {% elsif attempt == "restart" %}
+        <span class="book-badge">Restarted DNF</span>
+        {% endif %}
+
+        {% if outcome == "dnf" %}
+        {% assign stopped = entry.stopped_at -%}
+        {% capture stopped_label -%}
+          {%- if stopped -%}
+            {%- if stopped.estimated and stopped.kind != "note" -%}~{%- endif -%}
+            {%- case stopped.kind -%}
+              {%- when "percent" -%}{{ stopped.value }}%
+              {%- when "page" -%}page {{ stopped.value }}
+              {%- when "chapter" -%}chapter {{ stopped.value }}
+              {%- when "note" -%}{{ stopped.value }}
+              {%- else -%}{{ stopped.value }}
+            {%- endcase -%}
+          {%- endif -%}
+        {%- endcapture %}
+        <span class="book-badge book-badge-dnf">DNF{% if stopped_label != "" %} · {{ stopped_label | strip }}{% endif %}</span>
+        {% elsif outcome == "in_progress" %}
+        <span class="book-badge">Reading</span>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="book-author">{{ entry.author }}</div>
+
+    {% if entry.notes %}
+    {% for note in entry.notes %}
+    {% unless note == "" %}
+    <p class="book-notes">{{ note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+    {% endunless %}
+    {% endfor %}
+    {% endif %}
+
+    {% if attempt == "reread" or attempt == "restart" %}
+    {% capture previous_links %}
+      {% assign current_year_num = include.year | plus: 0 -%}
+      {% assign current_index = include.index | plus: 0 -%}
+      {% assign all_years = site.data.reading | sort -%}
+      {% for year_pair in all_years -%}
+        {% assign prior_year_key = year_pair[0] | append: "" -%}
+        {% assign prior_year_num = prior_year_key | plus: 0 -%}
+        {% if prior_year_num <= current_year_num -%}
+          {% for prior_section in year_pair[1].sections -%}
+            {% if prior_section.key == "books" -%}
+              {% for prior_entry in prior_section.entries -%}
+                {% assign prior_index = forloop.index0 | plus: 0 -%}
+                {% assign is_earlier_entry = false -%}
+                {% if prior_year_num < current_year_num -%}
+                  {% assign is_earlier_entry = true -%}
+                {% elsif prior_year_num == current_year_num and include.section == "books" and prior_index < current_index -%}
+                  {% assign is_earlier_entry = true -%}
+                {% endif -%}
+                {% if is_earlier_entry and prior_entry.book_id == entry.book_id -%}
+                  {% assign prior_outcome = prior_entry.outcome | default: "finished" -%}
+                  {% if attempt == "restart" -%}
+                    {% if prior_outcome == "dnf" -%}
+                      {% assign prior_id = prior_year_key | append: "-books-" | append: prior_index | append: "-" | append: prior_entry.book_id -%}
+                      <a href="{{ "/reading/" | relative_url }}{{ prior_year_key }}-reading-list.html#{{ prior_id }}">Prior DNF in {{ prior_year_key }}</a>
+                    {% endif -%}
+                  {% else -%}
+                    {% assign prior_id = prior_year_key | append: "-books-" | append: prior_index | append: "-" | append: prior_entry.book_id -%}
+                    <a href="{{ "/reading/" | relative_url }}{{ prior_year_key }}-reading-list.html#{{ prior_id }}">Previous read in {{ prior_year_key }}</a>
+                  {% endif -%}
+                {% endif -%}
+              {% endfor -%}
+            {% endif -%}
+          {% endfor -%}
+        {% endif -%}
+      {% endfor -%}
+    {% endcapture %}
+    {% if previous_links contains "<a " %}
+    <div class="book-previous">{{ previous_links | strip }}</div>
+    {% endif %}
+    {% endif %}
+  </div>
+</div>

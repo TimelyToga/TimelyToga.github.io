@@ -1,0 +1,336 @@
+sections:
+  - key: "favorites"
+    heading: "Ranked Favorites (Top 15)"
+    entries:
+      - book_id: "the-smartest-guys-in-the-room"
+        title: "The Smartest Guys in the Room"
+        author: "Bethany McLean"
+        cover: "https://covers.openlibrary.org/b/isbn/9781591846604-M.jpg"
+        number: 1
+        notes:
+          - "Was halfway through when the bottom fell out of FTX. McLean gives you the information to identify the grift, but fails to actually point the finger at Skilling and Lay and call a spade a grifting fraudster."
+      - book_id: "the-first-90-days"
+        title: "The First 90 Days"
+        author: "Michael Watkins"
+        cover: "https://covers.openlibrary.org/b/isbn/9781591391821-M.jpg"
+        number: 2
+        notes:
+          - "A playbook for effective leadership. Identifies the common failure modes of new executives. Biggest takeaway: what made you successful in your last job will definitely not make you successful in your next one."
+      - book_id: "liar-s-poker"
+        title: "Liar's Poker"
+        author: "Michael Lewis"
+        cover: "https://covers.openlibrary.org/b/isbn/9780393338690-M.jpg"
+        number: 3
+        notes:
+          - "Lewis claims he wasn't trying to get college kids excited to go into finance but that's clearly bullshit. High-flying tales of chaotic bond trading in the 1980s."
+      - book_id: "the-big-short"
+        title: "The Big Short"
+        author: "Michael Lewis"
+        cover: "https://covers.openlibrary.org/b/isbn/9780393338829-M.jpg"
+        number: 4
+        notes:
+          - "Unbelievable that I didn't realize ML's genius until 2022. A timeless masterpiece. Also made me realize how unhinged Michael Burry is. I would have lost my mind if Scion Capital had my money."
+      - book_id: "when-genius-failed"
+        title: "When Genius Failed"
+        author: "Roger Lowenstein"
+        cover: "https://covers.openlibrary.org/b/isbn/9780375758256-M.jpg"
+        number: 5
+        notes:
+          - "Great follow-up to Liar's Poker because John Meriwether was first introduced there. A perfect model performing well and bad model performing well are indistinguishable until your firm is entirely underwater."
+      - book_id: "the-shift"
+        title: "The Shift"
+        author: "Theresa Brown"
+        cover: "https://covers.openlibrary.org/b/isbn/9781616202811-M.jpg"
+        number: 6
+        notes:
+          - "Wasn't expecting to find a book about a single nurse's shift at a hospital to be so touching and beautiful, but I ripped through this book in only a few days. Nurses are heroes."
+      - book_id: "the-outsiders"
+        title: "The Outsiders"
+        author: "William N. Thorndike"
+        cover: "https://covers.openlibrary.org/b/isbn/9781591845638-M.jpg"
+        number: 7
+        notes:
+          - "Portraits of iconoclasts innovating business. Great long-term looks at excellent businessmen executing at incredibly high levels (without the support of their contemporaries)."
+      - book_id: "7-powers"
+        title: "7 Powers"
+        author: "Hamilton Helmer"
+        cover: "https://covers.openlibrary.org/b/isbn/9780998116310-M.jpg"
+        number: 8
+        notes:
+          - "My second attempt at this book, but I was mired in enough business books this year that my brain could understand the content of the book."
+      - book_id: "hardball"
+        title: "Hardball"
+        author: "Chris Matthews"
+        cover: "https://covers.openlibrary.org/b/isbn/9780684845593-M.jpg"
+        number: 9
+        notes:
+          - "A series of discontinuous stories that illustrate how political power is fought for, won, and leveraged in the United States."
+      - book_id: "flash-boys"
+        title: "Flash Boys"
+        author: "Michael Lewis"
+        cover: "https://covers.openlibrary.org/b/isbn/9780393351590-M.jpg"
+        number: 10
+        notes:
+          - "Discover HFT with a kindly Canadian protagonist from RBC that just wants the financial markets to be fair (he's super shocked they aren't)."
+      - book_id: "the-metaverse"
+        title: "The Metaverse"
+        author: "Matthew Ball"
+        cover: "https://covers.openlibrary.org/b/isbn/9781324092032-M.jpg"
+        number: 11
+        notes:
+          - "Made me feel that vibrant, boyish enthusiasm for technology that I first felt buzzing around SF as a 19 year old. Exploration of what a metaverse could be and the analysis of the people working on different approaches."
+      - book_id: "barbarians-at-the-gate"
+        title: "Barbarians at the Gate"
+        author: "Bryan Burrough, John Helyar"
+        cover: "https://covers.openlibrary.org/b/isbn/9780061655555-M.jpg"
+        number: 12
+        notes:
+          - "Ross Johnson of RJR Nabisco sure can spend money; as soon as I realized this book was telling the origin story of KKR, I knew it wouldn't end well for Johnson."
+      - book_id: "the-dealmaker"
+        title: "The Dealmaker"
+        author: "Guy Hands"
+        cover: "https://covers.openlibrary.org/b/isbn/9780241357866-M.jpg"
+        number: 13
+        notes:
+          - "Lessons from a life in private equity. Hands doesn't pull any punches when he tells about his failures. Career went off with a bang, then seemed to falter."
+      - book_id: "project-hail-mary"
+        title: "Project Hail Mary"
+        author: "Andy Weir"
+        cover: "https://covers.openlibrary.org/b/isbn/9780593135204-M.jpg"
+        number: 14
+        notes:
+          - "The Martian was an instant classic, 2nd book was boring, but this 3rd title from Weir is fantastic. Fresh and fascinating scifi. First contact stories are my favorite and this one contains two!"
+      - book_id: "cryptonomicon"
+        title: "Cryptonomicon"
+        author: "Neal Stephenson"
+        cover: "https://covers.openlibrary.org/b/isbn/9780060512804-M.jpg"
+        number: 15
+        notes:
+          - "Cryptography is a powerful tool for both harm and for good. Doesn't top Snowcrash or Seveneves, but is one of Stephenson's best."
+  - key: "unfinished"
+    heading: "Unfinished Books"
+    entries:
+      - book_id: "termination-shock"
+        title: "Termination Shock"
+        author: "Neal Stephenson"
+        cover: "https://covers.openlibrary.org/b/isbn/9780063028050-M.jpg"
+        notes:
+          - "Did not finish."
+        outcome: "dnf"
+      - book_id: "reframing-healthcare"
+        title: "Reframing Healthcare: A Roadmap for Creating Disruptive Change"
+        author: "Zeev E. Neuwirth MD"
+        cover: "https://covers.openlibrary.org/b/isbn/9781260455380-M.jpg"
+        alt: "Reframing Healthcare"
+        notes:
+          - "Did not finish."
+        outcome: "dnf"
+      - book_id: "the-hydrogen-sonata"
+        title: "The Hydrogen Sonata"
+        author: "Iain M. Banks"
+        cover: "https://covers.openlibrary.org/b/isbn/9780316212373-M.jpg"
+        notes:
+          - "Did not finish (in 2022—completed in 2023)."
+        outcome: "dnf"
+      - book_id: "inhibitor-phase"
+        title: "Inhibitor Phase"
+        author: "Alastair Reynolds"
+        cover: "https://covers.openlibrary.org/b/isbn/9780316462761-M.jpg"
+        notes:
+          - "Did not finish."
+        outcome: "dnf"
+  - key: "books"
+    heading: "Full Chronological List"
+    entries:
+      - book_id: "cryptonomicon"
+        title: "Cryptonomicon"
+        author: "Neal Stephenson"
+        cover: "https://covers.openlibrary.org/b/isbn/9780060512804-M.jpg"
+        number: 1
+        notes:
+          - "Cryptography is a powerful tool for both harm and for good."
+      - book_id: "the-freeze-frame-revolution"
+        title: "The Freeze Frame Revolution"
+        author: "Peter Watts"
+        cover: "https://covers.openlibrary.org/b/isbn/9780765379528-M.jpg"
+        number: 2
+      - book_id: "the-gripping-hand"
+        title: "The Gripping Hand"
+        author: "Jerry Pournelle, Larry Niven"
+        cover: "https://covers.openlibrary.org/b/isbn/9780671795733-M.jpg"
+        number: 3
+      - book_id: "the-hydrogen-sonata"
+        title: "The Hydrogen Sonata"
+        author: "Iain M. Banks"
+        cover: "https://covers.openlibrary.org/b/isbn/9780316212373-M.jpg"
+        number: 4
+        notes:
+          - "Did not finish (in 2022)."
+        outcome: "dnf"
+      - book_id: "project-hail-mary"
+        title: "Project Hail Mary"
+        author: "Andy Weir"
+        cover: "https://covers.openlibrary.org/b/isbn/9780593135204-M.jpg"
+        number: 5
+        notes:
+          - "Fresh and fascinating scifi. First contact stories are my favorite and this one contains two!"
+      - book_id: "inhibitor-phase"
+        title: "Inhibitor Phase"
+        author: "Alastair Reynolds"
+        cover: "https://covers.openlibrary.org/b/isbn/9780316462761-M.jpg"
+        number: 6
+        notes:
+          - "Did not finish."
+        outcome: "dnf"
+      - book_id: "the-dealmaker"
+        title: "The Dealmaker"
+        author: "Guy Hands"
+        cover: "https://covers.openlibrary.org/b/isbn/9780241357866-M.jpg"
+        number: 7
+        notes:
+          - "Lessons from a life in private equity."
+      - book_id: "the-first-90-days"
+        title: "The First 90 Days"
+        author: "Michael Watkins"
+        cover: "https://covers.openlibrary.org/b/isbn/9781591391821-M.jpg"
+        number: 8
+        notes:
+          - "A playbook for effective leadership."
+      - book_id: "trillion-dollar-coach"
+        title: "Trillion Dollar Coach"
+        author: "Eric Schmidt, Jonathan Rosenberg, Alan Eagle"
+        cover: "https://covers.openlibrary.org/b/isbn/9780062839268-M.jpg"
+        number: 9
+      - book_id: "termination-shock"
+        title: "Termination Shock"
+        author: "Neal Stephenson"
+        cover: "https://covers.openlibrary.org/b/isbn/9780063028050-M.jpg"
+        number: 10
+        notes:
+          - "Did not finish."
+        outcome: "dnf"
+      - book_id: "the-metaverse"
+        title: "The Metaverse"
+        author: "Matthew Ball"
+        cover: "https://covers.openlibrary.org/b/isbn/9781324092032-M.jpg"
+        number: 11
+        notes:
+          - "Exploration of what a metaverse could be."
+      - book_id: "so-you-want-to-start-a-hedge-fund"
+        title: "So You Want to Start a Hedge Fund"
+        author: "Ted Seides"
+        cover: "https://covers.openlibrary.org/b/isbn/9781118428719-M.jpg"
+        number: 12
+      - book_id: "the-outsiders"
+        title: "The Outsiders"
+        author: "William N. Thorndike"
+        cover: "https://covers.openlibrary.org/b/isbn/9781591845638-M.jpg"
+        number: 13
+        notes:
+          - "Portraits of iconoclasts innovating business."
+      - book_id: "anomaly"
+        title: "Anomaly"
+        author: "Peter Cawdron"
+        cover: "https://covers.openlibrary.org/b/isbn/9780316399845-M.jpg"
+        number: 14
+      - book_id: "the-name-of-the-wind"
+        title: "The Name of the Wind"
+        author: "Patrick Rothfuss"
+        cover: "https://covers.openlibrary.org/b/isbn/9780756404741-M.jpg"
+        number: 15
+      - book_id: "7-powers"
+        title: "7 Powers"
+        author: "Hamilton Helmer"
+        cover: "https://covers.openlibrary.org/b/isbn/9780998116310-M.jpg"
+        number: 16
+        notes:
+          - "Business strategy framework."
+      - book_id: "zero-to-one"
+        title: "Zero to One"
+        author: "Peter Thiel, Blake Masters"
+        cover: "https://covers.openlibrary.org/b/isbn/9780804139298-M.jpg"
+        number: 17
+      - book_id: "notes-on-nursing"
+        title: "Notes On Nursing"
+        author: "Florence Nightingale"
+        cover: "https://covers.openlibrary.org/b/isbn/9781979723367-M.jpg"
+        number: 18
+      - book_id: "reframing-healthcare"
+        title: "Reframing Healthcare"
+        author: "Zeev E. Neuwirth MD"
+        cover: "https://covers.openlibrary.org/b/isbn/9781260455380-M.jpg"
+        number: 19
+        notes:
+          - "Did not finish."
+        outcome: "dnf"
+      - book_id: "the-shift"
+        title: "The Shift"
+        author: "Theresa Brown"
+        cover: "https://covers.openlibrary.org/b/isbn/9781616202811-M.jpg"
+        number: 20
+        notes:
+          - "Beautiful book about a nurse's shift at a hospital."
+      - book_id: "founders-pocket-guide-convertible-debt"
+        title: "Founders Pocket Guide: Convertible Debt"
+        author: "Stephen R. Poland"
+        cover: "https://covers.openlibrary.org/b/isbn/9780991183579-M.jpg"
+        number: 21
+      - book_id: "hardball"
+        title: "Hardball"
+        author: "Chris Matthews"
+        cover: "https://covers.openlibrary.org/b/isbn/9780684845593-M.jpg"
+        number: 22
+        notes:
+          - "How political power is fought for, won, and leveraged."
+      - book_id: "liar-s-poker"
+        title: "Liar's Poker"
+        author: "Michael Lewis"
+        cover: "https://covers.openlibrary.org/b/isbn/9780393338690-M.jpg"
+        number: 23
+        notes:
+          - "High-flying tales of chaotic bond trading in the 1980s."
+      - book_id: "the-big-short"
+        title: "The Big Short"
+        author: "Michael Lewis"
+        cover: "https://covers.openlibrary.org/b/isbn/9780393338829-M.jpg"
+        number: 24
+        notes:
+          - "A timeless masterpiece about the 2008 financial crisis."
+      - book_id: "flash-boys"
+        title: "Flash Boys"
+        author: "Michael Lewis"
+        cover: "https://covers.openlibrary.org/b/isbn/9780393351590-M.jpg"
+        number: 25
+        notes:
+          - "Discover HFT with a kindly Canadian protagonist."
+      - book_id: "monetizing-innovation"
+        title: "Monetizing Innovation"
+        author: "Madhavan Ramanujam, Georg Tacke"
+        cover: "https://covers.openlibrary.org/b/isbn/9781119240860-M.jpg"
+        number: 26
+      - book_id: "the-smartest-guys-in-the-room"
+        title: "The Smartest Guys in the Room"
+        author: "Bethany McLean, Peter Elkind"
+        cover: "https://covers.openlibrary.org/b/isbn/9781591846604-M.jpg"
+        number: 27
+        notes:
+          - "The Enron story."
+      - book_id: "high-output-management"
+        title: "High Output Management"
+        author: "Andrew S. Grove"
+        cover: "https://covers.openlibrary.org/b/isbn/9780679762881-M.jpg"
+        number: 28
+      - book_id: "when-genius-failed"
+        title: "When Genius Failed"
+        author: "Roger Lowenstein"
+        cover: "https://covers.openlibrary.org/b/isbn/9780375758256-M.jpg"
+        number: 29
+        notes:
+          - "The rise and fall of Long-Term Capital Management."
+      - book_id: "barbarians-at-the-gate"
+        title: "Barbarians at the Gate"
+        author: "Bryan Burrough, John Helyar"
+        cover: "https://covers.openlibrary.org/b/isbn/9780061655555-M.jpg"
+        number: 30
+        notes:
+          - "The origin story of KKR."
