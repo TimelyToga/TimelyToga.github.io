@@ -55,3 +55,7 @@ sections:
         title: "Titan"
         author: "Ron Chernow"
         cover: "https://covers.openlibrary.org/b/id/12373738-M.jpg"
+      - book_id: "timelike-infinity"
+        title: "Timelike Infinity"
+        author: "Stephen Baxter"
+        cover: "https://covers.openlibrary.org/b/id/4725-M.jpg"
