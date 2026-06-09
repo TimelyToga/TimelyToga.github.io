@@ -28,8 +28,20 @@ I'm currently the founder of [Throne](https://www.thronescience.com/), where we'
 
 A timeline of places I've worked and things I've built over the years.
 
-<div class="timeline">
-    <div class="timeline-item">
+<div class="about-life-map" data-about-globe>
+    <aside class="about-globe-panel" aria-label="Life moves globe">
+        <div class="about-globe-sticky">
+            <div class="about-globe-copy">
+                <div class="about-globe-kicker">Moves</div>
+                <div class="about-globe-title" id="about-globe-title">Jupiter, FL to Austin, TX</div>
+                <div class="about-globe-subtitle" id="about-globe-subtitle">Mar 2023</div>
+            </div>
+            <canvas id="about-globe-canvas" width="720" height="720" role="img" aria-label="Globe with arcs showing moves between cities" data-land-url="{{ '/assets/data/land-110m.json' | relative_url }}"></canvas>
+        </div>
+    </aside>
+
+    <div class="timeline about-timeline" id="life-timeline">
+    <div class="timeline-item" data-location-id="austin">
         <div class="timeline-date">2023 - Present</div>
         <h3 class="timeline-title">Throne</h3>
         <div class="timeline-place">Austin, TX</div>
@@ -41,24 +53,23 @@ A timeline of places I've worked and things I've built over the years.
         </div>
     </div>
 
-    <div class="timeline-move">
+    <div class="timeline-move" data-move-id="jupiter-austin">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Moved back to Austin, TX (Mar 2023)
-    </div>
-
-    <div class="timeline-item">
-        <div class="timeline-date">2019 - 2023</div>
-        <h3 class="timeline-title">Skyflow</h3>
-        <div class="timeline-place">Mountain View, CA</div>
-        <div class="timeline-content">
-            <p>Early engineer working on advanced cryptography for data privacy. Helped build the infrastructure for secure data handling at scale.</p>
-        </div>
-        <div class="timeline-links">
-            <a href="https://www.skyflow.com/" target="_blank">Skyflow</a>
+        <div class="timeline-move-copy">
+            <div class="timeline-move-title">Moved back to Austin, TX (Mar 2023)</div>
+            <div class="timeline-move-subtitle">married the girl</div>
         </div>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-move" data-move-id="austin-jupiter">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <div class="timeline-move-copy">
+            <div class="timeline-move-title">Moved to Jupiter, FL (Dec 2021)</div>
+            <div class="timeline-move-subtitle">met a girl</div>
+        </div>
+    </div>
+
+    <div class="timeline-item" data-location-id="austin">
         <div class="timeline-date">Sep 2021 - Nov 2022</div>
         <h3 class="timeline-title">royal.io</h3>
         <div class="timeline-place">Austin, TX (later Jupiter, FL)</div>
@@ -70,17 +81,24 @@ A timeline of places I've worked and things I've built over the years.
         </div>
     </div>
 
-    <div class="timeline-move">
+    <div class="timeline-move" data-move-id="mountain-view-austin">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Moved to Jupiter, FL (Dec 2021)
+        Moved to Austin, TX (2021)
     </div>
 
-    <div class="timeline-move">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        Moved to Mountain View, CA (2019)
+    <div class="timeline-item" data-location-id="mountain-view">
+        <div class="timeline-date">2019 - 2021</div>
+        <h3 class="timeline-title">Skyflow</h3>
+        <div class="timeline-place">Mountain View, CA</div>
+        <div class="timeline-content">
+            <p>Early engineer working on advanced cryptography for data privacy. Helped build the infrastructure for secure data handling at scale.</p>
+        </div>
+        <div class="timeline-links">
+            <a href="https://www.skyflow.com/" target="_blank">Skyflow</a>
+        </div>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-location-id="palo-alto">
         <div class="timeline-date">2018 - 2019</div>
         <h3 class="timeline-title">Lyft Level 5 (Autonomous Vehicles)</h3>
         <div class="timeline-place">Palo Alto, CA</div>
@@ -92,7 +110,12 @@ A timeline of places I've worked and things I've built over the years.
         </div>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-move" data-move-id="new-york-mountain-view">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Moved to Mountain View, CA (2018)
+    </div>
+
+    <div class="timeline-item" data-location-id="new-york">
         <div class="timeline-date">2018</div>
         <h3 class="timeline-title">Surecave</h3>
         <div class="timeline-place">New York City, NY</div>
@@ -101,12 +124,12 @@ A timeline of places I've worked and things I've built over the years.
         </div>
     </div>
 
-    <div class="timeline-move">
+    <div class="timeline-move" data-move-id="shanghai-new-york">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         Moved to New York City, NY
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-location-id="shanghai">
         <div class="timeline-date">2017 - 2018</div>
         <h3 class="timeline-title">CNSPEC</h3>
         <div class="timeline-place">Shanghai, China</div>
@@ -115,21 +138,21 @@ A timeline of places I've worked and things I've built over the years.
         </div>
     </div>
 
-    <div class="timeline-move">
+    <div class="timeline-move" data-move-id="durham-shanghai">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         Moved to Shanghai, China
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-location-id="durham">
         <div class="timeline-date">2017</div>
         <h3 class="timeline-title">Duke University</h3>
         <div class="timeline-place">Durham, NC</div>
         <div class="timeline-content">
-            <p>Graduated. Studied computer science with interests in graphics, distributed systems, and machine learning.</p>
+            <p>Graduated. Studied computer science with a minor in Chinese, with interests in graphics, distributed systems, and machine learning.</p>
         </div>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-location-id="san-francisco">
         <div class="timeline-date">2016</div>
         <h3 class="timeline-title">Lyft (Intern)</h3>
         <div class="timeline-place">San Francisco, CA</div>
@@ -138,7 +161,7 @@ A timeline of places I've worked and things I've built over the years.
         </div>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-location-id="beijing">
         <div class="timeline-date">2015</div>
         <h3 class="timeline-title">Chinese Language Study</h3>
         <div class="timeline-place">Beijing, China</div>
@@ -147,7 +170,7 @@ A timeline of places I've worked and things I've built over the years.
         </div>
     </div>
 
-    <div class="timeline-item">
+    <div class="timeline-item" data-location-id="san-francisco">
         <div class="timeline-date">2014</div>
         <h3 class="timeline-title">Leo / Camoji</h3>
         <div class="timeline-place">San Francisco, CA</div>
@@ -158,4 +181,30 @@ A timeline of places I've worked and things I've built over the years.
             <a href="https://techcrunch.com/2015/06/26/lyft-acquihires-the-team-from-messaging-app-leo-to-improve-location-and-other-features/" target="_blank">TechCrunch Article</a>
         </div>
     </div>
+
+    <div class="timeline-item" data-location-id="durham">
+        <div class="timeline-date">2013</div>
+        <h3 class="timeline-title">Started Duke University</h3>
+        <div class="timeline-place">Durham, NC</div>
+        <div class="timeline-content">
+            <p>Started at Duke University.</p>
+        </div>
+    </div>
+
+    <div class="timeline-move" data-move-id="northeast-tennessee-durham">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Moved to Durham, NC (2013)
+    </div>
+
+    <div class="timeline-item" data-location-id="northeast-tennessee">
+        <div class="timeline-date">Before 2013</div>
+        <h3 class="timeline-title">Grew Up</h3>
+        <div class="timeline-place">Far Northeastern TN</div>
+        <div class="timeline-content">
+            <p>Grew up in far Northeastern Tennessee.</p>
+        </div>
+    </div>
+    </div>
 </div>
+
+<script src="{{ '/assets/js/about-globe.js' | relative_url }}" defer></script>
