@@ -1,61 +1,113 @@
 sections:
-  - key: "favorites"
-    heading: "Ranked Favorites (Top 5)"
-    placeholder: "Coming soon - add your favorites here!"
-  - key: "books"
-    heading: "Full Chronological List"
+  - key: 'favorites'
+    heading: 'Ranked Favorites (Top 5)'
+    placeholder: 'Coming soon - add your favorites here!'
+  - key: 'books'
+    heading: 'Full Chronological List'
     entries:
-      - book_id: "1929"
-        title: "1929"
-        author: "Andrew Ross Sorkin"
-        cover: "https://covers.openlibrary.org/b/id/15161980-M.jpg"
-      - book_id: "as1"
-        title: "AS1"
-        author: "Trevor Lewis"
-        cover: "https://aproposbooks.net/wp-content/uploads/2024/10/AS1.jpg"
-      - book_id: "the-corporation-wars-dissidence"
-        title: "The Corporation Wars: Dissidence"
-        author: "Ken MacLeod"
-        cover: "https://covers.openlibrary.org/b/id/8765805-M.jpg"
-      - book_id: "exordia"
-        title: "Exordia"
-        author: "Seth Dickinson"
-        cover: "https://covers.openlibrary.org/b/id/13297923-M.jpg"
-      - book_id: "a-splendid-exchange"
-        title: "A Splendid Exchange"
-        author: "William J. Bernstein"
-        cover: "https://covers.openlibrary.org/b/id/12627572-M.jpg"
-      - book_id: "recursion"
-        title: "Recursion"
-        author: "Blake Crouch"
-        cover: "https://covers.openlibrary.org/b/id/8748478-M.jpg"
-      - book_id: "the-faith-of-beasts"
-        title: "The Faith of Beasts"
-        author: "James S. A. Corey"
-        cover: "https://covers.openlibrary.org/b/id/15213189-M.jpg"
-      - book_id: "seeing-like-a-state"
-        title: "Seeing Like a State"
-        author: "James C. Scott"
-        cover: "https://covers.openlibrary.org/b/id/8290759-M.jpg"
-        attempt: "restart"
-      - book_id: "a-hole-in-the-sky"
-        title: "A Hole in the Sky"
-        author: "Peter F. Hamilton"
-        cover: "https://covers.openlibrary.org/b/id/15164278-M.jpg"
-      - book_id: "suicidal-empathy"
-        title: "Suicidal Empathy"
-        author: "Gad Saad"
-        cover: "https://images.booksense.com/images/533/446/9780063446533.jpg"
-      - book_id: "project-hail-mary"
-        title: "Project Hail Mary"
-        author: "Andy Weir"
-        cover: "https://covers.openlibrary.org/b/id/11200092-M.jpg"
-        attempt: "reread"
-      - book_id: "titan"
-        title: "Titan"
-        author: "Ron Chernow"
-        cover: "https://covers.openlibrary.org/b/id/12373738-M.jpg"
-      - book_id: "timelike-infinity"
-        title: "Timelike Infinity"
-        author: "Stephen Baxter"
-        cover: "https://covers.openlibrary.org/b/id/4725-M.jpg"
+      - book_id: '1929'
+        title: '1929'
+        author: 'Andrew Ross Sorkin'
+        cover: 'https://covers.openlibrary.org/b/id/15161980-M.jpg'
+        outcome: 'dnf'
+        stopped_at:
+          kind: 'percent'
+          value: 10
+        notes: 'I respect Andrew Ross Sorkin a great deal, but coming off the relative highs of The Power Broker and Titan, I found this one a bit too dramatized. Read almost like fiction so gave it up.'
+      - book_id: 'as1'
+        title: 'AS1'
+        author: 'Trevor Lewis'
+        cover: 'https://aproposbooks.net/wp-content/uploads/2024/10/AS1.jpg'
+        notes:
+          - >-
+            This was one of the scariest books I have ever read. The author is imprecise and bludgeons you over the head the last 2/3 of the book with the Young Adult fiction-style "something bad is happening vibes". The characters are trope-ridden and predictable, but the payoff is one of the scariest ideas I have encountered in science fiction.
+
+          - >-
+            So despite the flaws the payoff of the book is well worth the read. I will be carefully watching for future works from this author.
+      - book_id: 'the-corporation-wars-dissidence'
+        title: 'The Corporation Wars: Dissidence'
+        author: 'Ken MacLeod'
+        cover: 'https://covers.openlibrary.org/b/id/8765805-M.jpg'
+        notes:
+          - >-
+            I ultimately really unjoyed this one. I believe MacLeod and Iain M. Banks were best friends. Feels a bit like reading Tolkien after CS Lewis. There is a familiarity in the style and writing, but it obviously distinctive.
+
+          - >-
+            The story and world is extremely interesting. I feel like the author is slightly less polished at unifying the different threads of a story into a coherent storyline. I felt this was good not great as a read. There are sections (such as the robots becoming conscious) where the book was elevated from a 6/10 to a 9.5/10. If the whole book would have just closely followed those robots then I think it would have been far stronger.
+      - book_id: 'a-splendid-exchange'
+        title: 'A Splendid Exchange'
+        author: 'William J. Bernstein'
+        cover: 'https://covers.openlibrary.org/b/id/12627572-M.jpg'
+        notes:
+          - >-
+            Bernstein is a master of his craft. What portends to be a dry financial history, is extremely engaging. He paints up the characters from millenia ago and invites the reader to imagine the world they inhabited and the conditions underwhich they made their decisions.
+
+          - >-
+            Top-tier non-fiction. I felt like Bernstein spent just enough time on each time-period and subject before switching topics to keep the reading engaging. Other authors don't know when to move on and it gets boring.
+      - book_id: 'recursion'
+        title: 'Recursion'
+        author: 'Blake Crouch'
+        cover: 'https://covers.openlibrary.org/b/id/8748478-M.jpg'
+        notes:
+          - >-
+            In an interview for _Project Hail Mary_ Andy Weir recommended Blake Crouch as his favorite author and Recursion as his favorite work of Crouch's over _Dark Matter_.
+
+          - >-
+            This is a dark book. Much closer to reading Stephen King than it is to reading Andy fucking Weir. Harrowing scenes are painted in captivating prose that stick with you for hours after concluding your reading for the day. Although there are several sections that were so beautiful and engaging that I'll remember them for the rest of my life.
+
+          - >-
+            I found the first 2/3 of the book to be it's strongest sections. It reads a bit like the author wrote themselves into a corner and then needed to blow up the narrative to land the plane and end the book.
+
+          - >-
+            I found the ending extremely unsatisfying, but I'll read some of Crouch's other works.
+      - book_id: 'the-faith-of-beasts'
+        title: 'The Faith of Beasts'
+        author: 'James S. A. Corey'
+        cover: 'https://covers.openlibrary.org/b/id/15213189-M.jpg'
+        notes:
+          - >-
+            Fantastic progression of the terrifying story they kickstarted in _The Mercy of Gods_, which in my humble opinion paints the most accurate depiction of the overwhelming humiliation that humans would actually face at hands of a motivated alien civilization that is a few hundreds of thousands of years ahead of us in technological development.
+
+          - >-
+            This entry into the series makes good on the promise and setup of the previous book. Several moments where my jaw hung open stupidly at the shocking developments of the story. Sharp, smart, and concise story-telling with breath-taking science fiction ideas. I continue to be very impressed with this entire series.
+
+          - >-
+            I cannot wait for the next entry in the series.
+      - book_id: 'seeing-like-a-state'
+        title: 'Seeing Like a State'
+        author: 'James C. Scott'
+        cover: 'https://covers.openlibrary.org/b/id/8290759-M.jpg'
+        attempt: 'restart'
+        notes:
+          - >-
+            If you pull a random sentence or even paragraph from this book, it's highly likely I would find it so profounding boring that I might fall asleep on site. But despite Scott's painfully obtuse writing style and obdurate belief in standpoint epistemology, his book has something interesting and unique to say. He communicates this novel information slowly and painfully via historical accounts, but does slowly weave his way towards an interesting point.
+
+          - >-
+            Scott's framing is heavily coded with apologetic "modern Western society is evil", but his core idea is that evolutionary forces facing a state push it towards making the actions of its citizens more _legible_. Legible in the sense that they can be easily tabulated, tracked and of course taxed. He tells many stories where a state's actions are obviously brutal, uncaring and seemingly counter to what seems to be best for the citizens, unless you view it through the framing of the improvements to legibility.
+
+          - >-
+            I think there is a more nuanced message here, but I think I need to continue to let this book digest before I'm able to unearth it.
+      - book_id: 'a-hole-in-the-sky'
+        title: 'A Hole in the Sky'
+        author: 'Peter F. Hamilton'
+        cover: 'https://covers.openlibrary.org/b/id/15164278-M.jpg'
+        notes:
+          - >-
+            This book is actually a Young Adult novel. I didn't realize until I was maybe 1/3 of the way through and realized how shallow the characters and plot was. I ultimately enjoyed some pieces of the premise, but the book ranks the lowest perhaps of any Hamilton book I've read to date. 2/5 (and that is generous).
+      - book_id: 'suicidal-empathy'
+        title: 'Suicidal Empathy'
+        author: 'Gad Saad'
+        cover: 'https://images.booksense.com/images/533/446/9780063446533.jpg'
+      - book_id: 'project-hail-mary'
+        title: 'Project Hail Mary'
+        author: 'Andy Weir'
+        cover: 'https://covers.openlibrary.org/b/id/11200092-M.jpg'
+        attempt: 'reread'
+      - book_id: 'titan'
+        title: 'Titan'
+        author: 'Ron Chernow'
+        cover: 'https://covers.openlibrary.org/b/id/12373738-M.jpg'
+      - book_id: 'timelike-infinity'
+        title: 'Timelike Infinity'
+        author: 'Stephen Baxter'
+        cover: 'https://covers.openlibrary.org/b/id/4725-M.jpg'
