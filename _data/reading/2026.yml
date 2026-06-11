@@ -34,6 +34,14 @@ sections:
 
           - >-
             The story and world is extremely interesting. I feel like the author is slightly less polished at unifying the different threads of a story into a coherent storyline. I felt this was good not great as a read. There are sections (such as the robots becoming conscious) where the book was elevated from a 6/10 to a 9.5/10. If the whole book would have just closely followed those robots then I think it would have been far stronger.
+      - book_id: 'project-hail-mary'
+        title: 'Project Hail Mary'
+        author: 'Andy Weir'
+        cover: 'https://covers.openlibrary.org/b/id/11200092-M.jpg'
+        attempt: 'reread'
+        notes:
+          - >-
+            Just as exquisite as the first read, but read again in preparation for the movie release this year. Enjoyed the book and the movie in equal parts and for different reasons. The movie is an extremely faithful adaptation, but cuts out a lot of the scientific content and rather makes vague references that readers will catch as nods to content not covered in the film.
       - book_id: 'a-splendid-exchange'
         title: 'A Splendid Exchange'
         author: 'William J. Bernstein'
@@ -94,15 +102,23 @@ sections:
         notes:
           - >-
             This book is actually a Young Adult novel. I didn't realize until I was maybe 1/3 of the way through and realized how shallow the characters and plot was. I ultimately enjoyed some pieces of the premise, but the book ranks the lowest perhaps of any Hamilton book I've read to date. 2/5 (and that is generous).
+
+          - >-
+            The book is about a lost society in an arc ship, the pay-off for why the society is lost could have been interesting with more development, but as it stands is a total let down and deus ex machina.
       - book_id: 'suicidal-empathy'
         title: 'Suicidal Empathy'
         author: 'Gad Saad'
         cover: 'https://images.booksense.com/images/533/446/9780063446533.jpg'
-      - book_id: 'project-hail-mary'
-        title: 'Project Hail Mary'
-        author: 'Andy Weir'
-        cover: 'https://covers.openlibrary.org/b/id/11200092-M.jpg'
-        attempt: 'reread'
+      - book_id: 'halcyon-years'
+        title: 'Halcyon Years'
+        author: 'Alastair Reynolds'
+        cover: 'https://www.hachettebookgroup.com/wp-content/uploads/2025/11/9780316607087.jpg'
+        notes:
+          - >-
+            As compared with _A Hole in the Sky_, this is a much stronger story about a society struggling on in a degraded state in an arc ship. The pay-off here I would say is much more interesting and the characters more developed.
+
+          - >-
+            I haven't been able to truly revere a Reynold's sci-fi book in many years. _House of Suns_ is probably the last Reynolds book that I was able to completely love. Without fail, the ideas are good, the writing is good, but then then crippingly narrative choices grapple the book into a nose dive that ultimately makes the read unfulfilling. I continue to chase the high that _House of Suns_ gave me, but unfortunately Halcyon Years is simply not it.
       - book_id: 'titan'
         title: 'Titan'
         author: 'Ron Chernow'
