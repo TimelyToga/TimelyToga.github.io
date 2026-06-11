@@ -815,6 +815,10 @@ img {
       margin: 0;
     }
 
+    .book-notes + .book-notes {
+      margin-top: 0.75rem;
+    }
+
     .book-previous {
       display: flex;
       flex-wrap: wrap;
