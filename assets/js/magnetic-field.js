@@ -376,20 +376,27 @@
         var n = Math.sqrt(f.c2 * f.c2 + f.s2 * f.s2) || 1;
         f.c2 /= n; f.s2 /= n;
 
-        // Migrate along the field line so shavings clump into chains, with a
-        // whisper of Brownian paper-roughness on top.
+        // Migrate along the field line so shavings clump into chains.
+        // Drift peaks at mid field strength and tapers near the core,
+        // so grains settle into chains along the lines instead of
+        // avalanching onto the poles.
         var inv = 1 / mag;
-        var drift = DRIFT_SPEED * (0.15 + 0.85 * heat) * f.dir;
-        f.x += B.x * inv * drift + (Math.random() - 0.5) * 0.22;
-        f.y += B.y * inv * drift + (Math.random() - 0.5) * 0.22;
+        var bh = B.hot;
+        var profile = bh / (1 + (bh * bh * bh) / 10.6);
+        var drift = DRIFT_SPEED * profile * f.dir;
+        var jitter = 0.22 + 0.35 * Math.min(1, bh * 0.25);
+        f.x += B.x * inv * drift + (Math.random() - 0.5) * jitter;
+        f.y += B.y * inv * drift + (Math.random() - 0.5) * jitter;
 
         f.hot += (heat - f.hot) * 0.06;
       } else {
         f.hot *= 0.98;
       }
 
-      // Consumed at a pole core: respawn out in the gaps.
-      if (B.hot > 3.2) {
+      // Near a pole core grains get "buried": a hard kill right at the
+      // pole plus a small per-frame chance in the hot zone, so clumps
+      // turn over instead of growing without bound.
+      if (B.hot > 6 || (f.hot > 0.85 && Math.random() < 0.006)) {
         randomSpawn(f);
         continue;
       }
