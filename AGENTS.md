@@ -11,6 +11,6 @@
 
 # Site Theme
 
-- The animated background is `assets/js/magnetic-field.js`: iron filings aligning to a simulated magnetic field (traveling bands, two drifting dipoles, cursor magnet). `_layouts/default.html` provides the `#magnetic-field` canvas and loads the script on every page using that layout.
+- The animated background is `assets/js/magnetic-field.js`: iron filings aligning to a choreographed multi-pole magnetic field (a spinning N/S "rotor" pair, two orbiting satellite poles that periodically flip polarity, ambient traveling bands, and the cursor as the strongest pole). Field lines are traced live from the poles each frame; filings also drift along the field and clump near poles. `_layouts/default.html` provides the `#magnetic-field` canvas and loads the script on every page using that layout.
 - The hero HUD on the home page (`index.html`) uses `#field-hud`, `#flux-value`, and `#pole-value`; the script unhides `#field-hud` and updates it live.
 - Theme colors are the SCSS variables at the top of `assets/css/style.scss` (cold iron palette, copper accents). Run `bundle exec jekyll build` after style or script changes.
