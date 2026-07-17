@@ -2,19 +2,19 @@
 ---
 @charset 'UTF-8';
 
-// Color palette - dark, warm, minimal
-$bg-color: #11100e;
-$bg-darker: #1c1916;
-$text-color: #ece4da;
-$text-muted: #b9aa99;
-$text-light: #82786f;
+// Color palette - cold iron, warm copper
+$bg-color: #0b0d10;
+$bg-darker: #14171c;
+$text-color: #e9e6df;
+$text-muted: #a8a29a;
+$text-light: #6f7680;
 $accent-color: #d98757;
 $accent-hover: #f0a56b;
-$border-color: #302a25;
+$border-color: #242a31;
 $link-color: #e0a06f;
 $link-hover: #f3bd87;
-$surface-color: #171512;
-$surface-hover: #211d19;
+$surface-color: #10141a;
+$surface-hover: #161b22;
 $active-color: #79d6cf;
 $move-color: #f08a5d;
 
@@ -54,6 +54,20 @@ body {
   background-color: $bg-color;
 }
 
+// Magnetic field canvas: fixed behind all content
+#magnetic-field {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.page-content,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
 // Layout
 .wrapper {
   max-width: $max-width;
@@ -69,9 +83,14 @@ body {
 
 // Header
 .site-header {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit * 0.75 0;
   border-bottom: 1px solid $border-color;
-  background: $bg-color;
+  background: rgba($bg-color, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   .header-content {
     display: flex;
@@ -114,15 +133,34 @@ body {
   flex-shrink: 0;
 
   a {
+    position: relative;
     font-family: $font-sans;
     font-size: 0.85rem;
     color: $text-muted;
     text-decoration: none;
     transition: color 0.2s ease;
     white-space: nowrap;
+    padding-bottom: 3px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: $accent-color;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
 
     &:hover, &.active {
       color: $accent-color;
+
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 }
@@ -214,8 +252,8 @@ code {
 }
 
 pre {
-  background: #080807;
-  color: #f5eadf;
+  background: #07090c;
+  color: #f0ece4;
   padding: $spacing-unit;
   border-radius: 6px;
   overflow-x: auto;
@@ -251,27 +289,80 @@ img {
 // Homepage styles
 .home-hero {
   text-align: center;
-  padding: $spacing-unit * 2 0;
+  padding: $spacing-unit * 3 0 $spacing-unit * 2;
+}
+
+// Profile photo ringed by a slowly rotating copper arc, like the sweep of a
+// magnet's pole.
+.photo-ring {
+  position: relative;
+  width: 176px;
+  height: 176px;
+  margin: 0 auto $spacing-unit;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgba($accent-color, 0.9) 70deg,
+      rgba($accent-hover, 0.25) 140deg,
+      transparent 200deg,
+      transparent 360deg
+    );
+    animation: pole-sweep 14s linear infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 50%;
+    background: $bg-color;
+  }
+}
+
+@keyframes pole-sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-ring::before {
+    animation: none;
+  }
 }
 
 .profile-photo {
-  width: 160px;
-  height: 160px;
+  position: relative;
+  z-index: 1;
+  width: 156px;
+  height: 156px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: $spacing-unit;
-  border: 4px solid $bg-darker;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .home-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 6.5vw, 3.2rem);
   margin-bottom: 0.25rem;
   margin-top: 0;
+  background: linear-gradient(115deg, $text-color 30%, $accent-hover 70%, $accent-color 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .home-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: $text-muted;
   font-weight: 400;
   margin-bottom: $spacing-unit;
@@ -284,12 +375,66 @@ img {
   margin: 0 auto $spacing-unit * 0.75;
 }
 
+// Live field readout under the hero
+.field-hud {
+  font-family: $font-mono;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $text-light;
+  margin: $spacing-unit * 0.5 auto 0;
+
+  .hud-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $accent-color;
+    margin-right: 0.5em;
+    animation: hud-pulse 2.4s ease-in-out infinite;
+  }
+
+  #flux-value {
+    color: $accent-color;
+  }
+
+  #pole-value {
+    color: $text-muted;
+  }
+}
+
+@keyframes hud-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .field-hud .hud-dot {
+    animation: none;
+  }
+}
+
 .company-feature {
-  background: $bg-darker;
+  position: relative;
+  background: linear-gradient($surface-color, $surface-color) padding-box,
+    linear-gradient(135deg, rgba($accent-color, 0.55), rgba($border-color, 0.4) 45%, rgba($active-color, 0.25)) border-box;
+  border: 1px solid transparent;
   border-radius: 12px;
   padding: $spacing-unit * 1.5;
-  margin: $spacing-unit 0;
+  margin: $spacing-unit * 1.5 0;
   text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  }
 
   h2 {
     margin-top: 0;
@@ -929,7 +1074,7 @@ img {
   padding: 0.85rem;
   border: 1px solid $border-color;
   border-radius: 8px;
-  background: rgba(23, 21, 18, 0.9);
+  background: rgba(16, 20, 26, 0.88);
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
   backdrop-filter: blur(6px);
 }
@@ -1045,7 +1190,7 @@ img {
   transform: translateY(-50%);
   font-family: $font-sans;
   font-size: 0.85rem;
-  color: #3c3833;
+  color: #333a42;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   pointer-events: none;

@@ -3,6 +3,7 @@
 {% include head.html %}
 
 <body>
+    <canvas id="magnetic-field" aria-hidden="true"></canvas>
     <div class="big-monitor-message left msg-1">you need this much padding?</div>
     <div class="big-monitor-message right msg-1">you need this much padding?</div>
     <div class="big-monitor-message left msg-2">wow, rich man with the big monitor</div>
@@ -21,6 +22,8 @@
     </main>
 
     {%- include footer.html -%}
+
+    <script src="{{ '/assets/js/magnetic-field.js' | relative_url }}" defer></script>
 </body>
 
 </html>

@@ -8,3 +8,9 @@
 - Reading-list page content is rendered from `_data/reading/<year>.yml`; keep `_reading/*-reading-list.md` as thin include wrappers.
 - Manual order in `_data/reading/<year>.yml` is the reading order. Do not require exact per-book dates.
 - Use stable `book_id` values to connect rereads and restarts across years. Set `attempt: reread` for rereads, `attempt: restart` for restarting a previous DNF, and `outcome: dnf` plus `stopped_at` for unfinished books.
+
+# Site Theme
+
+- The animated background is `assets/js/magnetic-field.js`: iron filings aligning to a simulated magnetic field (traveling bands, two drifting dipoles, cursor magnet). `_layouts/default.html` provides the `#magnetic-field` canvas and loads the script on every page using that layout.
+- The hero HUD on the home page (`index.html`) uses `#field-hud`, `#flux-value`, and `#pole-value`; the script unhides `#field-hud` and updates it live.
+- Theme colors are the SCSS variables at the top of `assets/css/style.scss` (cold iron palette, copper accents). Run `bundle exec jekyll build` after style or script changes.
