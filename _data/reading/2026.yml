@@ -1,7 +1,4 @@
 sections:
-  - key: 'favorites'
-    heading: 'Ranked Favorites (Top 5)'
-    placeholder: 'Coming soon - add your favorites here!'
   - key: 'books'
     heading: 'Full Chronological List'
     entries:
@@ -135,6 +132,15 @@ sections:
         title: 'Material World'
         author: 'Ed Conway'
         cover: 'https://covers.openlibrary.org/b/id/14591884-M.jpg'
+        notes:
+          - >-
+            This book sounds incredibly boring, but I was surprised by just how fascinating Conway makes the subject matter. There is an uncomfortable amount of incoherent moralization about the evilness of the men raping the earth of it's resources, but is occasionally counter-balanced by the overwhelming demand the market has for these substances. The author portrays the mining of copper in particular as bizarre kind of catch-22. Copper mining with modern ore, requires mining an insane amount of rock to recover a small amount of copper, but the copper is used for producing renewable power infrastructure, so what should we do?!
+
+          - >-
+            I'm not diminishing the havoc that mercury washing has caused on the natural environment or that mining is not inherently destructive, but our modern society requires natural resources. And the earth is brimming with the elements and materials that we need, they just need to be extracted.
+
+          - >-
+            Ultimately this is a marvelous book if you can wade around the sensationalist claims that humans are fundamentally evil for mining, which I find laughable.
       - book_id: 'flux'
         title: 'Flux'
         author: 'Stephen Baxter'
