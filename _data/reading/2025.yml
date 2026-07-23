@@ -68,7 +68,7 @@ sections:
       - book_id: "empire-of-silence"
         title: "Empire of Silence"
         author: "Christopher Ruocchio"
-        cover: "https://covers.openlibrary.org/b/isbn/9780756413064-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/8789487-M.jpg"
         notes:
           - "This was a bit out of left field for me. I loved the protagonist and the world building. I loved the presentation of the complexities of galactic politics and the rich son who did not want to follow in his father's footsteps. I loved his escape and fall into poverty. This is my first read by from this author, but I'm looking forward to reading more."
       - book_id: "1177-b-c-revised-and-updated"
