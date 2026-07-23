@@ -8,9 +8,22 @@ permalink: /reading/
 
 {% assign sorted_reading = site.reading | sort: 'date' | reverse %}
 {% for post in sorted_reading %}
+{% assign reading_year_key = post.date | date: "%Y" %}
+{% assign display_book_count = post.book_count %}
+{% unless display_book_count %}
+    {% assign reading_year = site.data.reading[reading_year_key] %}
+    {% if reading_year %}
+        {% for section in reading_year.sections %}
+            {% if section.key == "books" %}
+                {% assign display_book_count = section.entries | size %}
+                {% break %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endunless %}
 <div class="story-item">
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <div class="story-meta">{{ post.date | date: "%Y" }} &middot; {{ post.book_count }} books</div>
+    <div class="story-meta">{{ reading_year_key }} &middot; {{ display_book_count }} books</div>
     <p class="story-description">{{ post.description }}</p>
 </div>
 {% endfor %}
