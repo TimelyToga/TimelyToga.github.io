@@ -36,7 +36,7 @@ sections:
         cover: "https://covers.openlibrary.org/b/isbn/9780375758256-M.jpg"
         number: 5
         notes:
-          - "Great follow-up to Liar's Poker because John Meriwether was first introduced there. A perfect model performing well and bad model performing well are indistinguishable until your firm is entirely underwater."
+          - "Great follow-up to Liar's Poker because John Meriwether was first introduced there. A perfect model performing well and a bad model performing well are indistinguishable until your firm is entirely underwater."
       - book_id: "the-shift"
         title: "The Shift"
         author: "Theresa Brown"
@@ -78,7 +78,7 @@ sections:
         cover: "https://covers.openlibrary.org/b/isbn/9781324092032-M.jpg"
         number: 11
         notes:
-          - "Made me feel that vibrant, boyish enthusiasm for technology that I first felt buzzing around SF as a 19 year old. Exploration of what a metaverse could be and the analysis of the people working on different approaches."
+          - "Made me feel that vibrant, boyish enthusiasm for technology that I first felt buzzing around SF as a 19-year-old. Exploration of what a metaverse could be and the analysis of the people working on different approaches."
       - book_id: "barbarians-at-the-gate"
         title: "Barbarians at the Gate"
         author: "Bryan Burrough, John Helyar"
@@ -106,7 +106,7 @@ sections:
         cover: "https://covers.openlibrary.org/b/isbn/9780060512804-M.jpg"
         number: 15
         notes:
-          - "Cryptography is a powerful tool for both harm and for good. Doesn't top Snowcrash or Seveneves, but is one of Stephenson's best."
+          - "Cryptography is a powerful tool for both harm and for good. Doesn't top Snow Crash or Seveneves, but is one of Stephenson's best."
   - key: "unfinished"
     heading: "Unfinished Books"
     entries:
