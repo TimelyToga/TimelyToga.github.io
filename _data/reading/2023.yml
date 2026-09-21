@@ -29,7 +29,7 @@ sections:
         cover: "https://covers.openlibrary.org/b/isbn/9780465026562-M.jpg"
         number: 4
         notes:
-          - "Tough to start, hard to put down. I lamented that this author refused to sell a digital version of their book, but this is less of a novel and more of an enjoyable textbook. Lots of fun math ideas explained gently. \"Strange loops\" introduce a lot of interesting problems for formal systems! When reading this book, I would ruminate on 2-3 page sections for a long while to make sure I could play the ideas out. Really fun read."
+          - "Tough to start, hard to put down. I lamented that this author refused to sell a digital version of their book, but this is less of a novel and more of an enjoyable textbook. Lots of fun math ideas explained gently. \"Strange loops\" introduce a lot of interesting problems for formal systems! When reading this book, I would ruminate on two- to three-page sections for a long while to make sure I could play the ideas out. Really fun read."
       - book_id: "a-mind-at-play"
         title: "A Mind at Play"
         author: "Rob Goodman"
@@ -82,7 +82,7 @@ sections:
         author: "Iain M. Banks"
         cover: "https://covers.openlibrary.org/b/isbn/9780316212373-M.jpg"
         notes:
-          - "Second attempt at reading this and it really sunk its hooks in. Kickstarted a re-read of my favorite Culture Series books."
+          - "Second attempt at reading this and it really sank its hooks in. Kickstarted a re-read of my favorite Culture Series books."
         attempt: "restart"
       - book_id: "the-first-tycoon"
         title: "The First Tycoon"
@@ -111,7 +111,7 @@ sections:
         author: "John Scalzi"
         cover: "https://covers.openlibrary.org/b/isbn/9780765389152-M.jpg"
         notes:
-          - "Fumbled the concept from The Collapsing Empire and quit halfway through."
+          - "Fumbled the concept from The Collapsing Empire; I quit halfway through."
         outcome: "dnf"
         stopped_at:
           kind: "percent"
@@ -173,7 +173,7 @@ sections:
         author: "Michael Dell"
         cover: "https://covers.openlibrary.org/b/isbn/9780593087749-M.jpg"
         notes:
-          - "Fun enough anecdotes, but definitely feels like a billionaire justifying his actions with the help of more than a couple lawyer proof-readers. Most of the language is far too stilted for him to be an approachable character. Fun to hear the genesis of Dell from a college dorm room."
+          - "Fun enough anecdotes, but definitely feels like a billionaire justifying his actions with the help of more than a couple of lawyer proofreaders. Most of the language is far too stilted for him to be an approachable character. Fun to hear the genesis of Dell from a college dorm room."
       - book_id: "look-to-windward"
         title: "Look to Windward"
         author: "Iain M. Banks"
@@ -228,4 +228,4 @@ sections:
         author: "Douglas Hofstadter"
         cover: "https://covers.openlibrary.org/b/isbn/9780465026562-M.jpg"
         notes:
-          - "Tough to start, hard to put down. I lamented that this author refused to sell a digital version of their book, but this is less of a novel and more of an enjoyable textbook. Lots of fun math ideas explained gently. \"Strange loops\" introduce a lot of interesting problems for formal systems! When reading this book, I would ruminate on 2-3 page sections for a long while to make sure I could play the ideas out. Really fun read."
+          - "Tough to start, hard to put down. I lamented that this author refused to sell a digital version of their book, but this is less of a novel and more of an enjoyable textbook. Lots of fun math ideas explained gently. \"Strange loops\" introduce a lot of interesting problems for formal systems! When reading this book, I would ruminate on two- to three-page sections for a long while to make sure I could play the ideas out. Really fun read."
