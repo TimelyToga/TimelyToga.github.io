@@ -11,9 +11,9 @@ permalink: /about/
     </div>
 </div>
 
-## What I'm Building
+## Throne
 
-I'm currently the founder of [Throne](https://www.thronescience.com/), where we're developing smart health monitoring technology. Our flagship product uses AI-powered sensors to track gut health and hydration—all with a privacy-first approach.
+I founded [Throne](https://www.thronescience.com/) in 2023. We built smart health monitoring technology that used AI-powered sensors to track gut health and hydration, with a privacy-first approach. I stopped working on Throne in August 2026.
 
 ## Connect
 
@@ -42,11 +42,11 @@ A timeline of places I've worked and things I've built over the years.
 
     <div class="timeline about-timeline" id="life-timeline">
     <div class="timeline-item" data-location-id="austin">
-        <div class="timeline-date">2023 - Present</div>
+        <div class="timeline-date">2023 - Aug 2026</div>
         <h3 class="timeline-title">Throne</h3>
         <div class="timeline-place">Austin, TX</div>
         <div class="timeline-content">
-            <p>Founder. Building smart health monitoring technology with Throne One—a privacy-first, AI-powered device for tracking gut health and hydration.</p>
+            <p>Founder. Built smart health monitoring technology with Throne One—a privacy-first, AI-powered device for tracking gut health and hydration.</p>
         </div>
         <div class="timeline-links">
             <a href="https://www.thronescience.com/" target="_blank">Throne</a>
