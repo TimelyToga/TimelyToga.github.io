@@ -3,13 +3,18 @@
 {% assign outcome = entry.outcome | default: "finished" -%}
 {% assign entry_id = include.year | append: "-" | append: include.section | append: "-" | append: include.index | append: "-" | append: entry.book_id -%}
 <div class="book-entry" id="{{ entry_id }}">
+  {% if entry.cover %}
   <img src="{{ entry.cover }}" alt="{{ entry.alt | default: entry.title }}" class="book-cover-small">
+  {% endif %}
   <div class="book-info">
     <div class="book-title-row">
       <h3>{% if entry.number %}{{ entry.number }}. {% endif %}{{ entry.title }}</h3>
 
-      {% if attempt != "first_read" or outcome != "finished" %}
+      {% if attempt != "first_read" or outcome != "finished" or entry.audible_rating %}
       <div class="book-badges">
+        {% if entry.audible_rating %}
+        <span class="book-badge">Audible {{ entry.audible_rating }}/5</span>
+        {% endif %}
         {% if attempt == "reread" %}
         <span class="book-badge">Reread</span>
         {% elsif attempt == "restart" %}
@@ -58,24 +63,24 @@
         {% assign prior_year_num = prior_year_key | plus: 0 -%}
         {% if prior_year_num <= current_year_num -%}
           {% for prior_section in year_pair[1].sections -%}
-            {% if prior_section.key == "books" -%}
+            {% if prior_section.key == "books" or prior_section.key == "audible" -%}
               {% for prior_entry in prior_section.entries -%}
                 {% assign prior_index = forloop.index0 | plus: 0 -%}
                 {% assign is_earlier_entry = false -%}
                 {% if prior_year_num < current_year_num -%}
                   {% assign is_earlier_entry = true -%}
-                {% elsif prior_year_num == current_year_num and include.section == "books" and prior_index < current_index -%}
+                {% elsif prior_year_num == current_year_num and prior_section.key == include.section and prior_index < current_index -%}
                   {% assign is_earlier_entry = true -%}
                 {% endif -%}
                 {% if is_earlier_entry and prior_entry.book_id == entry.book_id -%}
                   {% assign prior_outcome = prior_entry.outcome | default: "finished" -%}
                   {% if attempt == "restart" -%}
                     {% if prior_outcome == "dnf" -%}
-                      {% assign prior_id = prior_year_key | append: "-books-" | append: prior_index | append: "-" | append: prior_entry.book_id -%}
+                      {% assign prior_id = prior_year_key | append: "-" | append: prior_section.key | append: "-" | append: prior_index | append: "-" | append: prior_entry.book_id -%}
                       <a href="{{ "/reading/" | relative_url }}{{ prior_year_key }}-reading-list.html#{{ prior_id }}">Prior DNF in {{ prior_year_key }}</a>
                     {% endif -%}
                   {% else -%}
-                    {% assign prior_id = prior_year_key | append: "-books-" | append: prior_index | append: "-" | append: prior_entry.book_id -%}
+                    {% assign prior_id = prior_year_key | append: "-" | append: prior_section.key | append: "-" | append: prior_index | append: "-" | append: prior_entry.book_id -%}
                     <a href="{{ "/reading/" | relative_url }}{{ prior_year_key }}-reading-list.html#{{ prior_id }}">Previous read in {{ prior_year_key }}</a>
                   {% endif -%}
                 {% endif -%}

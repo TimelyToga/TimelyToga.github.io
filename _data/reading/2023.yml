@@ -107,6 +107,7 @@ sections:
         notes:
           - "Interesting concept that discovering a comprehensive theory of everything will cause the universe to unravel."
       - book_id: "the-last-emperox"
+        audible_rating: 2
         title: "The Last Emperox"
         author: "John Scalzi"
         cover: "https://covers.openlibrary.org/b/isbn/9780765389152-M.jpg"
@@ -229,3 +230,24 @@ sections:
         cover: "https://covers.openlibrary.org/b/isbn/9780465026562-M.jpg"
         notes:
           - "Tough to start, hard to put down. I lamented that this author refused to sell a digital version of their book, but this is less of a novel and more of an enjoyable textbook. Lots of fun math ideas explained gently. \"Strange loops\" introduce a lot of interesting problems for formal systems! When reading this book, I would ruminate on two- to three-page sections for a long while to make sure I could play the ideas out. Really fun read."
+
+  - key: audible
+    heading: More Books from Audible History
+    placeholder: Completion years are estimated from Audible listening positions reaching at least 90%. Order within the year is unknown.
+    entries:
+    - book_id: consider-phlebas
+      title: Consider Phlebas
+      author: Iain M. Banks
+      source: audible
+    - book_id: matter
+      title: Matter
+      author: Iain M. Banks
+      source: audible
+    - book_id: the-consuming-fire
+      title: The Consuming Fire
+      author: John Scalzi
+      source: audible
+    - book_id: use-of-weapons
+      title: Use of Weapons
+      author: Iain M. Banks
+      source: audible

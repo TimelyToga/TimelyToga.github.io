@@ -1,0 +1,42 @@
+sections:
+- key: books
+  heading: Books from Audible History
+  placeholder: Completion years are estimated from Audible listening positions reaching at least 90%. Order within the year is unknown.
+  entries:
+  - book_id: absolution-gap
+    title: Absolution Gap
+    author: Alastair Reynolds
+    source: audible
+  - book_id: judas-unchained
+    title: Judas Unchained
+    author: Peter F. Hamilton
+    source: audible
+  - book_id: liftoff
+    title: Liftoff
+    author: Eric Berger
+    source: audible
+  - book_id: reamde
+    title: Reamde
+    author: Neal Stephenson
+    source: audible
+  - book_id: redemption-ark
+    title: Redemption Ark
+    author: Alastair Reynolds
+    source: audible
+  - book_id: the-clockwork-rocket
+    title: The Clockwork Rocket
+    author: Greg Egan
+    source: audible
+  - book_id: the-dreaming-void
+    title: The Dreaming Void
+    author: Peter F. Hamilton
+    source: audible
+  - book_id: the-evolutionary-void
+    title: The Evolutionary Void
+    author: Peter F. Hamilton
+    source: audible
+    audible_rating: 5
+  - book_id: the-temporal-void
+    title: The Temporal Void
+    author: Peter F. Hamilton
+    source: audible
