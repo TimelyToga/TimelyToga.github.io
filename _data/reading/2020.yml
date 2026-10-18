@@ -1,0 +1,41 @@
+sections:
+- key: books
+  heading: Books from Audible History
+  placeholder: Completion years are estimated from Audible listening positions reaching at least 90%. Order within the year is unknown.
+  entries:
+  - book_id: '1984'
+    title: '1984'
+    author: George Orwell
+    source: audible
+  - book_id: accelerando
+    title: Accelerando
+    author: Charles Stross
+    source: audible
+  - book_id: body-language-how-to-analyze-people-and-use-powerful-communication-persuasion-and-negotiation-skills-to-influence-people
+    title: 'Body Language: How to Analyze People and Use Powerful Communication, Persuasion and Negotiation Skills to Influence People'
+    author: Joe Houston, Philip Navarro
+    source: audible
+  - book_id: dealers-of-lightning
+    title: Dealers of Lightning
+    author: Michael A. Hiltzik
+    source: audible
+  - book_id: death-s-end
+    title: Death's End
+    author: Cixin Liu; translated by Ken Liu
+    source: audible
+  - book_id: the-dark-forest
+    title: The Dark Forest
+    author: Cixin Liu; translated by Joel Martinsen
+    source: audible
+  - book_id: the-eternal-flame
+    title: The Eternal Flame
+    author: Greg Egan
+    source: audible
+  - book_id: the-wise-man-s-fear
+    title: The Wise Man's Fear
+    author: Patrick Rothfuss
+    source: audible
+  - book_id: ultimate-knowledge-ultimate-power
+    title: Ultimate Knowledge Ultimate Power
+    author: Annheete Oakley
+    source: audible
