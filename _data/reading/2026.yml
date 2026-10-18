@@ -12,6 +12,7 @@ sections:
           value: 10
         notes: 'I respect Andrew Ross Sorkin a great deal, but coming off the relative highs of The Power Broker and Titan, I found this one a bit too dramatized. Read almost like fiction so gave it up.'
       - book_id: 'as1'
+        audible_rating: 5
         title: 'AS1'
         author: 'Trevor Lewis'
         cover: 'https://aproposbooks.net/wp-content/uploads/2024/10/AS1.jpg'
@@ -150,3 +151,16 @@ sections:
         title: 'The World for Sale'
         author: 'Javier Blas and Jack Farchy'
         cover: 'https://covers.openlibrary.org/b/id/13466631-M.jpg'
+
+  - key: audible
+    heading: More Books from Audible History
+    placeholder: Completion years are estimated from Audible listening positions reaching at least 90%. Order within the year is unknown.
+    entries:
+    - book_id: carpathians
+      title: Carpathians
+      author: Paul Dixon
+      source: audible
+    - book_id: leviathan-wakes
+      title: Leviathan Wakes
+      author: James S. A. Corey
+      source: audible
