@@ -1,0 +1,45 @@
+sections:
+- key: books
+  heading: Books from Audible History
+  placeholder: Completion years are estimated from Audible listening positions reaching at least 90%. Order within the year is unknown.
+  entries:
+  - book_id: a-deepness-in-the-sky
+    title: A Deepness in the Sky
+    author: Vernor Vinge
+    source: audible
+  - book_id: a-fire-upon-the-deep
+    title: A Fire Upon the Deep
+    author: Vernor Vinge
+    source: audible
+  - book_id: all-these-worlds
+    title: All These Worlds
+    author: Dennis E. Taylor
+    source: audible
+  - book_id: contact
+    title: Contact
+    author: Carl Sagan
+    source: audible
+  - book_id: for-we-are-many
+    title: For We Are Many
+    author: Dennis E. Taylor
+    source: audible
+  - book_id: on-intelligence
+    title: On Intelligence
+    author: Jeff Hawkins, Sandra Blakeslee
+    source: audible
+  - book_id: proxima-book-1
+    title: 'Proxima: Book 1'
+    author: Stephen Baxter
+    source: audible
+  - book_id: the-forever-war
+    title: The Forever War
+    author: Joe Haldeman
+    source: audible
+  - book_id: the-reality-dysfunction
+    title: The Reality Dysfunction
+    author: Peter F. Hamilton
+    source: audible
+  - book_id: the-three-body-problem
+    title: The Three-Body Problem
+    author: Cixin Liu; translated by Ken Liu
+    source: audible

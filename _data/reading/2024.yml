@@ -1,0 +1,57 @@
+sections:
+- key: books
+  heading: Books from Audible History
+  placeholder: Completion years are estimated from Audible listening positions reaching at least 90%. Order within the year is unknown.
+  entries:
+  - book_id: den-of-thieves
+    title: Den of Thieves
+    author: James B. Stewart
+    source: audible
+  - book_id: dune
+    title: Dune
+    author: Frank Herbert
+    source: audible
+  - book_id: elysium-fire
+    title: Elysium Fire
+    author: Alastair Reynolds
+    source: audible
+  - book_id: on-the-edge
+    title: On the Edge
+    author: Nate Silver
+    source: audible
+  - book_id: pandora-s-star
+    title: Pandora's Star
+    author: Peter F. Hamilton
+    source: audible
+  - book_id: permutation-city
+    title: Permutation City
+    author: Greg Egan
+    source: audible
+  - book_id: salvation
+    title: Salvation
+    author: Peter F. Hamilton
+    source: audible
+  - book_id: salvation-lost
+    title: Salvation Lost
+    author: Peter F. Hamilton
+    source: audible
+  - book_id: the-caesars-palace-coup
+    title: The Caesars Palace Coup
+    author: Max Frumes, Sujeet Indap
+    source: audible
+  - book_id: the-mote-in-god-s-eye
+    title: The Mote in God's Eye
+    author: Larry Niven, Jerry Pournelle
+    source: audible
+  - book_id: the-nvidia-way
+    title: The Nvidia Way
+    author: Tae Kim
+    source: audible
+  - book_id: the-saints-of-salvation
+    title: The Saints of Salvation
+    author: Peter F. Hamilton
+    source: audible
+  - book_id: we-are-legion-we-are-bob
+    title: We Are Legion (We Are Bob)
+    author: Dennis E. Taylor
+    source: audible
