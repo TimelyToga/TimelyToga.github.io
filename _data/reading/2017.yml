@@ -1,0 +1,50 @@
+sections:
+- key: books
+  heading: Books from Audible History
+  placeholder: Completion years are estimated from Audible listening positions reaching at least 90%. Order within the year is unknown.
+  entries:
+  - book_id: a-night-without-stars-a-novel-of-the-commonwealth
+    title: 'A Night Without Stars: A Novel of the Commonwealth'
+    author: Peter F. Hamilton
+    source: audible
+  - book_id: artemis
+    title: Artemis
+    author: Andy Weir
+    source: audible
+  - book_id: aurora
+    title: Aurora
+    author: Kim Stanley Robinson
+    source: audible
+  - book_id: blindsight
+    title: Blindsight
+    author: Peter Watts
+    source: audible
+  - book_id: incandescence
+    title: Incandescence
+    author: Greg Egan
+    source: audible
+  - book_id: revelation-space
+    title: Revelation Space
+    author: Alastair Reynolds
+    source: audible
+  - book_id: ringworld
+    title: Ringworld
+    author: Larry Niven
+    source: audible
+  - book_id: seveneves
+    title: Seveneves
+    author: Neal Stephenson
+    source: audible
+    audible_rating: 5
+  - book_id: stories-of-your-life-and-others
+    title: Stories of Your Life and Others
+    author: Ted Chiang
+    source: audible
+  - book_id: the-abyss-beyond-dreams
+    title: The Abyss Beyond Dreams
+    author: Peter F. Hamilton
+    source: audible
+  - book_id: the-ringworld-engineers
+    title: The Ringworld Engineers
+    author: Larry Niven
+    source: audible

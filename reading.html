@@ -6,24 +6,24 @@ permalink: /reading/
 
 <p>Yearly reading lists with notes on the books that stood out.</p>
 
+<p>Audible additions use estimated finish years from listening positions reaching at least 90%. Existing reading years, rereads, and unfinished-book notes are preserved.</p>
+
+<p>Some Culture novels were also read before 2022; their individual reading years are unknown.</p>
+
 {% assign sorted_reading = site.reading | sort: 'date' | reverse %}
 {% for post in sorted_reading %}
 {% assign reading_year_key = post.date | date: "%Y" %}
-{% assign display_book_count = post.book_count %}
-{% unless display_book_count %}
-    {% assign reading_year = site.data.reading[reading_year_key] %}
-    {% if reading_year %}
-        {% for section in reading_year.sections %}
-            {% if section.key == "books" %}
-                {% assign display_book_count = section.entries | size %}
-                {% break %}
-            {% endif %}
-        {% endfor %}
+{% assign display_book_count = 0 %}
+{% assign reading_year = site.data.reading[reading_year_key] %}
+{% for section in reading_year.sections %}
+    {% if section.key == "books" or section.key == "audible" %}
+        {% assign section_count = section.entries | size %}
+        {% assign display_book_count = display_book_count | plus: section_count %}
     {% endif %}
-{% endunless %}
+{% endfor %}
 <div class="story-item">
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <div class="story-meta">{{ reading_year_key }} &middot; {{ display_book_count }} books</div>
+    <div class="story-meta">{{ reading_year_key }} &middot; {{ display_book_count }} {% if display_book_count == 1 %}book{% else %}books{% endif %}</div>
     <p class="story-description">{{ post.description }}</p>
 </div>
 {% endfor %}

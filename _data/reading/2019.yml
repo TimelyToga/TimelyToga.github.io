@@ -1,0 +1,49 @@
+sections:
+- key: books
+  heading: Books from Audible History
+  placeholder: Completion years are estimated from Audible listening positions reaching at least 90%. Order within the year is unknown.
+  entries:
+  - book_id: ai-superpowers
+    title: AI Superpowers
+    author: Kai-Fu Lee
+    source: audible
+  - book_id: chasm-city
+    title: Chasm City
+    author: Alastair Reynolds
+    source: audible
+  - book_id: children-of-time
+    title: Children of Time
+    author: Adrian Tchaikovsky
+    source: audible
+  - book_id: dragon-s-egg
+    title: Dragon's Egg
+    author: Robert L. Forward
+    source: audible
+  - book_id: exhalation
+    title: Exhalation
+    author: Ted Chiang
+    source: audible
+  - book_id: great-north-road
+    title: Great North Road
+    author: Peter F. Hamilton
+    source: audible
+  - book_id: house-of-suns
+    title: House of Suns
+    author: Alastair Reynolds
+    source: audible
+  - book_id: hyperion
+    title: Hyperion
+    author: Dan Simmons
+    source: audible
+  - book_id: pushing-ice
+    title: Pushing Ice
+    author: Alastair Reynolds
+    source: audible
+  - book_id: surface-detail
+    title: Surface Detail
+    author: Iain M. Banks
+    source: audible
+  - book_id: the-quantum-magician
+    title: The Quantum Magician
+    author: Derek Künsken
+    source: audible
