@@ -1,22 +1,79 @@
 {% assign year_key = include.year | append: "" -%}
 {% assign reading_year = site.data.reading[year_key] -%}
+{% assign sorted_years_nav = site.reading | sort: 'date' | reverse -%}
+
+<nav class="reading-year-rail" aria-label="Switch reading year">
+    {% for yr_post in sorted_years_nav -%}
+        {% assign nav_yr = yr_post.date | date: "%Y" -%}
+        <a href="{{ yr_post.url | relative_url }}" class="year-rail-chip{% if nav_yr == year_key %} is-active{% endif %}"{% if nav_yr == year_key %} aria-current="page"{% endif %}>{{ nav_yr }}</a>
+    {% endfor -%}
+</nav>
+
 {% if reading_year -%}
-{%- for section in reading_year.sections %}
-<h2>{{ section.heading }}</h2>
-{% if section.placeholder %}
-<p><em>{{ section.placeholder }}</em></p>
-{% endif -%}
-{% if section.entries %}
-<div class="reading-section reading-section-{{ section.key }}">
-{% for entry in section.entries -%}
-{% include reading_entry.html entry=entry year=year_key section=section.key index=forloop.index0 %}
+{% assign has_notes_any = false -%}
+{% assign has_reread_any = false -%}
+{% assign has_dnf_any = false -%}
+{% assign has_audible_any = false -%}
+{% assign total_entries_on_page = 0 -%}
+{% for section in reading_year.sections -%}
+    {% if section.entries -%}
+        {% for e in section.entries -%}
+            {% assign total_entries_on_page = total_entries_on_page | plus: 1 -%}
+            {% if e.notes %}{% assign has_notes_any = true %}{% endif -%}
+            {% if e.attempt == "reread" or e.attempt == "restart" %}{% assign has_reread_any = true %}{% endif -%}
+            {% if e.outcome == "dnf" %}{% assign has_dnf_any = true %}{% endif -%}
+            {% if e.source == "audible" or section.key == "audible" or e.audible_rating %}{% assign has_audible_any = true %}{% endif -%}
+        {% endfor -%}
+    {% endif -%}
 {% endfor -%}
+
+{% if total_entries_on_page > 3 %}
+<div class="reading-controls" data-reading-controls>
+    <div class="reading-filter-pills" role="toolbar" aria-label="Filter books">
+        <button type="button" class="filter-pill is-active" data-filter="all">All</button>
+        {% if has_notes_any %}
+        <button type="button" class="filter-pill" data-filter="notes">With Notes</button>
+        {% endif %}
+        {% if has_reread_any %}
+        <button type="button" class="filter-pill" data-filter="reread">Rereads</button>
+        {% endif %}
+        {% if has_dnf_any %}
+        <button type="button" class="filter-pill" data-filter="dnf">DNF</button>
+        {% endif %}
+        {% if has_audible_any %}
+        <button type="button" class="filter-pill" data-filter="audible">Audible</button>
+        {% endif %}
+    </div>
+    <div class="reading-search-wrap">
+        <input type="search" class="reading-search-input" data-reading-search placeholder="Filter title or author..." aria-label="Filter books by title, author, or note">
+        <span class="reading-filter-status" data-reading-status aria-live="polite"></span>
+    </div>
 </div>
-{% endif -%}
-{% unless forloop.last %}
-<hr>
-{% endunless -%}
+{% endif %}
+
+<div class="reading-sections-root" data-reading-root>
+{%- for section in reading_year.sections %}
+<section class="reading-section-block" data-reading-section="{{ section.key }}">
+    <h2>{{ section.heading }}</h2>
+    {% if section.placeholder %}
+    <p class="section-placeholder"><em>{{ section.placeholder }}</em></p>
+    {% endif -%}
+    {% if section.entries %}
+    <div class="reading-section reading-section-{{ section.key }}">
+    {% for entry in section.entries -%}
+    {% include reading_entry.html entry=entry year=year_key section=section.key index=forloop.index0 %}
+    {% endfor -%}
+    </div>
+    {% endif -%}
+    {% unless forloop.last %}
+    <hr class="reading-section-divider">
+    {% endunless -%}
+</section>
 {% endfor -%}
+<p class="reading-empty-state" data-reading-empty hidden>No books match this filter.</p>
+</div>
+
+<script src="{{ '/assets/js/reading-ui.js' | relative_url }}" defer></script>
 {% else %}
 <p><em>No reading data found for {{ year_key }}.</em></p>
 {% endif %}

@@ -1,29 +1,127 @@
 ---
 layout: page
 title: Reading
+eyebrow: Archive &amp; Marginalia
 permalink: /reading/
 ---
 
-<p>Yearly reading lists with notes on the books that stood out.</p>
-
-<p>Audible additions use estimated finish years from listening positions reaching at least 90%. Existing reading years, rereads, and unfinished-book notes are preserved.</p>
-
-<p>Some Culture novels were also read before 2022; their individual reading years are unknown.</p>
-
 {% assign sorted_reading = site.reading | sort: 'date' | reverse %}
+{% assign chron_reading = site.reading | sort: 'date' %}
+{% assign grand_total_books = 0 %}
+{% assign grand_total_notes = 0 %}
+{% assign max_books_in_year = 1 %}
+
 {% for post in sorted_reading %}
-{% assign reading_year_key = post.date | date: "%Y" %}
-{% assign display_book_count = 0 %}
-{% assign reading_year = site.data.reading[reading_year_key] %}
-{% for section in reading_year.sections %}
-    {% if section.key == "books" or section.key == "audible" %}
-        {% assign section_count = section.entries | size %}
-        {% assign display_book_count = display_book_count | plus: section_count %}
+    {% assign yk = post.date | date: "%Y" %}
+    {% assign ry = site.data.reading[yk] %}
+    {% assign yc = 0 %}
+    {% for section in ry.sections %}
+        {% if section.key == "books" or section.key == "audible" %}
+            {% for ent in section.entries %}
+                {% assign yc = yc | plus: 1 %}
+                {% assign grand_total_books = grand_total_books | plus: 1 %}
+                {% if ent.notes %}
+                    {% assign grand_total_notes = grand_total_notes | plus: 1 %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+    {% if yc > max_books_in_year %}
+        {% assign max_books_in_year = yc %}
     {% endif %}
 {% endfor %}
-<div class="story-item">
-    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <div class="story-meta">{{ reading_year_key }} &middot; {{ display_book_count }} {% if display_book_count == 1 %}book{% else %}books{% endif %}</div>
-    <p class="story-description">{{ post.description }}</p>
+
+<div class="reading-intro-prose">
+    <p>Yearly reading lists with notes on the books that stood out.</p>
+    <p>Audible additions use estimated finish years from listening positions reaching at least 90%. Existing reading years, rereads, and unfinished-book notes are preserved.</p>
+    <p>Some Culture novels were also read before 2022; their individual reading years are unknown.</p>
 </div>
+
+<div class="reading-telemetry-card" aria-label="Reading archive overview">
+    <div class="reading-stats-row">
+        <div class="reading-stat">
+            <span class="stat-value">{{ grand_total_books }}</span>
+            <span class="stat-label">Books Logged</span>
+        </div>
+        <div class="reading-stat">
+            <span class="stat-value">{{ sorted_reading | size }}</span>
+            <span class="stat-label">Years Tracked</span>
+        </div>
+        <div class="reading-stat">
+            <span class="stat-value">{{ grand_total_notes }}</span>
+            <span class="stat-label">Written Notes</span>
+        </div>
+    </div>
+
+    <div class="reading-cadence-chart" role="navigation" aria-label="Books per year chart">
+        {% for post in chron_reading %}
+            {% assign c_year = post.date | date: "%Y" %}
+            {% assign c_data = site.data.reading[c_year] %}
+            {% assign c_count = 0 %}
+            {% for section in c_data.sections %}
+                {% if section.key == "books" or section.key == "audible" %}
+                    {% assign sc = section.entries | size %}
+                    {% assign c_count = c_count | plus: sc %}
+                {% endif %}
+            {% endfor %}
+            {% assign bar_pct = c_count | times: 100 | divided_by: max_books_in_year | at_least: 8 %}
+            <a href="{{ post.url | relative_url }}" class="cadence-col" data-year-target="{{ c_year }}" title="{{ c_year }}: {{ c_count }} {% if c_count == 1 %}book{% else %}books{% endif %}">
+                <span class="cadence-val">{{ c_count }}</span>
+                <span class="cadence-track">
+                    <span class="cadence-bar" style="height: {{ bar_pct }}%"></span>
+                </span>
+                <span class="cadence-yr">'{{ c_year | slice: 2, 2 }}</span>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="reading-years-list">
+{% for post in sorted_reading %}
+    {% assign reading_year_key = post.date | date: "%Y" %}
+    {% assign display_book_count = 0 %}
+    {% assign year_note_count = 0 %}
+    {% assign year_covers = "" | split: "" %}
+    {% assign reading_year = site.data.reading[reading_year_key] %}
+    {% for section in reading_year.sections %}
+        {% if section.key == "books" or section.key == "audible" %}
+            {% assign section_count = section.entries | size %}
+            {% assign display_book_count = display_book_count | plus: section_count %}
+            {% for ent in section.entries %}
+                {% if ent.notes %}{% assign year_note_count = year_note_count | plus: 1 %}{% endif %}
+                {% if ent.cover and year_covers.size < 5 %}
+                    {% assign year_covers = year_covers | push: ent %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+    <a href="{{ post.url | relative_url }}" class="year-archive-card" id="year-card-{{ reading_year_key }}" data-year-card="{{ reading_year_key }}">
+        <div class="year-card-main">
+            <div class="year-card-header">
+                <span class="year-pill">{{ reading_year_key }}</span>
+                <h2 class="year-card-title">{{ post.title }}</h2>
+            </div>
+            <div class="story-meta">
+                {{ reading_year_key }} &middot; {{ display_book_count }} {% if display_book_count == 1 %}book{% else %}books{% endif %}
+                {% if year_note_count > 0 %}&middot; {{ year_note_count }} reviewed{% endif %}
+            </div>
+            <p class="story-description">{{ post.description }}</p>
+        </div>
+
+        {% if year_covers.size > 0 %}
+        <div class="year-cover-strip" aria-hidden="true">
+            {% for cov_ent in year_covers %}
+            <img src="{{ cov_ent.cover }}" alt="" loading="lazy">
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="year-audible-tag" aria-hidden="true">
+            <span>Audible Log</span>
+        </div>
+        {% endif %}
+    </a>
 {% endfor %}
+</div>
+
+<script src="{{ '/assets/js/reading-ui.js' | relative_url }}" defer></script>

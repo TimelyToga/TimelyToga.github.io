@@ -1,12 +1,182 @@
 ---
 layout: default
+wide: true
 ---
-<div class="home-hero">
-    <img src="/assets/img/profile/face.jpg" alt="Timothy Blumberg" class="profile-photo">
-    <h1 class="home-title">Timothy Blumberg</h1>
-    <p class="home-subtitle">杜君伟</p>
-    <p class="home-intro">
-        Software engineer, writer, and founder based in Austin, TX.
-        I build things, write science fiction, and think about the future.
-    </p>
-</div>
+{% assign total_books_all = 0 %}
+{% for yr_pair in site.data.reading %}
+    {% for sec in yr_pair[1].sections %}
+        {% if sec.key == "books" or sec.key == "audible" %}
+            {% assign sc = sec.entries | size %}
+            {% assign total_books_all = total_books_all | plus: sc %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+{% assign books_2026 = 0 %}
+{% assign covers_2026 = "" | split: "" %}
+{% if site.data.reading["2026"] %}
+    {% for sec in site.data.reading["2026"].sections %}
+        {% if sec.key == "books" or sec.key == "audible" %}
+            {% assign sc26 = sec.entries | size %}
+            {% assign books_2026 = books_2026 | plus: sc26 %}
+            {% for ent in sec.entries %}
+                {% if ent.cover and covers_2026.size < 4 %}
+                    {% assign covers_2026 = covers_2026 | push: ent %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% assign sorted_scifi = site.scifi | sort: 'date' | reverse %}
+{% assign latest_story = sorted_scifi | first %}
+
+<section class="home-stage">
+    <div class="home-hero">
+        <div class="portrait-orbit">
+            <svg class="orbit-ring" viewBox="0 0 220 220" aria-hidden="true">
+                <circle cx="110" cy="110" r="102" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="3 7" opacity="0.38"/>
+                <circle cx="110" cy="110" r="92" fill="none" stroke="currentColor" stroke-width="1" opacity="0.22"/>
+                <circle cx="110" cy="8" r="2.8" fill="#6bc9c1"/>
+                <circle cx="202" cy="110" r="2.2" fill="#df9559"/>
+            </svg>
+            <img src="{{ '/assets/img/profile/face.jpg' | relative_url }}" alt="Timothy Blumberg" class="profile-photo">
+        </div>
+
+        <div class="home-hero-copy">
+            <div class="hero-kicker">
+                <span class="kicker-dot"></span>
+                <span>Austin, TX &middot; Engineer, Writer &amp; Founder</span>
+            </div>
+            <h1 class="home-title">
+                Timothy Blumberg
+                <span class="home-subtitle" lang="zh-Hans">杜君伟</span>
+            </h1>
+            <p class="home-intro">
+                Software engineer, writer, and founder based in Austin, TX.
+                I build things, write science fiction, and think about the future.
+            </p>
+            <div class="home-hero-links">
+                <a href="{{ '/about/' | relative_url }}" class="btn-editorial btn-editorial-primary">
+                    <span>Explore Background</span>
+                    <span aria-hidden="true">&rarr;</span>
+                </a>
+                <a href="{{ '/writing/' | relative_url }}" class="btn-editorial">Read Fiction &amp; Essays</a>
+                <a href="{{ '/reading/' | relative_url }}" class="btn-editorial">Reading Archive ({{ total_books_all }})</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="portal-grid" aria-label="Site sections">
+        <a href="{{ '/about/' | relative_url }}" class="portal-card">
+            <div class="portal-top">
+                <span class="portal-index">01 / Trajectory</span>
+                <span class="portal-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+            <h2 class="portal-title">Systems, Privacy &amp; Autonomy</h2>
+            <p class="portal-desc">
+                Founded Throne (AI health hardware, 2023&ndash;2026). Previously built cryptographic privacy infrastructure at Skyflow, AV simulation at Lyft Level 5, and 3D superhighrise mapping in Shanghai.
+            </p>
+            <div class="portal-route" aria-label="Cities lived in">
+                <span>TN</span><span class="route-sep">&rarr;</span>
+                <span>NC</span><span class="route-sep">&rarr;</span>
+                <span>Shanghai</span><span class="route-sep">&rarr;</span>
+                <span>NYC</span><span class="route-sep">&rarr;</span>
+                <span>Bay Area</span><span class="route-sep">&rarr;</span>
+                <span class="route-active">Austin</span>
+            </div>
+        </a>
+
+        <a href="{{ '/writing/' | relative_url }}" class="portal-card">
+            <div class="portal-top">
+                <span class="portal-index">02 / Writing</span>
+                <span class="portal-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+            <h2 class="portal-title">Speculative Fiction &amp; Essays</h2>
+            <p class="portal-desc">
+                Short stories probing synthetic consciousness, civilizations at the terminus of physics, and dying stars&mdash;alongside essays on mathematical abstraction and tools.
+            </p>
+            <div class="portal-footer-meta">
+                <span>{{ site.scifi | size }} sci-fi stories</span>
+                <span>&middot;</span>
+                <span>{{ site.posts | size }} essays</span>
+                {% if latest_story %}
+                <span>&middot;</span>
+                <span class="portal-highlight">{{ latest_story.title }}</span>
+                {% endif %}
+            </div>
+        </a>
+
+        <a href="{{ '/reading/' | relative_url }}" class="portal-card">
+            <div class="portal-top">
+                <span class="portal-index">03 / Library</span>
+                <span class="portal-arrow" aria-hidden="true">&nearr;</span>
+            </div>
+            <h2 class="portal-title">Decade Reading Archive</h2>
+            <p class="portal-desc">
+                Chronological logs and candid notes across hard science fiction, financial history, institutional power, and biographies from 2016 through 2026.
+            </p>
+            <div class="portal-reading-row">
+                <div class="mini-cover-stack" aria-hidden="true">
+                    {% for c in covers_2026 %}
+                    <img src="{{ c.cover }}" alt="" loading="lazy">
+                    {% endfor %}
+                </div>
+                <span class="portal-reading-stat">{{ total_books_all }} books &middot; {{ books_2026 }} in 2026</span>
+            </div>
+        </a>
+    </div>
+
+    <div class="home-split-showcase">
+        <div class="showcase-column">
+            <div class="section-header">
+                <h2 class="showcase-heading">Speculative Fiction</h2>
+                <a href="{{ '/writing/' | relative_url }}">All writing &rarr;</a>
+            </div>
+            <div class="compact-ledger">
+                {% for story in sorted_scifi %}
+                {% assign s_words = story.content | strip_html | number_of_words %}
+                {% assign s_mins = s_words | divided_by: 220 | at_least: 1 %}
+                <a href="{{ story.url | relative_url }}" class="ledger-row">
+                    <div class="ledger-row-head">
+                        <span class="ledger-title">{{ story.title }}</span>
+                        <span class="ledger-meta">{{ story.date | date: "%Y" }} &middot; {{ s_mins }}m</span>
+                    </div>
+                    <p class="ledger-desc">{{ story.description }}</p>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="showcase-column">
+            <div class="section-header">
+                <h2 class="showcase-heading">Recent Reading</h2>
+                <a href="{{ '/reading/2026-reading-list.html' | relative_url }}">2026 log &rarr;</a>
+            </div>
+            <div class="compact-ledger">
+                {% if site.data.reading["2026"] %}
+                    {% assign book_sec = site.data.reading["2026"].sections | where: "key", "books" | first %}
+                    {% assign recent_entries = book_sec.entries | reverse %}
+                    {% assign shown_recent = 0 %}
+                    {% for entry in recent_entries %}
+                        {% if shown_recent < 4 and entry.outcome != "dnf" %}
+                        {% assign shown_recent = shown_recent | plus: 1 %}
+                        <a href="{{ '/reading/2026-reading-list.html' | relative_url }}" class="ledger-row ledger-row-book">
+                            {% if entry.cover %}
+                            <img src="{{ entry.cover }}" alt="" class="ledger-thumb" loading="lazy">
+                            {% endif %}
+                            <div class="ledger-book-body">
+                                <div class="ledger-row-head">
+                                    <span class="ledger-title">{{ entry.title }}</span>
+                                    {% if entry.attempt == "reread" %}<span class="ledger-tag">Reread</span>{% endif %}
+                                </div>
+                                <div class="ledger-author">{{ entry.author }}</div>
+                            </div>
+                        </a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

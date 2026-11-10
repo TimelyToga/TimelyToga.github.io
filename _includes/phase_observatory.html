@@ -1,0 +1,63 @@
+<aside class="phase-hud" id="phase-hud" aria-label="Dynamical system background controls">
+    <div class="phase-hud-panel" id="phase-hud-panel" hidden>
+        <div class="phase-hud-header">
+            <div>
+                <div class="phase-hud-kicker">Phase-Space Manifold · RK4</div>
+                <div class="phase-hud-name" id="phase-hud-name">Thomas Attractor</div>
+            </div>
+            <button type="button" class="phase-hud-icon-btn" id="phase-hud-close" aria-label="Collapse controls" title="Collapse">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M4 6l4 4 4-4"/></svg>
+            </button>
+        </div>
+
+        <div class="phase-hud-eq" id="phase-hud-eq">dx/dt = sin(y) − bx</div>
+
+        <div class="phase-hud-regimes" role="tablist" aria-label="Strange attractor system">
+            <button type="button" class="phase-regime-btn is-active" data-regime="thomas" role="tab" aria-selected="true">Thomas</button>
+            <button type="button" class="phase-regime-btn" data-regime="aizawa" role="tab" aria-selected="false">Aizawa</button>
+            <button type="button" class="phase-regime-btn" data-regime="lorenz" role="tab" aria-selected="false">Lorenz</button>
+            <button type="button" class="phase-regime-btn" data-regime="halvorsen" role="tab" aria-selected="false">Halvorsen</button>
+        </div>
+
+        <div class="phase-hud-metrics">
+            <div class="phase-metric">
+                <span class="phase-metric-label">Parameter</span>
+                <span class="phase-metric-val" id="phase-hud-param">b = 0.1998</span>
+            </div>
+            <div class="phase-metric">
+                <span class="phase-metric-label">Mean |v|</span>
+                <span class="phase-metric-val" id="phase-hud-vel">0.42</span>
+            </div>
+            <div class="phase-metric">
+                <span class="phase-metric-label">Filaments</span>
+                <span class="phase-metric-val" id="phase-hud-count">210</span>
+            </div>
+        </div>
+
+        <div class="phase-hud-actions">
+            <button type="button" class="phase-action-btn" id="phase-btn-perturb" title="Inject a harmonic wave impulse into phase space">
+                Perturb
+            </button>
+            <button type="button" class="phase-action-btn" id="phase-btn-inspect" title="Dim page content and drag to orbit the 3D manifold">
+                Inspect 3D
+            </button>
+            <button type="button" class="phase-action-btn" id="phase-btn-pause" aria-pressed="false" title="Pause or resume numerical integration">
+                Pause
+            </button>
+        </div>
+    </div>
+
+    <div class="phase-hud-bar">
+        <button type="button" class="phase-exit-inspect" id="phase-exit-inspect" hidden>
+            <span class="phase-live-dot"></span>
+            <span>Drag to orbit · Scroll to zoom · <strong>Exit 3D View</strong></span>
+        </button>
+
+        <button type="button" class="phase-hud-pill" id="phase-hud-toggle" aria-expanded="false" aria-controls="phase-hud-panel">
+            <span class="phase-live-dot" id="phase-live-dot"></span>
+            <span class="phase-pill-label" id="phase-pill-label">Thomas Manifold</span>
+            <span class="phase-pill-sep">·</span>
+            <span class="phase-pill-sub" id="phase-pill-sub">RK4</span>
+        </button>
+    </div>
+</aside>
