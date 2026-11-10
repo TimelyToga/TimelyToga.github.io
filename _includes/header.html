@@ -1,14 +1,26 @@
-<header class="site-header">
-    <div class="wrapper">
-        <div class="header-content">
-            <a class="site-title" href="{{ "/" | relative_url }}">
-                {{ site.title }}
-            </a>
-            <nav class="site-nav">
-                <a href="{{ "/about/" | relative_url }}"{% if page.url == "/about/" %} class="active"{% endif %}>About</a>
-                <a href="{{ "/writing/" | relative_url }}"{% if page.url contains "/writing" or page.url contains "/scifi" %} class="active"{% endif %}>Writing</a>
-                <a href="{{ "/reading/" | relative_url }}"{% if page.url contains "/reading" %} class="active"{% endif %}>Reading</a>
-            </nav>
-        </div>
+{% assign is_writing = false %}
+{% if page.url contains "/writing" or page.url contains "/scifi" or page.collection == "posts" %}
+  {% assign is_writing = true %}
+{% endif %}
+<header class="site-header" id="site-header">
+    <div class="header-content">
+        <a class="site-title" href="{{ "/" | relative_url }}" aria-label="{{ site.title }} — Home">
+            <span class="site-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-28 12 12)" stroke="currentColor" stroke-width="1.2" opacity="0.72"/>
+                    <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(34 12 12)" stroke="currentColor" stroke-width="1.2" opacity="0.42"/>
+                    <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                </svg>
+            </span>
+            <span class="site-title-text">{{ site.title }}</span>
+            <span class="chinese-name" lang="zh-Hans">{{ site.chinese_name }}</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+            <a href="{{ "/about/" | relative_url }}"{% if page.url == "/about/" %} class="active" aria-current="page"{% endif %}>About</a>
+            <a href="{{ "/writing/" | relative_url }}"{% if is_writing %} class="active" aria-current="page"{% endif %}>Writing</a>
+            <a href="{{ "/reading/" | relative_url }}"{% if page.url contains "/reading" %} class="active" aria-current="page"{% endif %}>Reading</a>
+        </nav>
     </div>
+    <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
 </header>
