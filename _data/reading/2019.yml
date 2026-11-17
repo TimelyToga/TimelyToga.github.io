@@ -1,7 +1,6 @@
 sections:
 - key: books
   heading: Books from Audible History
-  placeholder: Completion years are estimated from Audible listening positions reaching at least 90%. Order within the year is unknown.
   entries:
   - book_id: ai-superpowers
     title: AI Superpowers
