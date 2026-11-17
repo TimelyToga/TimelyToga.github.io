@@ -24,154 +24,10 @@
   var LEVEL_KEY = "timelytoga_phase_bg_level";
   var DEFAULT_BG_LEVEL = 78;
 
-  // Library of 18 intricate 3D fluid, topological & strange vector fields (no textbook cliches)
-  // Flow 01 models the 2026 OpenAI Navier-Stokes inward-spiraling stretched vortex + annulus pulses
+  // Seven favorite 3D fluid, topological & strange vector fields
   var FLOWS = [
     {
-      // 01: Axisymmetric Swirling Stretched-Vortex Singularity (Navier-Stokes 2026)
-      seedRadius: 0.95,
-      camZoom: 1.06,
-      basePitch: -0.38,
-      evalField: function (x, y, z, t, out) {
-        var r2 = x * x + z * z;
-        var r = Math.sqrt(r2 + 1e-5);
-        var r02 = 0.4 + 0.06 * Math.sin(t * 0.23);
-        var y02 = 0.72 + 0.08 * Math.cos(t * 0.19);
-        var env = Math.exp(-(r2 / (r02 * 2.2) + (y * y) / (y02 * 2.0)));
-        var wm = 0.021;
-        var ur = -wm * r * (1 - (1.95 * y * y) / y02) * env;
-        var uy = wm * 1.45 * y * (1 - r2 / r02) * env;
-        var eps2 = 0.03 + 0.01 * (0.5 + 0.5 * Math.sin(t * 0.29));
-        var omega =
-          (0.0125 / Math.pow(r2 + eps2, 0.66)) * Math.exp(-0.28 * (r2 + 0.42 * y * y));
-        var theta = Math.atan2(z, x);
-        var ann = r * Math.exp(-Math.pow((r - 0.62) / 0.28, 2));
-        var pulse = 0.0038 * ann * Math.sin(3 * theta - 4.0 * y + t * 0.52);
-        var bowl = Math.max(0, r2 + 0.75 * y * y - 0.78) * 0.008;
-        var tilt = 0.0018 * Math.sin(t * 0.17);
-        out[0] = (ur * x) / r - omega * z + pulse * Math.cos(theta) - x * bowl + tilt * y;
-        out[1] = uy - y * bowl * 1.15;
-        out[2] = (ur * z) / r + omega * x + pulse * Math.sin(theta) - z * bowl - tilt * x;
-      }
-    },
-    {
-      // 02: Stereographic Hopf Fibration Link (interlocking Villarceau circles)
-      seedRadius: 0.9,
-      camZoom: 1.04,
-      basePitch: 0.44,
-      evalField: function (x, y, z, t, out) {
-        var a = 0.76 + 0.09 * Math.sin(t * 0.18);
-        var r2 = x * x + y * y + z * z;
-        var k = 0.0155 / ((a * a + r2) * 0.85 + 0.35);
-        var hx = 2 * (-a * z + x * y);
-        var hy = a * a + y * y - x * x - z * z;
-        var hz = 2 * (a * x + y * z);
-        var pull = (r2 - 0.86) * 0.0045;
-        var twist = 0.22 * Math.sin(t * 0.14);
-        out[0] = (hx + twist * z) * k - x * pull;
-        out[1] = (hy + 0.14 * Math.cos(t * 0.21) * x) * k - y * pull;
-        out[2] = (hz - twist * x) * k - z * pull;
-      }
-    },
-    {
-      // 03: Travelling Beltrami Curl Eigenfield Labyrinth
-      seedRadius: 0.92,
-      camZoom: 1.0,
-      basePitch: 0.35,
-      evalField: function (x, y, z, t, out) {
-        var s = 2.55;
-        var X = x * s + 0.35 * t * 0.4;
-        var Y = y * s + 0.28 * Math.cos(t * 0.17);
-        var Z = z * s - 0.3 * t * 0.35;
-        var A = 1.0 + 0.16 * Math.sin(t * 0.17);
-        var B = 0.86 + 0.15 * Math.cos(t * 0.21);
-        var C = 0.74 + 0.15 * Math.sin(t * 0.13 + 1.2);
-        var k = 0.011;
-        var pull = Math.max(0, x * x + y * y + z * z - 0.78) * 0.014;
-        out[0] = (A * Math.sin(Z) + C * Math.cos(Y)) * k - z * 0.0035 - x * pull;
-        out[1] = (B * Math.sin(X) + A * Math.cos(Z)) * k - y * pull;
-        out[2] = (C * Math.sin(Y) + B * Math.cos(X)) * k + x * 0.0035 - z * pull;
-      }
-    },
-    {
-      // 04: Trefoil (2,3) Knotted Vortex Filament
-      seedRadius: 0.88,
-      camZoom: 1.06,
-      basePitch: -0.48,
-      evalField: function (x, y, z, t, out) {
-        var R = Math.sqrt(x * x + z * z) + 1e-4;
-        var Rs = Math.max(0.34, R);
-        var phi = Math.atan2(z, x);
-        var ph = phi + t * 0.07;
-        var Rk = 0.7 + 0.21 * Math.cos(3 * ph);
-        var Yk = 0.26 * Math.sin(3 * ph);
-        var dR = R - Rk;
-        var dY = y - Yk;
-        var swirl = 0.0054 / Math.pow(dR * dR + dY * dY + 0.045, 0.54);
-        var uPhi = 0.0086;
-        var angRate = uPhi / Rs;
-        var uR =
-          -dY * swirl -
-          dR * 0.0045 -
-          0.63 * Math.sin(3 * ph) * angRate +
-          0.0018 * Math.cos(2 * ph - t * 0.28);
-        var uY =
-          dR * swirl -
-          dY * 0.0045 +
-          0.78 * Math.cos(3 * ph) * angRate +
-          0.0018 * Math.sin(2 * ph + t * 0.24);
-        out[0] = (uR * x - uPhi * z) / R;
-        out[1] = uY;
-        out[2] = (uR * z + uPhi * x) / R;
-      }
-    },
-    {
-      // 05: Stellarator 5-Period Twisted Flux Islands
-      seedRadius: 0.88,
-      camZoom: 1.06,
-      basePitch: -0.52,
-      evalField: function (x, y, z, t, out) {
-        var R = Math.sqrt(x * x + z * z) + 1e-4;
-        var phi = Math.atan2(z, x);
-        var twist = 2.5 * phi - t * 0.16;
-        var c = Math.cos(twist);
-        var s = Math.sin(twist);
-        var dr = R - 0.74;
-        var u = dr * c + y * s;
-        var v = -dr * s + y * c;
-        var rho2 = 1.55 * u * u + 0.65 * v * v;
-        var iota = 0.0135 * (1.18 - 0.42 * rho2);
-        var du = -0.65 * v * iota - u * (rho2 - 0.17) * 0.007;
-        var dv = 1.55 * u * iota - v * (rho2 - 0.17) * 0.007;
-        var uR = du * c - dv * s + 0.002 * Math.sin(5 * phi + t * 0.28);
-        var uY = du * s + dv * c;
-        var uPhi = 0.0105 * (1 + 0.2 * dr);
-        out[0] = (uR * x - uPhi * z) / R;
-        out[1] = uY;
-        out[2] = (uR * z + uPhi * x) / R;
-      }
-    },
-    {
-      // 06: Taylor-Couette Wavy Azimuthal Vortex Cells
-      seedRadius: 0.9,
-      camZoom: 1.04,
-      basePitch: -0.34,
-      evalField: function (x, y, z, t, out) {
-        var R = Math.sqrt(x * x + z * z) + 1e-4;
-        var phi = Math.atan2(z, x);
-        var wave = 0.15 * Math.sin(4 * phi - t * 0.32);
-        var Yw = (y + wave) * 3.3;
-        var dr = R - 0.68;
-        var uR = 0.011 * Math.cos(Yw) * (0.14 - dr * dr) * 3.2 - dr * 0.004;
-        var uY = -0.011 * Math.sin(Yw) * (dr * 2.2) - y * Math.max(0, y * y - 0.72) * 0.015;
-        var uPhi = 0.011 * (1.15 - 0.52 * R);
-        out[0] = (uR * x - uPhi * z) / R;
-        out[1] = uY;
-        out[2] = (uR * z + uPhi * x) / R;
-      }
-    },
-    {
-      // 07: Dadras Four-Scroll Calligraphic Braid
+      // 01: Dadras Four-Scroll Calligraphic Braid
       seedRadius: 0.8,
       camZoom: 1.0,
       basePitch: 0.36,
@@ -199,7 +55,7 @@
       }
     },
     {
-      // 08: Four-Wing Tetrahedral Saddle Clover
+      // 02: Four-Wing Tetrahedral Saddle Clover
       seedRadius: 0.82,
       camZoom: 1.06,
       basePitch: 0.42,
@@ -217,7 +73,7 @@
       }
     },
     {
-      // 09: Rabinovich-Fabrikant Plasma Saddle Canopies
+      // 03: Rabinovich-Fabrikant Plasma Saddle Canopies
       seedRadius: 0.72,
       camZoom: 1.02,
       basePitch: -0.44,
@@ -244,7 +100,7 @@
       }
     },
     {
-      // 10: Burke-Shaw Twisted Mobius Ribbon
+      // 04: Burke-Shaw Twisted Mobius Ribbon
       seedRadius: 0.8,
       camZoom: 1.06,
       basePitch: 0.32,
@@ -262,7 +118,7 @@
       }
     },
     {
-      // 11: Spherical-Harmonic Geostrophic Shell Gyres
+      // 05: Spherical-Harmonic Geostrophic Shell Gyres
       seedRadius: 0.9,
       camZoom: 1.04,
       basePitch: 0.3,
@@ -293,53 +149,7 @@
       }
     },
     {
-      // 12: Cinquefoil (2,5) Star-Torus Jet Stream
-      seedRadius: 0.88,
-      camZoom: 1.06,
-      basePitch: -0.5,
-      evalField: function (x, y, z, t, out) {
-        var R = Math.sqrt(x * x + z * z) + 1e-4;
-        var Rs = Math.max(0.36, R);
-        var phi = Math.atan2(z, x);
-        var ph = phi - t * 0.05;
-        var Rk = 0.72 + 0.18 * Math.cos(5 * ph);
-        var Yk = 0.21 * Math.sin(5 * ph) + 0.08 * Math.cos(2 * ph + t * 0.18);
-        var dR = R - Rk;
-        var dY = y - Yk;
-        var swirl = 0.0044 / Math.pow(dR * dR + dY * dY + 0.042, 0.52);
-        var uPhi = 0.0074;
-        var angRate = uPhi / Rs;
-        var uR = -dY * swirl - dR * 0.0055 - 0.9 * Math.sin(5 * ph) * angRate;
-        var uY = dR * swirl - dY * 0.0055 + 1.05 * Math.cos(5 * ph) * angRate;
-        out[0] = (uR * x - uPhi * z) / R;
-        out[1] = uY;
-        out[2] = (uR * z + uPhi * x) / R;
-      }
-    },
-    {
-      // 13: Braided Double-Helix Vortex Merger
-      seedRadius: 0.85,
-      camZoom: 1.02,
-      basePitch: -0.28,
-      evalField: function (x, y, z, t, out) {
-        var r2 = x * x + z * z;
-        var ang = t * 0.24 + y * 2.5;
-        var cA = Math.cos(ang);
-        var sA = Math.sin(ang);
-        var sep = 0.44 + 0.06 * Math.sin(t * 0.19);
-        var d1x = x - sep * cA;
-        var d1z = z - sep * sA;
-        var d2x = x + sep * cA;
-        var d2z = z + sep * sA;
-        var w1 = 0.0054 / (d1x * d1x + d1z * d1z + 0.065);
-        var w2 = 0.0054 / (d2x * d2x + d2z * d2z + 0.065);
-        out[0] = -d1z * w1 - d2z * w2 - x * (r2 - 0.58) * 0.009;
-        out[1] = 0.0115 * Math.cos(r2 * 3.4 - t * 0.22) * (1 - 0.85 * y * y) - y * 0.0045;
-        out[2] = d1x * w1 + d2x * w2 - z * (r2 - 0.58) * 0.009;
-      }
-    },
-    {
-      // 14: Nose-Hoover Interlaced Torus Web
+      // 06: Nose-Hoover Interlaced Torus Web
       seedRadius: 0.82,
       camZoom: 1.04,
       basePitch: 0.36,
@@ -366,26 +176,7 @@
       }
     },
     {
-      // 15: Polar Spindle-Torus Shroud
-      seedRadius: 0.78,
-      camZoom: 1.08,
-      basePitch: -0.52,
-      evalField: function (ux, uy, uz, t, out) {
-        var s = 1.18;
-        var x = ux * s;
-        var y = uz * s;
-        var z = 0.72 + uy * s;
-        var d = 3.5 + 0.25 * Math.cos(t * 0.14);
-        var c = 0.62 + 0.025 * Math.sin(t * 0.19);
-        var r2 = x * x + y * y;
-        var k = 0.0054 / s;
-        out[0] = ((z - 0.7) * x - d * y) * k;
-        out[1] = (c + 0.95 * z - (z * z * z) / 3 - r2 * (1 + 0.25 * z) + 0.1 * z * x * x * x) * k;
-        out[2] = (d * x + (z - 0.7) * y) * k;
-      }
-    },
-    {
-      // 16: Cyclic Sinusoidal Crystal Filigree
+      // 07: Cyclic Sinusoidal Crystal Filigree
       seedRadius: 0.85,
       camZoom: 0.96,
       basePitch: 0.42,
@@ -399,57 +190,6 @@
         out[0] = (Math.sin(y) - b * x + 0.045 * Math.sin(t * 0.13 + uz)) * k;
         out[1] = (Math.sin(z) - b * y + 0.045 * Math.cos(t * 0.17 + ux)) * k;
         out[2] = (Math.sin(x) - b * z + 0.045 * Math.sin(t * 0.11 - uy)) * k;
-      }
-    },
-    {
-      // 17: Cyclic Three-Crown Braid
-      seedRadius: 0.68,
-      camZoom: 0.92,
-      basePitch: 0.5,
-      evalField: function (ux, uy, uz, t, out) {
-        var s = 6.2;
-        var x = -2.1 + ux * s;
-        var y = -2.1 + uy * s;
-        var z = -2.1 + uz * s;
-        var a = 1.42 + 0.06 * Math.sin(t * 0.17);
-        var k = 0.0023 / s;
-        var dx = (-a * x - 4 * y - 4 * z - y * y + 0.34 * Math.sin(t * 0.13)) * k;
-        var dy = (-a * y - 4 * z - 4 * x - z * z + 0.34 * Math.cos(t * 0.16)) * k;
-        var dz = (-a * z - 4 * x - 4 * y - x * x - 0.34 * Math.sin(t * 0.19)) * k;
-        var r2 = ux * ux + uy * uy + uz * uz;
-        if (r2 > 2.8) {
-          var p = (r2 - 2.8) * 0.035;
-          dx -= ux * p;
-          dy -= uy * p;
-          dz -= uz * p;
-        }
-        out[0] = dx;
-        out[1] = dy;
-        out[2] = dz;
-      }
-    },
-    {
-      // 18: Figure-Eight Lissajous Vortex Knot
-      seedRadius: 0.88,
-      camZoom: 1.04,
-      basePitch: 0.26,
-      evalField: function (x, y, z, t, out) {
-        var phi = Math.atan2(z, x);
-        var R = Math.sqrt(x * x + z * z) + 1e-4;
-        var Rs = Math.max(0.35, R);
-        var ph = phi + t * 0.06;
-        var Rk = 0.66 + 0.24 * Math.cos(2 * ph);
-        var Yk = 0.34 * Math.sin(3 * ph);
-        var dR = R - Rk;
-        var dY = y - Yk;
-        var swirl = 0.005 / Math.pow(dR * dR + dY * dY + 0.045, 0.54);
-        var uPhi = 0.0082;
-        var angRate = uPhi / Rs;
-        var uR = -dY * swirl - dR * 0.0048 - 0.48 * Math.sin(2 * ph) * angRate;
-        var uY = dR * swirl - dY * 0.0048 + 1.02 * Math.cos(3 * ph) * angRate;
-        out[0] = (uR * x - uPhi * z) / R;
-        out[1] = uY;
-        out[2] = (uR * z + uPhi * x) / R;
       }
     }
   ];
@@ -477,13 +217,8 @@
     }
   }
 
-  // Slight selection boost for standout sculptural flows (07-11, 14, 16) while keeping all 18 in rotation
-  var FAVORITE_WEIGHTS = [
-    1, 1, 1, 1, 1, 1,
-    2, 2, 2, 2, 2.6,
-    1, 1, 2, 1, 2,
-    1, 1
-  ];
+  // Preserve the extra selection weight for the standout spherical-harmonic flow (05)
+  var FAVORITE_WEIGHTS = [2, 2, 2, 2, 2.6, 2, 2];
 
   function pickRandomFlowIndex(excludeIdx) {
     var totalWeight = 0;
