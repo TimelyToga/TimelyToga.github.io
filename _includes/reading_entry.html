@@ -2,33 +2,23 @@
 {% assign attempt = entry.attempt | default: "first_read" -%}
 {% assign outcome = entry.outcome | default: "finished" -%}
 {% assign entry_id = include.year | append: "-" | append: include.section | append: "-" | append: include.index | append: "-" | append: entry.book_id -%}
-{% assign has_notes_flag = "false" -%}
-{% if entry.notes %}{% assign has_notes_flag = "true" %}{% endif -%}
-{% assign is_audible_flag = "false" -%}
-{% if entry.source == "audible" or include.section == "audible" or entry.audible_rating %}{% assign is_audible_flag = "true" %}{% endif -%}
-<div class="book-entry{% unless entry.cover %} book-entry-nocover{% endunless %}" id="{{ entry_id }}" data-book-entry data-attempt="{{ attempt }}" data-outcome="{{ outcome }}" data-has-notes="{{ has_notes_flag }}" data-audible="{{ is_audible_flag }}">
+<div class="book-entry" id="{{ entry_id }}">
   {% if entry.cover %}
-  <div class="book-cover-frame">
-    <img src="{{ entry.cover }}" alt="{{ entry.alt | default: entry.title }}" class="book-cover-small" loading="lazy">
-  </div>
-  {% else %}
-  <div class="book-cover-placeholder" aria-hidden="true">
-    <span class="placeholder-monogram">{{ entry.title | slice: 0, 1 }}</span>
-  </div>
+  <img src="{{ entry.cover }}" alt="{{ entry.alt | default: entry.title }}" class="book-cover-small">
   {% endif %}
   <div class="book-info">
     <div class="book-title-row">
-      <h3>{% if entry.number %}<span class="book-rank-num">{{ entry.number }}.</span> {% endif %}{{ entry.title }}</h3>
+      <h3>{% if entry.number %}{{ entry.number }}. {% endif %}{{ entry.title }}</h3>
 
       {% if attempt != "first_read" or outcome != "finished" or entry.audible_rating %}
       <div class="book-badges">
         {% if entry.audible_rating %}
-        <span class="book-badge book-badge-rating">Audible {{ entry.audible_rating }}/5</span>
+        <span class="book-badge">Audible {{ entry.audible_rating }}/5</span>
         {% endif %}
         {% if attempt == "reread" %}
-        <span class="book-badge book-badge-reread">Reread</span>
+        <span class="book-badge">Reread</span>
         {% elsif attempt == "restart" %}
-        <span class="book-badge book-badge-reread">Restarted DNF</span>
+        <span class="book-badge">Restarted DNF</span>
         {% endif %}
 
         {% if outcome == "dnf" %}
@@ -45,9 +35,9 @@
             {%- endcase -%}
           {%- endif -%}
         {%- endcapture %}
-        <span class="book-badge book-badge-dnf">DNF{% if stopped_label != "" %} &middot; {{ stopped_label | strip }}{% endif %}</span>
+        <span class="book-badge book-badge-dnf">DNF{% if stopped_label != "" %} · {{ stopped_label | strip }}{% endif %}</span>
         {% elsif outcome == "in_progress" %}
-        <span class="book-badge book-badge-reading">Reading</span>
+        <span class="book-badge">Reading</span>
         {% endif %}
       </div>
       {% endif %}

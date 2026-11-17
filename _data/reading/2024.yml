@@ -6,34 +6,42 @@ sections:
   - book_id: den-of-thieves
     title: Den of Thieves
     author: James B. Stewart
+    cover: https://covers.openlibrary.org/b/id/3969425-M.jpg
     source: audible
   - book_id: dune
     title: Dune
     author: Frank Herbert
+    cover: https://covers.openlibrary.org/b/id/11481354-M.jpg
     source: audible
   - book_id: elysium-fire
     title: Elysium Fire
     author: Alastair Reynolds
+    cover: https://covers.openlibrary.org/b/id/11087255-M.jpg
     source: audible
   - book_id: on-the-edge
     title: On the Edge
     author: Nate Silver
+    cover: https://covers.openlibrary.org/b/id/14658251-M.jpg
     source: audible
   - book_id: pandora-s-star
     title: Pandora's Star
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/15126851-M.jpg
     source: audible
   - book_id: permutation-city
     title: Permutation City
     author: Greg Egan
+    cover: https://covers.openlibrary.org/b/id/1000639-M.jpg
     source: audible
   - book_id: salvation
     title: Salvation
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/9159027-M.jpg
     source: audible
   - book_id: salvation-lost
     title: Salvation Lost
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/9120190-M.jpg
     source: audible
   - book_id: the-caesars-palace-coup
     title: The Caesars Palace Coup
@@ -42,6 +50,7 @@ sections:
   - book_id: the-mote-in-god-s-eye
     title: The Mote in God's Eye
     author: Larry Niven, Jerry Pournelle
+    cover: https://covers.openlibrary.org/b/id/408133-M.jpg
     source: audible
   - book_id: the-nvidia-way
     title: The Nvidia Way
@@ -50,8 +59,10 @@ sections:
   - book_id: the-saints-of-salvation
     title: The Saints of Salvation
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/10305043-M.jpg
     source: audible
   - book_id: we-are-legion-we-are-bob
     title: We Are Legion (We Are Bob)
     author: Dennis E. Taylor
+    cover: https://covers.openlibrary.org/b/id/8421582-M.jpg
     source: audible

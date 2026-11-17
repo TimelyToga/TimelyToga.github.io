@@ -1,22 +1,12 @@
 <!DOCTYPE html>
-{% assign phase_regime = "thomas" %}
-{% if page.url == "/about/" %}
-  {% assign phase_regime = "aizawa" %}
-{% elsif page.url contains "/reading" %}
-  {% assign phase_regime = "lorenz" %}
-{% elsif page.url contains "/writing" or page.url contains "/scifi" or page.collection == "posts" %}
-  {% assign phase_regime = "halvorsen" %}
-{% endif %}
 {% assign page_kind = "standard" %}
 {% if page.url == "/" %}
   {% assign page_kind = "home" %}
-{% elsif page.layout == "post" %}
-  {% assign page_kind = "prose" %}
 {% endif %}
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 {% include head.html %}
 
-<body data-phase-regime="{{ phase_regime }}" data-page-kind="{{ page_kind }}">
+<body data-page-kind="{{ page_kind }}">
     <canvas id="phase-space-canvas" aria-hidden="true"></canvas>
     <div class="phase-atmosphere" aria-hidden="true"></div>
 
@@ -29,11 +19,11 @@
     <div class="big-monitor-message left msg-4">HOLY FUCKING SHIT LOOK AT THE SIZE OF THIS MONITOR</div>
     <div class="big-monitor-message right msg-4">HOLY FUCKING SHIT LOOK AT THE SIZE OF THIS MONITOR</div>
 
-    <div class="site-shell" id="site-shell">
+    <div class="site-shell">
         {%- include header.html -%}
 
         <main class="page-content" aria-label="Content">
-            <div class="wrapper{% if page.wide %} wrapper-wide{% endif %}">
+            <div class="wrapper">
                 {{ content }}
             </div>
         </main>

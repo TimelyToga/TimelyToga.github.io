@@ -6,40 +6,50 @@ sections:
   - book_id: a-deepness-in-the-sky
     title: A Deepness in the Sky
     author: Vernor Vinge
+    cover: https://covers.openlibrary.org/b/id/603591-M.jpg
     source: audible
   - book_id: a-fire-upon-the-deep
     title: A Fire Upon the Deep
     author: Vernor Vinge
+    cover: https://covers.openlibrary.org/b/id/9261466-M.jpg
     source: audible
   - book_id: all-these-worlds
     title: All These Worlds
     author: Dennis E. Taylor
+    cover: https://covers.openlibrary.org/b/id/12750210-M.jpg
     source: audible
   - book_id: contact
     title: Contact
     author: Carl Sagan
+    cover: https://covers.openlibrary.org/b/id/4143957-M.jpg
     source: audible
   - book_id: for-we-are-many
     title: For We Are Many
     author: Dennis E. Taylor
+    cover: https://covers.openlibrary.org/b/id/11329842-M.jpg
     source: audible
   - book_id: on-intelligence
     title: On Intelligence
     author: Jeff Hawkins, Sandra Blakeslee
+    cover: https://covers.openlibrary.org/b/id/581436-M.jpg
     source: audible
   - book_id: proxima-book-1
     title: 'Proxima: Book 1'
     author: Stephen Baxter
+    cover: https://covers.openlibrary.org/b/id/8175193-M.jpg
     source: audible
   - book_id: the-forever-war
     title: The Forever War
     author: Joe Haldeman
+    cover: https://covers.openlibrary.org/b/id/10693768-M.jpg
     source: audible
   - book_id: the-reality-dysfunction
     title: The Reality Dysfunction
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/1000595-M.jpg
     source: audible
   - book_id: the-three-body-problem
     title: The Three-Body Problem
     author: Cixin Liu; translated by Ken Liu
+    cover: https://covers.openlibrary.org/b/id/9157544-M.jpg
     source: audible

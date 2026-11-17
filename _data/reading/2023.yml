@@ -238,16 +238,20 @@ sections:
     - book_id: consider-phlebas
       title: Consider Phlebas
       author: Iain M. Banks
+      cover: https://covers.openlibrary.org/b/id/1009644-M.jpg
       source: audible
     - book_id: matter
       title: Matter
       author: Iain M. Banks
+      cover: https://covers.openlibrary.org/b/id/1174791-M.jpg
       source: audible
     - book_id: the-consuming-fire
       title: The Consuming Fire
       author: John Scalzi
+      cover: https://covers.openlibrary.org/b/id/8788885-M.jpg
       source: audible
     - book_id: use-of-weapons
       title: Use of Weapons
       author: Iain M. Banks
+      cover: https://covers.openlibrary.org/b/id/2379038-M.jpg
       source: audible

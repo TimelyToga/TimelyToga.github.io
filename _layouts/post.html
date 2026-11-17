@@ -1,100 +1,31 @@
 ---
 layout: default
 ---
-{% assign is_reading_page = false %}
-{% if page.collection == "reading" %}
-  {% assign is_reading_page = true %}
-{% endif %}
-{% assign word_count = content | strip_html | number_of_words %}
-{% assign read_minutes = word_count | divided_by: 220 | at_least: 1 %}
-
-<article class="post-content{% if is_reading_page %} post-content-reading{% endif %}" data-reading-track>
-    <header class="post-header">
-        <div class="post-breadcrumb">
-            {% if is_reading_page %}
-                <a href="{{ '/reading/' | relative_url }}" class="back-link">&larr; Reading Archive</a>
-                <span class="crumb-sep">/</span>
-                <span class="post-kind-badge">Annual Log</span>
-            {% elsif page.collection == "scifi" %}
-                <a href="{{ '/writing/' | relative_url }}" class="back-link">&larr; Writing</a>
-                <span class="crumb-sep">/</span>
-                <span class="post-kind-badge">Speculative Fiction</span>
-            {% else %}
-                <a href="{{ '/writing/' | relative_url }}" class="back-link">&larr; Writing</a>
-                <span class="crumb-sep">/</span>
-                <span class="post-kind-badge">Essay</span>
-            {% endif %}
-        </div>
-
+<article class="post-content">
+    <header>
         <h1 class="page-title">{{ page.title }}</h1>
-
-        {% if page.description and is_reading_page == false %}
-        <p class="post-standfirst">{{ page.description }}</p>
-        {% elsif page.description and is_reading_page %}
-        <p class="post-standfirst">{{ page.description }}</p>
-        {% endif %}
-
-        <div class="post-meta-bar">
-            {% if is_reading_page %}
-                {% assign reading_year_key = page.date | date: "%Y" %}
-                {% assign reading_year_data = site.data.reading[reading_year_key] %}
-                {% assign yr_books = 0 %}
-                {% assign yr_notes = 0 %}
-                {% if reading_year_data %}
-                    {% for sec in reading_year_data.sections %}
-                        {% if sec.key == "books" or sec.key == "audible" %}
-                            {% for ent in sec.entries %}
-                                {% assign yr_books = yr_books | plus: 1 %}
-                                {% if ent.notes %}{% assign yr_notes = yr_notes | plus: 1 %}{% endif %}
-                            {% endfor %}
-                        {% endif %}
-                    {% endfor %}
-                {% endif %}
-                <span class="meta-chip">{{ reading_year_key }}</span>
-                <span class="meta-dot">&middot;</span>
-                <span>{{ yr_books }} {% if yr_books == 1 %}book{% else %}books{% endif %} logged</span>
-                {% if yr_notes > 0 %}
-                <span class="meta-dot">&middot;</span>
-                <span>{{ yr_notes }} with notes</span>
-                {% endif %}
-            {% else %}
-                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
-                <span class="meta-dot">&middot;</span>
-                <span>{{ read_minutes }} min read</span>
-                <span class="meta-dot">&middot;</span>
-                <span>{{ word_count }} words</span>
-            {% endif %}
-        </div>
+        <p class="post-meta">{{ page.date | date: "%B %d, %Y" }}</p>
     </header>
 
     {% if page.retrospective %}
     <div class="retrospective-note">
-        <div class="note-header">
-            <span class="note-dot"></span>
-            Retrospective &middot; {{ page.retrospective_date | default: "2025" }}
-        </div>
+        <div class="note-header">Note from {{ page.retrospective_date | default: "2025" }}</div>
         <p>{{ page.retrospective }}</p>
     </div>
     {% endif %}
 
-    <div class="post-body">
-        {{ content }}
-    </div>
+    {{ content }}
 
-    {% if page.previous.url or page.next.url %}
-    <nav class="blog-nav" aria-label="Adjacent entries">
+    <nav class="blog-nav">
         {% if page.previous.url %}
-        <a class="blog-nav-card prev" href="{{ page.previous.url }}">
-            <span class="blog-nav-dir">&larr; Previous</span>
-            <span class="blog-nav-title">{{ page.previous.title }}</span>
-        </a>
+        <span class="prev">
+            <a href="{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+        </span>
         {% endif %}
         {% if page.next.url %}
-        <a class="blog-nav-card next" href="{{ page.next.url }}">
-            <span class="blog-nav-dir">Next &rarr;</span>
-            <span class="blog-nav-title">{{ page.next.title }}</span>
-        </a>
+        <span class="next">
+            <a href="{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+        </span>
         {% endif %}
     </nav>
-    {% endif %}
 </article>

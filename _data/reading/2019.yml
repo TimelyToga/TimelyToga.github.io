@@ -6,44 +6,55 @@ sections:
   - book_id: ai-superpowers
     title: AI Superpowers
     author: Kai-Fu Lee
+    cover: https://covers.openlibrary.org/b/id/8276796-M.jpg
     source: audible
   - book_id: chasm-city
     title: Chasm City
     author: Alastair Reynolds
+    cover: https://covers.openlibrary.org/b/id/380118-M.jpg
     source: audible
   - book_id: children-of-time
     title: Children of Time
     author: Adrian Tchaikovsky
+    cover: https://covers.openlibrary.org/b/id/8264706-M.jpg
     source: audible
   - book_id: dragon-s-egg
     title: Dragon's Egg
     author: Robert L. Forward
+    cover: https://covers.openlibrary.org/b/id/209771-M.jpg
     source: audible
   - book_id: exhalation
     title: Exhalation
     author: Ted Chiang
+    cover: https://covers.openlibrary.org/b/id/10113848-M.jpg
     source: audible
   - book_id: great-north-road
     title: Great North Road
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/11394032-M.jpg
     source: audible
   - book_id: house-of-suns
     title: House of Suns
     author: Alastair Reynolds
+    cover: https://covers.openlibrary.org/b/id/5732007-M.jpg
     source: audible
   - book_id: hyperion
     title: Hyperion
     author: Dan Simmons
+    cover: https://covers.openlibrary.org/b/id/15211746-M.jpg
     source: audible
   - book_id: pushing-ice
     title: Pushing Ice
     author: Alastair Reynolds
+    cover: https://covers.openlibrary.org/b/id/284350-M.jpg
     source: audible
   - book_id: surface-detail
     title: Surface Detail
     author: Iain M. Banks
+    cover: https://covers.openlibrary.org/b/id/6672209-M.jpg
     source: audible
   - book_id: the-quantum-magician
     title: The Quantum Magician
     author: Derek Künsken
+    cover: https://covers.openlibrary.org/b/id/8765337-M.jpg
     source: audible

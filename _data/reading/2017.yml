@@ -6,45 +6,56 @@ sections:
   - book_id: a-night-without-stars-a-novel-of-the-commonwealth
     title: 'A Night Without Stars: A Novel of the Commonwealth'
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/8428686-M.jpg
     source: audible
   - book_id: artemis
     title: Artemis
     author: Andy Weir
+    cover: https://covers.openlibrary.org/b/id/8235551-M.jpg
     source: audible
   - book_id: aurora
     title: Aurora
     author: Kim Stanley Robinson
+    cover: https://covers.openlibrary.org/b/id/7425787-M.jpg
     source: audible
   - book_id: blindsight
     title: Blindsight
     author: Peter Watts
+    cover: https://covers.openlibrary.org/b/id/524560-M.jpg
     source: audible
   - book_id: incandescence
     title: Incandescence
     author: Greg Egan
+    cover: https://covers.openlibrary.org/b/id/2969147-M.jpg
     source: audible
   - book_id: revelation-space
     title: Revelation Space
     author: Alastair Reynolds
+    cover: https://covers.openlibrary.org/b/id/911071-M.jpg
     source: audible
   - book_id: ringworld
     title: Ringworld
     author: Larry Niven
+    cover: https://covers.openlibrary.org/b/id/8999878-M.jpg
     source: audible
   - book_id: seveneves
     title: Seveneves
     author: Neal Stephenson
+    cover: https://covers.openlibrary.org/b/id/9295719-M.jpg
     source: audible
     audible_rating: 5
   - book_id: stories-of-your-life-and-others
     title: Stories of Your Life and Others
     author: Ted Chiang
+    cover: https://covers.openlibrary.org/b/id/524046-M.jpg
     source: audible
   - book_id: the-abyss-beyond-dreams
     title: The Abyss Beyond Dreams
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/8109214-M.jpg
     source: audible
   - book_id: the-ringworld-engineers
     title: The Ringworld Engineers
     author: Larry Niven
+    cover: https://covers.openlibrary.org/b/id/207260-M.jpg
     source: audible
