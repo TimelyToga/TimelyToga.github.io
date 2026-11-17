@@ -6,4 +6,5 @@ sections:
   - book_id: snow-crash
     title: Snow Crash
     author: Neal Stephenson
+    cover: https://covers.openlibrary.org/b/id/392508-M.jpg
     source: audible

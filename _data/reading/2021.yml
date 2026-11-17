@@ -6,37 +6,46 @@ sections:
   - book_id: absolution-gap
     title: Absolution Gap
     author: Alastair Reynolds
+    cover: https://covers.openlibrary.org/b/id/284155-M.jpg
     source: audible
   - book_id: judas-unchained
     title: Judas Unchained
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/211015-M.jpg
     source: audible
   - book_id: liftoff
     title: Liftoff
     author: Eric Berger
+    cover: https://covers.openlibrary.org/b/id/11033056-M.jpg
     source: audible
   - book_id: reamde
     title: Reamde
     author: Neal Stephenson
+    cover: https://covers.openlibrary.org/b/id/12604647-M.jpg
     source: audible
   - book_id: redemption-ark
     title: Redemption Ark
     author: Alastair Reynolds
+    cover: https://covers.openlibrary.org/b/id/15133656-M.jpg
     source: audible
   - book_id: the-clockwork-rocket
     title: The Clockwork Rocket
     author: Greg Egan
+    cover: https://covers.openlibrary.org/b/id/7610425-M.jpg
     source: audible
   - book_id: the-dreaming-void
     title: The Dreaming Void
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/10435012-M.jpg
     source: audible
   - book_id: the-evolutionary-void
     title: The Evolutionary Void
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/10168765-M.jpg
     source: audible
     audible_rating: 5
   - book_id: the-temporal-void
     title: The Temporal Void
     author: Peter F. Hamilton
+    cover: https://covers.openlibrary.org/b/id/6275892-M.jpg
     source: audible

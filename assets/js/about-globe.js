@@ -11,7 +11,6 @@
   var ctx = canvas.getContext("2d");
   var titleEl = document.getElementById("about-globe-title");
   var subtitleEl = document.getElementById("about-globe-subtitle");
-  var coordsEl = document.getElementById("about-globe-coords");
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var RAD = Math.PI / 180;
   var DEG = 180 / Math.PI;
@@ -85,14 +84,12 @@
   ];
 
   var moveById = {};
-  var allKnownIds = {};
-
-  Object.keys(locations).forEach(function (k) {
-    allKnownIds[k] = true;
-  });
+  var moveEndpointIds = {};
 
   moves.forEach(function (move) {
     moveById[move.id] = move;
+    moveEndpointIds[move.from] = true;
+    moveEndpointIds[move.to] = true;
   });
 
   var activeMoveId = "jupiter-austin";
@@ -108,16 +105,6 @@
   var isScrollScheduled = false;
   var landPolygons = [];
   var landDataUrl = canvas.getAttribute("data-land-url") || "/assets/data/land-110m.json";
-  var pulseProgress = 0;
-  var isDraggingGlobe = false;
-  var manualOverrideUntil = 0;
-  var dragStart = { x: 0, y: 0, lat: 0, lon: 0 };
-
-  function formatCoords(lat, lon) {
-    var ns = lat >= 0 ? "N" : "S";
-    var ew = lon >= 0 ? "E" : "W";
-    return Math.abs(lat).toFixed(2) + "\u00b0" + ns + ", " + Math.abs(lon).toFixed(2) + "\u00b0" + ew;
-  }
 
   function vectorFromLatLon(lat, lon) {
     var latRad = lat * RAD;
@@ -227,7 +214,7 @@
     metrics.height = displayHeight;
     metrics.centerX = displayWidth / 2;
     metrics.centerY = displayHeight / 2;
-    metrics.radius = displayWidth * 0.415;
+    metrics.radius = displayWidth * 0.42;
   }
 
   function drawProjectedPath(samples, strokeStyle, lineWidth, visibilityFloor) {
@@ -262,35 +249,25 @@
   }
 
   function drawGlobeBase() {
-    // Outer orbital tick ring
-    ctx.save();
-    ctx.beginPath();
-    ctx.arc(metrics.centerX, metrics.centerY, metrics.radius * 1.065, 0, TAU);
-    ctx.strokeStyle = "rgba(107, 201, 193, 0.14)";
-    ctx.setLineDash([2, 6]);
-    ctx.lineWidth = 1;
-    ctx.stroke();
-    ctx.restore();
-
     var gradient = ctx.createRadialGradient(
       metrics.centerX - metrics.radius * 0.34,
       metrics.centerY - metrics.radius * 0.38,
-      metrics.radius * 0.1,
+      metrics.radius * 0.12,
       metrics.centerX,
       metrics.centerY,
       metrics.radius
     );
 
-    gradient.addColorStop(0, "#152b2e");
-    gradient.addColorStop(0.46, "#0c181d");
-    gradient.addColorStop(1, "#05080b");
+    gradient.addColorStop(0, "#1b3433");
+    gradient.addColorStop(0.42, "#102223");
+    gradient.addColorStop(1, "#070b0d");
 
     ctx.save();
     ctx.beginPath();
     ctx.arc(metrics.centerX, metrics.centerY, metrics.radius + 2, 0, TAU);
-    ctx.shadowColor = "rgba(107, 201, 193, 0.18)";
-    ctx.shadowBlur = metrics.radius * 0.18;
-    ctx.fillStyle = "#05080b";
+    ctx.shadowColor = "rgba(121, 214, 207, 0.16)";
+    ctx.shadowBlur = metrics.radius * 0.16;
+    ctx.fillStyle = "#070b0d";
     ctx.fill();
     ctx.restore();
 
@@ -306,10 +283,9 @@
 
     ctx.restore();
 
-    // Specular limb ring
     ctx.beginPath();
     ctx.arc(metrics.centerX, metrics.centerY, metrics.radius, 0, TAU);
-    ctx.strokeStyle = "rgba(239, 233, 223, 0.18)";
+    ctx.strokeStyle = "rgba(236, 228, 218, 0.16)";
     ctx.lineWidth = Math.max(1, metrics.radius * 0.007);
     ctx.stroke();
   }
@@ -324,12 +300,7 @@
       for (lon = -180; lon <= 180; lon += 3) {
         samples.push([lat, lon, 0]);
       }
-      drawProjectedPath(
-        samples,
-        lat === 0 ? "rgba(107, 201, 193, 0.14)" : "rgba(239, 233, 223, 0.065)",
-        1,
-        0
-      );
+      drawProjectedPath(samples, "rgba(236, 228, 218, 0.08)", 1, 0);
     }
 
     for (lon = -180; lon < 180; lon += 30) {
@@ -337,14 +308,14 @@
       for (lat = -80; lat <= 80; lat += 3) {
         samples.push([lat, lon, 0]);
       }
-      drawProjectedPath(samples, "rgba(239, 233, 223, 0.05)", 1, 0);
+      drawProjectedPath(samples, "rgba(236, 228, 218, 0.06)", 1, 0);
     }
   }
 
   function drawLandPolygons() {
     landPolygons.forEach(function (polygon) {
       polygon.forEach(function (ring) {
-        drawProjectedPath(ring, "rgba(130, 196, 188, 0.42)", 1.08, 0);
+        drawProjectedPath(ring, "rgba(154, 189, 178, 0.38)", 1.05, 0);
       });
     });
   }
@@ -367,60 +338,31 @@
     drawProjectedPath(samples, strokeStyle, lineWidth, visibilityFloor);
   }
 
-  function drawActivePulse(move) {
-    var fromVector = vectorForLocation(move.from);
-    var toVector = vectorForLocation(move.to);
-    var vector = slerp(fromVector, toVector, pulseProgress);
-    var latLon = latLonFromVector(vector);
-    var lift = Math.sin(Math.PI * pulseProgress) * 0.24;
-    var projected = project(latLon.lat, latLon.lon, lift);
-
-    if (projected.z < -0.22) {
-      return;
-    }
-
-    ctx.save();
-    ctx.beginPath();
-    ctx.arc(projected.x, projected.y, 6, 0, TAU);
-    ctx.fillStyle = "rgba(242, 182, 125, 0.28)";
-    ctx.fill();
-
-    ctx.beginPath();
-    ctx.arc(projected.x, projected.y, 2.6, 0, TAU);
-    ctx.fillStyle = "#fff6eb";
-    ctx.fill();
-    ctx.restore();
-  }
-
   function drawMoveArcs() {
     moves.forEach(function (move) {
       if (move.id !== activeMoveId) {
         drawArcStroke(
           move,
-          "rgba(107, 201, 193, 0.26)",
-          Math.max(1.15, metrics.radius * 0.0055),
+          "rgba(111, 137, 132, 0.36)",
+          Math.max(1.2, metrics.radius * 0.006),
           -0.18
         );
       }
     });
 
     if (activeMoveId && moveById[activeMoveId]) {
-      var activeMove = moveById[activeMoveId];
       drawArcStroke(
-        activeMove,
-        "rgba(242, 182, 125, 0.34)",
-        Math.max(4.5, metrics.radius * 0.02),
+        moveById[activeMoveId],
+        "rgba(255, 235, 218, 0.7)",
+        Math.max(4, metrics.radius * 0.018),
         -0.24
       );
       drawArcStroke(
-        activeMove,
-        "#df9559",
-        Math.max(2.2, metrics.radius * 0.01),
+        moveById[activeMoveId],
+        "#f08a5d",
+        Math.max(2.4, metrics.radius * 0.01),
         -0.24
       );
-      if (!prefersReducedMotion) {
-        drawActivePulse(activeMove);
-      }
     }
   }
 
@@ -437,22 +379,12 @@
       return;
     }
 
-    var radius = state.active
-      ? Math.max(5, metrics.radius * 0.024)
-      : Math.max(2.6, metrics.radius * 0.012);
-    var fill = state.active ? "#6bc9c1" : "rgba(239, 233, 223, 0.68)";
-
-    if (state.active) {
-      ctx.beginPath();
-      ctx.arc(projected.x, projected.y, radius + 5.5, 0, TAU);
-      ctx.strokeStyle = "rgba(107, 201, 193, 0.32)";
-      ctx.lineWidth = 1.2;
-      ctx.stroke();
-    }
+    var radius = state.active ? Math.max(5, metrics.radius * 0.024) : Math.max(2.8, metrics.radius * 0.012);
+    var fill = state.active ? "#79d6cf" : "rgba(236, 228, 218, 0.68)";
 
     ctx.beginPath();
     ctx.arc(projected.x, projected.y, radius + (state.active ? 2.5 : 1.5), 0, TAU);
-    ctx.fillStyle = "rgba(5, 8, 11, 0.9)";
+    ctx.fillStyle = "rgba(7, 11, 13, 0.88)";
     ctx.fill();
 
     ctx.beginPath();
@@ -462,8 +394,8 @@
 
     if (state.origin) {
       ctx.beginPath();
-      ctx.arc(projected.x, projected.y, radius + 3.2, 0, TAU);
-      ctx.strokeStyle = "rgba(223, 149, 89, 0.8)";
+      ctx.arc(projected.x, projected.y, radius + 3, 0, TAU);
+      ctx.strokeStyle = "rgba(240, 138, 93, 0.72)";
       ctx.lineWidth = 1.4;
       ctx.stroke();
     }
@@ -562,7 +494,7 @@
   }
 
   function drawPoints() {
-    Object.keys(allKnownIds).forEach(function (locationId) {
+    Object.keys(moveEndpointIds).forEach(function (locationId) {
       drawPoint(locationId, { active: false, origin: false });
     });
 
@@ -584,7 +516,8 @@
   }
 
   function normalizeLon(lon) {
-    return ((lon + 180) % 360 + 360) % 360 - 180;
+    var normalized = ((lon + 180) % 360 + 360) % 360 - 180;
+    return normalized;
   }
 
   function shortestLonDelta(fromLon, toLon) {
@@ -592,12 +525,8 @@
   }
 
   function setTarget(lat, lon) {
-    target.lat = Math.max(-68, Math.min(68, lat));
+    target.lat = Math.max(-65, Math.min(65, lat));
     target.lon = normalizeLon(lon);
-
-    if (coordsEl) {
-      coordsEl.textContent = formatCoords(target.lat, target.lon);
-    }
 
     if (prefersReducedMotion) {
       view.lat = target.lat;
@@ -606,7 +535,7 @@
   }
 
   function moveTitle(move) {
-    return locations[move.from].name + " \u2192 " + locations[move.to].name;
+    return locations[move.from].name + " -> " + locations[move.to].name;
   }
 
   function setActiveElement(element) {
@@ -638,15 +567,13 @@
     var moveFocus = getMoveFocus(move);
     activeMoveId = move.id;
     activeLocationId = move.to;
-    pulseProgress = 0;
 
     if (titleEl) {
       titleEl.textContent = moveTitle(move);
     }
 
     if (subtitleEl) {
-      subtitleEl.textContent =
-        move.label + " \u00b7 " + move.date + (move.note ? " \u00b7 " + move.note : "");
+      subtitleEl.textContent = move.label + " | " + move.date + (move.note ? " | " + move.note : "");
     }
 
     setTarget(moveFocus.lat, moveFocus.lon);
@@ -681,17 +608,13 @@
     }
 
     if (subtitleEl) {
-      subtitleEl.textContent = subtitleParts.join(" \u00b7 ");
+      subtitleEl.textContent = subtitleParts.join(" | ");
     }
 
     setTarget(location.lat, location.lon);
   }
 
   function chooseVisibleTimelineElement() {
-    if (Date.now() < manualOverrideUntil || isDraggingGlobe) {
-      return;
-    }
-
     var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
     var focusY = viewportHeight * 0.44;
     var bestElement = null;
@@ -730,56 +653,12 @@
     });
   }
 
-  // Click any timeline item or move to lock focus immediately
-  timelineElements.forEach(function (element) {
-    element.addEventListener("click", function (e) {
-      if (e.target && e.target.closest && e.target.closest("a")) {
-        return;
-      }
-      manualOverrideUntil = Date.now() + 1400;
-      setActiveElement(element);
-    });
-  });
-
-  // Interactive drag-to-rotate on the globe canvas
-  canvas.addEventListener("pointerdown", function (e) {
-    isDraggingGlobe = true;
-    dragStart.x = e.clientX;
-    dragStart.y = e.clientY;
-    dragStart.lat = target.lat;
-    dragStart.lon = target.lon;
-    if (canvas.setPointerCapture) {
-      canvas.setPointerCapture(e.pointerId);
-    }
-  });
-
-  canvas.addEventListener("pointermove", function (e) {
-    if (!isDraggingGlobe) {
-      return;
-    }
-    var dx = e.clientX - dragStart.x;
-    var dy = e.clientY - dragStart.y;
-    var degPerPx = 140 / Math.max(180, metrics.width);
-    setTarget(dragStart.lat + dy * degPerPx, dragStart.lon - dx * degPerPx);
-  });
-
-  function endGlobeDrag() {
-    if (isDraggingGlobe) {
-      isDraggingGlobe = false;
-      manualOverrideUntil = Date.now() + 1800;
-    }
-  }
-
-  canvas.addEventListener("pointerup", endGlobeDrag);
-  canvas.addEventListener("pointercancel", endGlobeDrag);
-
   function animate() {
-    var easing = isDraggingGlobe ? 0.28 : prefersReducedMotion ? 1 : 0.085;
+    var easing = prefersReducedMotion ? 1 : 0.08;
     var lonDelta = shortestLonDelta(view.lon, target.lon);
 
     view.lon = normalizeLon(view.lon + lonDelta * easing);
     view.lat += (target.lat - view.lat) * easing;
-    pulseProgress = (pulseProgress + 0.0085) % 1;
 
     draw();
     window.requestAnimationFrame(animate);

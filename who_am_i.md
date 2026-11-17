@@ -2,55 +2,41 @@
 layout: page
 title: About
 permalink: /about/
-hide_page_header: true
 ---
 
-<div class="about-dossier">
-    <div class="about-header">
-        <img src="{{ '/assets/img/profile/face.jpg' | relative_url }}" alt="Timothy Blumberg" class="about-photo">
-        <div class="about-intro">
-            <div class="page-eyebrow">About &middot; Biography</div>
-            <h1 class="page-title about-display-title">Timothy Blumberg <span class="about-chinese" lang="zh-Hans">杜君伟</span></h1>
-            <p class="about-lead">I'm Timothy Blumberg (杜君伟). I'm a software engineer, writer, and founder based in Austin, TX.</p>
-            <div class="connect-pills" aria-label="Connect">
-                <a href="https://github.com/timelytoga" target="_blank" rel="noopener">GitHub &nearr;</a>
-                <a href="https://linkedin.com/in/timothy-blumberg-72489589" target="_blank" rel="noopener">LinkedIn &nearr;</a>
-                <a href="https://twitter.com/tim_blumberg" target="_blank" rel="noopener">Twitter &nearr;</a>
-                <a href="https://www.goodreads.com/user/show/7414236-tim-blumberg" target="_blank" rel="noopener">Goodreads &nearr;</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="venture-callout">
-        <div class="venture-callout-head">
-            <h2>Throne</h2>
-            <span class="venture-span">2023 &ndash; Aug 2026 &middot; Founder</span>
-        </div>
-        <p>I founded <a href="https://www.thronescience.com/" target="_blank" rel="noopener">Throne</a> in 2023. We built smart health monitoring technology that used AI-powered sensors to track gut health and hydration, with a privacy-first approach. I stopped working on Throne in August 2026.</p>
+<div class="about-header">
+    <img src="/assets/img/profile/face.jpg" alt="Timothy Blumberg" class="about-photo">
+    <div class="about-intro">
+        <p>I'm Timothy Blumberg (杜君伟). I'm a software engineer, writer, and founder based in Austin, TX.</p>
     </div>
 </div>
 
-<hr>
+## Throne
 
-<div class="background-intro">
-    <div class="page-eyebrow">Chronology &amp; Geodesics</div>
-    <h2>Background</h2>
-    <p>A timeline of places I've worked and things I've built over the years. Scroll or click any stop to trace the route on the globe.</p>
-</div>
+I founded [Throne](https://www.thronescience.com/) in 2023. We built smart health monitoring technology that used AI-powered sensors to track gut health and hydration, with a privacy-first approach. I stopped working on Throne in August 2026.
+
+## Connect
+
+- [GitHub](https://github.com/timelytoga)
+- [LinkedIn](https://linkedin.com/in/timothy-blumberg-72489589)
+- [Twitter](https://twitter.com/tim_blumberg)
+- [Goodreads](https://www.goodreads.com/user/show/7414236-tim-blumberg)
+
+---
+
+## Background
+
+A timeline of places I've worked and things I've built over the years.
 
 <div class="about-life-map" data-about-globe>
     <aside class="about-globe-panel" aria-label="Life moves globe">
         <div class="about-globe-sticky">
             <div class="about-globe-copy">
-                <div class="about-globe-toprow">
-                    <span class="about-globe-kicker">Moves &amp; Coordinates</span>
-                    <span class="about-globe-coords" id="about-globe-coords">30.27&deg;N, 97.74&deg;W</span>
-                </div>
+                <div class="about-globe-kicker">Moves</div>
                 <div class="about-globe-title" id="about-globe-title">Jupiter, FL to Austin, TX</div>
                 <div class="about-globe-subtitle" id="about-globe-subtitle">Mar 2023</div>
             </div>
             <canvas id="about-globe-canvas" width="720" height="720" role="img" aria-label="Globe with arcs showing moves between cities" data-land-url="{{ '/assets/data/land-110m.json' | relative_url }}"></canvas>
-            <div class="about-globe-hint">Drag globe to inspect &middot; Click timeline to jump</div>
         </div>
     </aside>
 
@@ -63,7 +49,7 @@ hide_page_header: true
             <p>Founder. Built smart health monitoring technology with Throne One—a privacy-first, AI-powered device for tracking gut health and hydration.</p>
         </div>
         <div class="timeline-links">
-            <a href="https://www.thronescience.com/" target="_blank" rel="noopener">Throne</a>
+            <a href="https://www.thronescience.com/" target="_blank">Throne</a>
         </div>
     </div>
 
@@ -91,7 +77,7 @@ hide_page_header: true
             <p><strong>Smart Contract Engineer.</strong> Smart contracts != smartly written contracts. Wrote chain-facing services, smart contracts, and web services at a crypto music royalties company.</p>
         </div>
         <div class="timeline-links">
-            <a href="https://royal.io/" target="_blank" rel="noopener">royal.io</a>
+            <a href="https://royal.io/" target="_blank">royal.io</a>
         </div>
     </div>
 
@@ -108,7 +94,7 @@ hide_page_header: true
             <p>Early engineer working on advanced cryptography for data privacy. Helped build the infrastructure for secure data handling at scale.</p>
         </div>
         <div class="timeline-links">
-            <a href="https://www.skyflow.com/" target="_blank" rel="noopener">Skyflow</a>
+            <a href="https://www.skyflow.com/" target="_blank">Skyflow</a>
         </div>
     </div>
 
@@ -120,7 +106,7 @@ hide_page_header: true
             <p>Worked on the AV Infrastructure and Simulation teams. Built distributed systems for ingesting and indexing large amounts of sensor data, and worked on large-scale simulation infrastructure.</p>
         </div>
         <div class="timeline-links">
-            <a href="https://level5.lyft.com/" target="_blank" rel="noopener">Lyft L5</a>
+            <a href="https://level5.lyft.com/" target="_blank">Lyft L5</a>
         </div>
     </div>
 
@@ -192,7 +178,7 @@ hide_page_header: true
             <p>Android and server engineering intern at a messaging app startup (later acquired by Lyft).</p>
         </div>
         <div class="timeline-links">
-            <a href="https://techcrunch.com/2015/06/26/lyft-acquihires-the-team-from-messaging-app-leo-to-improve-location-and-other-features/" target="_blank" rel="noopener">TechCrunch Article</a>
+            <a href="https://techcrunch.com/2015/06/26/lyft-acquihires-the-team-from-messaging-app-leo-to-improve-location-and-other-features/" target="_blank">TechCrunch Article</a>
         </div>
     </div>
 

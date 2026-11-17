@@ -163,4 +163,5 @@ sections:
     - book_id: leviathan-wakes
       title: Leviathan Wakes
       author: James S. A. Corey
+      cover: 'https://covers.openlibrary.org/b/id/7314237-M.jpg'
       source: audible
