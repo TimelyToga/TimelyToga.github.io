@@ -7,7 +7,6 @@ permalink: /reading/
 {% assign sorted_reading = site.reading | sort: 'date' | reverse %}
 {% assign chron_reading = site.reading | sort: 'date' %}
 {% assign grand_total_books = 0 %}
-{% assign grand_total_notes = 0 %}
 {% assign max_books_in_year = 1 %}
 
 {% for post in sorted_reading %}
@@ -19,9 +18,6 @@ permalink: /reading/
             {% for ent in section.entries %}
                 {% assign yc = yc | plus: 1 %}
                 {% assign grand_total_books = grand_total_books | plus: 1 %}
-                {% if ent.notes %}
-                    {% assign grand_total_notes = grand_total_notes | plus: 1 %}
-                {% endif %}
             {% endfor %}
         {% endif %}
     {% endfor %}
@@ -45,10 +41,6 @@ permalink: /reading/
         <div class="reading-stat">
             <span class="stat-value">{{ sorted_reading | size }}</span>
             <span class="stat-label">Years Tracked</span>
-        </div>
-        <div class="reading-stat">
-            <span class="stat-value">{{ grand_total_notes }}</span>
-            <span class="stat-label">Written Notes</span>
         </div>
     </div>
 
