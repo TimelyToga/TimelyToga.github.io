@@ -175,6 +175,7 @@ sections:
       - book_id: 'ufos-and-nukes'
         title: 'UFOs and Nukes'
         author: 'Robert L. Hastings'
+        cover: 'https://covers.openlibrary.org/b/id/11984946-M.jpg'
         outcome: 'in_progress'
         notes:
           - >-
