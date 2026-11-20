@@ -14,7 +14,7 @@ permalink: /reading/
     {% assign ry = site.data.reading[yk] %}
     {% assign yc = 0 %}
     {% for section in ry.sections %}
-        {% if section.key == "books" or section.key == "audible" %}
+        {% if section.key == "books" %}
             {% for ent in section.entries %}
                 {% assign yc = yc | plus: 1 %}
                 {% assign grand_total_books = grand_total_books | plus: 1 %}
@@ -27,8 +27,6 @@ permalink: /reading/
 {% endfor %}
 
 <p>Yearly reading lists with notes on the books that stood out.</p>
-
-<p>Audible additions use estimated finish years from listening positions reaching at least 90%. Existing reading years, rereads, and unfinished-book notes are preserved.</p>
 
 <p>Some Culture novels were also read before 2022; their individual reading years are unknown.</p>
 
@@ -50,7 +48,7 @@ permalink: /reading/
             {% assign c_data = site.data.reading[c_year] %}
             {% assign c_count = 0 %}
             {% for section in c_data.sections %}
-                {% if section.key == "books" or section.key == "audible" %}
+                {% if section.key == "books" %}
                     {% assign sc = section.entries | size %}
                     {% assign c_count = c_count | plus: sc %}
                 {% endif %}
@@ -72,7 +70,7 @@ permalink: /reading/
 {% assign display_book_count = 0 %}
 {% assign reading_year = site.data.reading[reading_year_key] %}
 {% for section in reading_year.sections %}
-    {% if section.key == "books" or section.key == "audible" %}
+    {% if section.key == "books" %}
         {% assign section_count = section.entries | size %}
         {% assign display_book_count = display_book_count | plus: section_count %}
     {% endif %}
