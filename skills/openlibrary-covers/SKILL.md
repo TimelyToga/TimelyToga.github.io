@@ -1,13 +1,13 @@
 ---
 name: openlibrary-covers
-description: Find, validate, and format Open Library book cover URLs for reading-list pages. Use when Codex needs to fix wrong book covers, replace stale ISBN cover URLs, choose the correct Open Library edition or cover_i, generate covers.openlibrary.org URLs, or update _reading/*.md book-cover image src values.
+description: Find and validate book covers when adding reading-list entries, auditing missing covers, or correcting existing covers. Prefer Open Library and search reliable alternatives when needed.
 ---
 
 # Open Library Covers
 
 ## Overview
 
-Use Open Library search results to identify the right book and cover, then build a `covers.openlibrary.org` image URL. Prefer `cover_i` cover IDs from search results when available because ISBN cover lookups can silently point to the wrong edition or an unrelated book.
+Every newly added reading-list entry should have a verified cover unless a reasonable search fails. Work in `_data/reading/<year>.yml`, not the thin `_reading` wrappers. Open Library is preferred, but an unsuccessful lookup is not a reason to stop: search reliable alternative sources. Use `cover_i` IDs when available because ISBN lookups can silently point at the wrong edition.
 
 Official docs:
 
@@ -16,7 +16,7 @@ Official docs:
 
 ## Workflow
 
-1. Search by title and author; do not trust the current ISBN in the reading-list file.
+1. Search by title and author; do not trust the current ISBN in the reading-list file. If a strict search returns no results, try a shortened title, alternate spelling, punctuation, and one author at a time. A failed request or timeout is not evidence that no cover exists.
 
 ```sh
 python3 skills/openlibrary-covers/scripts/find_cover.py \
@@ -37,13 +37,15 @@ curl -L -s -o /dev/null -w '%{http_code} %{content_type}\n' \
   'https://covers.openlibrary.org/b/id/240727-M.jpg?default=false'
 ```
 
-4. Update only the `<img src="...">` unless the local title/author is also wrong. Preserve the existing `alt` text and `class="book-cover-small"` style.
+4. If Open Library yields no validated match, search the publisher, author, bookseller, library catalogs, and book or audiobook metadata services. Verify the title and author against the source, fetch the image successfully, and inspect the actual image for the right book and a usable cover. Prefer cover art without format or retailer branding when available. Use a reliable direct image URL; do not use summaries, unrelated books, placeholders, or search thumbnails without confirming the source.
 
-```html
-<img src="https://covers.openlibrary.org/b/id/240727-M.jpg" alt="Book Title" class="book-cover-small">
+5. Add or update the entry's `cover` field. Preserve the existing title, author, and other data unless a correction is requested. The template supplies alt text and styling.
+
+```yaml
+cover: 'https://covers.openlibrary.org/b/id/240727-M.jpg'
 ```
 
-5. Rebuild the site after edits:
+6. Rebuild the site after edits:
 
 ```sh
 bundle exec jekyll build
@@ -122,6 +124,6 @@ done
 - Prefer a `cover_i` from the matching work or edition when the current ISBN returns the wrong cover.
 - If search returns multiple plausible works, verify using the Open Library work page (`https://openlibrary.org/works/OL...W`) or edition page (`https://openlibrary.org/books/OL...M`) before editing files.
 - Keep `alt` text as the local book title, not the Open Library result title, if the local title is intentionally styled or expanded.
-- If no Open Library candidate can be validated with `?default=false`, do not switch to a random external cover without explicit user approval.
+- If no matching cover is found after these searches, leave the field absent and report the title, sources searched, and the specific obstacle. Do not imply a cover is unavailable solely because Open Library or one search failed.
 - Do not crawl or bulk-download covers. The Covers API is rate-limited for non-cover-ID lookups and intended for public page display.
 - Include a courtesy link to Open Library when adding broader attribution surfaces; for simple existing reading-list image fixes, keep the established site style unless asked to redesign attribution.

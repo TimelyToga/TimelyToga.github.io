@@ -45,6 +45,7 @@ sections:
   - book_id: the-caesars-palace-coup
     title: The Caesars Palace Coup
     author: Max Frumes, Sujeet Indap
+    cover: 'https://m.media-amazon.com/images/I/81BZP1Rej0L._SL1500_.jpg'
     source: audible
   - book_id: the-mote-in-god-s-eye
     title: The Mote in God's Eye
@@ -54,6 +55,7 @@ sections:
   - book_id: the-nvidia-way
     title: The Nvidia Way
     author: Tae Kim
+    cover: 'https://cdn10.bigcommerce.com/s-fu1b8f4/products/2562583/images/29931026/9781324086710__55987.1789260358.500.1280.jpg?c=2'
     source: audible
   - book_id: the-saints-of-salvation
     title: The Saints of Salvation
