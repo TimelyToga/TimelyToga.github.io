@@ -172,3 +172,10 @@ sections:
         author: James S. A. Corey
         cover: 'https://covers.openlibrary.org/b/id/7314237-M.jpg'
         source: audible
+      - book_id: 'ufos-and-nukes'
+        title: 'UFOs and Nukes'
+        author: 'Robert L. Hastings'
+        outcome: 'in_progress'
+        notes:
+          - >-
+            Unsettling accounts from hundreds of members of US military about UAPs being seen around nuclear sites in the united states since the 1940s.
