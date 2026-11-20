@@ -151,6 +151,18 @@ sections:
         title: 'The World for Sale'
         author: 'Javier Blas and Jack Farchy'
         cover: 'https://covers.openlibrary.org/b/id/13466631-M.jpg'
+      - book_id: 'amusing-ourselves-to-death'
+        title: 'Amusing Ourselves to Death'
+        author: 'Neil Postman'
+        notes:
+          - >-
+            I bought this book ultimately very skeptical of the premise and I remain a bit skeptical. It furthermore seems a bit like a repackaging of the claims of McLuhan and instead of hiding the ideas deep in the bowels of a inscrutable tome, kept the book light and airy enough to finish in a handful of hours.
+
+          - >-
+            Nonetheless, I do find the presentation of America being a society of readers at its founding to be an astounding bit of historical trivia that I am convinced had a remarkable impact on our history as a nation. Furthermore the depictions of the 7 hours of oratory debate and the lecture circuit was also quite astounding to me.
+
+          - >-
+            Overall I find Postman pretty hopeless when it comes to the marching forward of technology. There are many aspects of learning that are substantially less with consuming video content. My screentime on YouTube has certainly decreased since I finished this book.
 
   - key: audible
     heading: More Books from Audible History
