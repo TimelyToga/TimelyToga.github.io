@@ -1,6 +1,6 @@
 sections:
   - key: 'books'
-    heading: 'Full Chronological List'
+    heading: 'Full List'
     entries:
       - book_id: '1929'
         title: '1929'
@@ -163,16 +163,12 @@ sections:
 
           - >-
             Overall I find Postman pretty hopeless when it comes to the marching forward of technology. There are many aspects of learning that are substantially less with consuming video content. My screentime on YouTube has certainly decreased since I finished this book.
-
-  - key: audible
-    heading: More Books from Audible History
-    entries:
-    - book_id: carpathians
-      title: Carpathians
-      author: Paul Dixon
-      source: audible
-    - book_id: leviathan-wakes
-      title: Leviathan Wakes
-      author: James S. A. Corey
-      cover: 'https://covers.openlibrary.org/b/id/7314237-M.jpg'
-      source: audible
+      - book_id: carpathians
+        title: Carpathians
+        author: Paul Dixon
+        source: audible
+      - book_id: leviathan-wakes
+        title: Leviathan Wakes
+        author: James S. A. Corey
+        cover: 'https://covers.openlibrary.org/b/id/7314237-M.jpg'
+        source: audible

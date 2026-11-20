@@ -1,6 +1,6 @@
 sections:
 - key: books
-  heading: Books from Audible History
+  heading: Books
   entries:
   - book_id: ai-superpowers
     title: AI Superpowers

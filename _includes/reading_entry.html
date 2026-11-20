@@ -13,7 +13,7 @@
       {% if attempt != "first_read" or outcome != "finished" or entry.audible_rating %}
       <div class="book-badges">
         {% if entry.audible_rating %}
-        <span class="book-badge">Audible {{ entry.audible_rating }}/5</span>
+        <span class="book-badge">{{ entry.audible_rating }}/5</span>
         {% endif %}
         {% if attempt == "reread" %}
         <span class="book-badge">Reread</span>
@@ -63,7 +63,7 @@
         {% assign prior_year_num = prior_year_key | plus: 0 -%}
         {% if prior_year_num <= current_year_num -%}
           {% for prior_section in year_pair[1].sections -%}
-            {% if prior_section.key == "books" or prior_section.key == "audible" -%}
+            {% if prior_section.key == "books" -%}
               {% for prior_entry in prior_section.entries -%}
                 {% assign prior_index = forloop.index0 | plus: 0 -%}
                 {% assign is_earlier_entry = false -%}

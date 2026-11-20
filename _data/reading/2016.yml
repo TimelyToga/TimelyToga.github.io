@@ -1,6 +1,6 @@
 sections:
 - key: books
-  heading: Books from Audible History
+  heading: Books
   entries:
   - book_id: snow-crash
     title: Snow Crash

@@ -38,7 +38,7 @@ sections:
         notes:
           - "Wonderful biography of Claude Shannon, the \"Father of the Information Age\". Wanders in the middle a bit, but does a great job pulling the threads together around why Information Theory is non-obvious and an extremely useful underpinning of computer science."
   - key: "books"
-    heading: "Full Chronological List"
+    heading: "Full List"
     entries:
       - book_id: "billion-dollar-whale"
         title: "Billion Dollar Whale"
@@ -230,27 +230,23 @@ sections:
         cover: "https://covers.openlibrary.org/b/isbn/9780465026562-M.jpg"
         notes:
           - "Tough to start, hard to put down. I lamented that this author refused to sell a digital version of their book, but this is less of a novel and more of an enjoyable textbook. Lots of fun math ideas explained gently. \"Strange loops\" introduce a lot of interesting problems for formal systems! When reading this book, I would ruminate on two- to three-page sections for a long while to make sure I could play the ideas out. Really fun read."
-
-  - key: audible
-    heading: More Books from Audible History
-    entries:
-    - book_id: consider-phlebas
-      title: Consider Phlebas
-      author: Iain M. Banks
-      cover: https://covers.openlibrary.org/b/id/1009644-M.jpg
-      source: audible
-    - book_id: matter
-      title: Matter
-      author: Iain M. Banks
-      cover: https://covers.openlibrary.org/b/id/1174791-M.jpg
-      source: audible
-    - book_id: the-consuming-fire
-      title: The Consuming Fire
-      author: John Scalzi
-      cover: https://covers.openlibrary.org/b/id/8788885-M.jpg
-      source: audible
-    - book_id: use-of-weapons
-      title: Use of Weapons
-      author: Iain M. Banks
-      cover: https://covers.openlibrary.org/b/id/2379038-M.jpg
-      source: audible
+      - book_id: consider-phlebas
+        title: Consider Phlebas
+        author: Iain M. Banks
+        cover: https://covers.openlibrary.org/b/id/1009644-M.jpg
+        source: audible
+      - book_id: matter
+        title: Matter
+        author: Iain M. Banks
+        cover: https://covers.openlibrary.org/b/id/1174791-M.jpg
+        source: audible
+      - book_id: the-consuming-fire
+        title: The Consuming Fire
+        author: John Scalzi
+        cover: https://covers.openlibrary.org/b/id/8788885-M.jpg
+        source: audible
+      - book_id: use-of-weapons
+        title: Use of Weapons
+        author: Iain M. Banks
+        cover: https://covers.openlibrary.org/b/id/2379038-M.jpg
+        source: audible

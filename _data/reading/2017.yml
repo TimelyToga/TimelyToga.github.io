@@ -1,6 +1,6 @@
 sections:
 - key: books
-  heading: Books from Audible History
+  heading: Books
   entries:
   - book_id: a-night-without-stars-a-novel-of-the-commonwealth
     title: 'A Night Without Stars: A Novel of the Commonwealth'
