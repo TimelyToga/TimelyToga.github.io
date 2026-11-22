@@ -117,9 +117,6 @@ body[data-page-kind="home"] .phase-atmosphere {
     align-items: center;
     flex-wrap: nowrap;
     gap: 1.5rem;
-    max-width: $max-width-wide;
-    margin: 0 auto;
-    padding: 0 $spacing-unit;
   }
 }
 
@@ -127,6 +124,7 @@ body[data-page-kind="home"] .phase-atmosphere {
   font-family: $font-serif;
   font-size: 1.15rem;
   font-weight: 700;
+  line-height: 1.25;
   color: $text-color;
   text-decoration: none;
   letter-spacing: -0.02em;
@@ -147,42 +145,62 @@ body[data-page-kind="home"] .phase-atmosphere {
 
 .site-nav {
   display: flex;
+  align-items: center;
   gap: 1.25rem;
   flex-wrap: nowrap;
   flex-shrink: 0;
 
   a {
+    position: relative;
     font-family: $font-sans;
     font-size: 0.85rem;
+    line-height: 1.3;
     color: $text-muted;
     text-decoration: none;
+    padding: 0.25rem 0;
     transition: color 0.2s ease;
     white-space: nowrap;
 
     &:hover, &.active {
       color: $accent-color;
     }
+
+    &.active {
+      font-weight: 500;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1.5px;
+        background: $accent-color;
+        border-radius: 999px;
+      }
+    }
   }
-}
-
-// Mobile nav toggle
-.nav-trigger {
-  display: none;
-}
-
-.menu-icon {
-  display: none;
 }
 
 @media (max-width: 600px) {
-  .site-header .header-content {
-    flex-direction: column;
-    align-items: flex-start;
+  .site-header {
+    padding: 0.9rem 0 0.75rem;
+
+    .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.45rem;
+    }
+  }
+
+  .site-title {
+    font-size: 1.05rem;
   }
 
   .site-nav {
-    flex-direction: column;
-    gap: 0.75rem;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
   }
 }
 
@@ -190,6 +208,10 @@ body[data-page-kind="home"] .phase-atmosphere {
 .page-content {
   padding: $spacing-unit * 2 0;
   min-height: calc(100vh - 200px);
+
+  @media (max-width: 600px) {
+    padding: $spacing-unit * 1.25 0 $spacing-unit * 1.75;
+  }
 }
 
 // Typography

@@ -4,10 +4,10 @@
             <a class="site-title" href="{{ "/" | relative_url }}">
                 {{ site.title }}
             </a>
-            <nav class="site-nav">
-                <a href="{{ "/about/" | relative_url }}"{% if page.url == "/about/" %} class="active"{% endif %}>About</a>
-                <a href="{{ "/writing/" | relative_url }}"{% if page.url contains "/writing" or page.url contains "/scifi" %} class="active"{% endif %}>Writing</a>
-                <a href="{{ "/reading/" | relative_url }}"{% if page.url contains "/reading" %} class="active"{% endif %}>Reading</a>
+            <nav class="site-nav" aria-label="Primary">
+                <a href="{{ "/about/" | relative_url }}"{% if page.url == "/about/" %} class="active" aria-current="page"{% endif %}>About</a>
+                <a href="{{ "/writing/" | relative_url }}"{% if page.url contains "/writing" or page.url contains "/scifi" %} class="active" aria-current="page"{% endif %}>Writing</a>
+                <a href="{{ "/reading/" | relative_url }}"{% if page.url contains "/reading" %} class="active" aria-current="page"{% endif %}>Reading</a>
             </nav>
         </div>
     </div>

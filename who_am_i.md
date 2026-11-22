@@ -7,7 +7,7 @@ permalink: /about/
 <div class="about-header">
     <img src="/assets/img/profile/face.jpg" alt="Timothy Blumberg" class="about-photo">
     <div class="about-intro">
-        <p>I'm Timothy Blumberg (杜君伟). I'm a software engineer, writer, and founder based in Austin, TX.</p>
+        <p>I'm Timothy Blumberg (杜君伟). I'm a software engineer and founder based in Austin, TX.</p>
     </div>
 </div>
 
