@@ -986,6 +986,18 @@ img {
   }
 }
 
+.reading-mode-control {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.reading-mode-label {
+  font-size: 0.8rem;
+  font-family: $font-sans;
+  color: $text-muted;
+}
+
 .reading-mode-switch {
   display: inline-flex;
   align-items: center;
@@ -1001,9 +1013,9 @@ img {
   background: transparent;
   color: $text-light;
   font-family: $font-sans;
-  font-size: 0.66rem;
-  font-weight: 500;
-  padding: 0.2rem 0.48rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.38rem 0.7rem;
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease;
@@ -1012,7 +1024,7 @@ img {
     color: $text-color;
   }
 
-  &.is-active {
+  &[aria-pressed="true"] {
     background: rgba(217, 135, 87, 0.18);
     color: $accent-hover;
   }
@@ -1366,11 +1378,7 @@ img {
   height: 100%;
   object-fit: cover;
   display: block;
-  opacity: 0;
-
-  &.is-loaded {
-    opacity: 1;
-  }
+  background: $bg-darker;
 }
 
 .shelf-cover-fallback {
@@ -1510,6 +1518,10 @@ img {
 
 // List view mode (editorial rows with full inline notes)
 .reading-archive[data-view-mode="list"] {
+  .reading-era-hint {
+    display: none;
+  }
+
   .reading-shelf-grid {
     display: flex;
     flex-direction: column;
@@ -1582,6 +1594,10 @@ img {
       color: $text-muted;
     }
   }
+}
+
+.reading-archive .shelf-book-card[hidden] {
+  display: none;
 }
 
 .reading-empty-state {

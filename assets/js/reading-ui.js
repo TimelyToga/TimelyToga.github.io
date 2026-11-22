@@ -69,31 +69,18 @@
       .replace(/"/g, "&quot;");
   }
 
-  // Reveal loaded covers cleanly and fall back gracefully on broken images
   function wireCoverImage(img) {
     if (!img) return;
-    function reveal() {
-      if (img.naturalWidth > 2) {
-        img.classList.add("is-loaded");
-        var fb = img.previousElementSibling;
-        if (fb && fb.classList.contains("shelf-cover-fallback")) {
-          fb.style.display = "none";
-        }
-      } else {
+    function discardInvalidCover() {
+      if (img.naturalWidth <= 2 || img.naturalHeight <= 2) {
         img.remove();
       }
     }
     if (img.complete) {
-      reveal();
+      discardInvalidCover();
     } else {
-      img.addEventListener("load", reveal, { once: true });
-      img.addEventListener(
-        "error",
-        function () {
-          img.remove();
-        },
-        { once: true }
-      );
+      img.addEventListener("load", discardInvalidCover, { once: true });
+      img.addEventListener("error", discardInvalidCover, { once: true });
     }
   }
 
@@ -464,6 +451,7 @@
 
     card.addEventListener("click", handleActivate);
     card.addEventListener("keydown", function (e) {
+      if (currentMode === "list") return;
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         handleActivate();
@@ -586,21 +574,52 @@
       });
   }
 
-  // Shelf / List mode toggle
+  function setMode(mode) {
+    currentMode = mode;
+    archive.setAttribute("data-view-mode", mode);
+    modeBtns.forEach(function (btn) {
+      btn.setAttribute("aria-pressed", String(btn.getAttribute("data-mode") === mode));
+    });
+    allCards.forEach(function (card) {
+      if (mode === "list") {
+        card.removeAttribute("tabindex");
+        card.removeAttribute("role");
+      } else {
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("role", "button");
+      }
+    });
+    if (mode === "list") {
+      pinnedKey = null;
+      hoveredKey = null;
+      hoverSourceYear = null;
+      syncCardStates();
+    }
+    renderRailBody();
+    onScroll();
+  }
+
   modeBtns.forEach(function (btn) {
     btn.addEventListener("click", function () {
-      currentMode = btn.getAttribute("data-mode");
-      archive.setAttribute("data-view-mode", currentMode);
-      modeBtns.forEach(function (b) {
-        var active = b === btn;
-        b.classList.toggle("is-active", active);
-        b.setAttribute("aria-selected", active ? "true" : "false");
+      var mode = btn.getAttribute("data-mode");
+      if (mode === currentMode) return;
+
+      var viewportTop = isMobileLayout()
+        ? archive.querySelector(".reading-rail").getBoundingClientRect().bottom
+        : 0;
+      var anchor = getVisibleCards().find(function (card) {
+        var rect = card.getBoundingClientRect();
+        return rect.bottom > viewportTop && rect.top < window.innerHeight;
       });
-      if (currentMode === "list") {
-        pinnedKey = null;
-        hoveredKey = null;
-        syncCardStates();
-        renderRailBody();
+      var anchorTop = anchor && anchor.getBoundingClientRect().top;
+      setMode(mode);
+      if (anchor) {
+        window.scrollBy(0, anchor.getBoundingClientRect().top - anchorTop);
+      }
+      try {
+        window.localStorage.setItem("reading-view-mode", mode);
+      } catch (error) {
+        // The switch also works when browser storage is unavailable.
       }
     });
   });
@@ -651,6 +670,12 @@
   }
 
   updateYearTelemetry(activeYear);
-  renderRailBody();
+  try {
+    if (window.localStorage.getItem("reading-view-mode") === "list") {
+      setMode("list");
+    }
+  } catch (error) {
+    // Keep the default shelf when browser storage is unavailable.
+  }
   handleHash();
 })();

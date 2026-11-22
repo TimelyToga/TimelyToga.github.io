@@ -2,6 +2,7 @@
 layout: default
 title: Reading
 permalink: /reading/
+reading_archive: true
 ---
 
 {% assign sorted_reading = site.reading | sort: 'date' | reverse %}
@@ -102,14 +103,17 @@ permalink: /reading/
         </div>
 
         <div class="reading-rail-controls">
+          <div class="reading-mode-control">
+            <span class="reading-mode-label" id="reading-view-label">View</span>
+            <div class="reading-mode-switch" role="group" aria-labelledby="reading-view-label">
+              <button type="button" class="reading-mode-btn" data-mode="shelf" aria-pressed="true" aria-controls="reading-shelf-stream">Shelf</button>
+              <button type="button" class="reading-mode-btn" data-mode="list" aria-pressed="false" aria-controls="reading-shelf-stream">List</button>
+            </div>
+          </div>
           <div class="reading-filter-pills" id="reading-filter-pills" role="group" aria-label="Filter books">
             <button type="button" class="reading-pill is-active" data-filter="all">All <span class="reading-pill-cnt">{{ grand_total_books }}</span></button>
             <button type="button" class="reading-pill" data-filter="noted">Noted <span class="reading-pill-cnt">{{ grand_total_noted }}</span></button>
             <button type="button" class="reading-pill" data-filter="fav">&#9733; Fav <span class="reading-pill-cnt">{{ grand_total_favs }}</span></button>
-          </div>
-          <div class="reading-mode-switch" role="tablist" aria-label="Display layout">
-            <button type="button" class="reading-mode-btn is-active" data-mode="shelf" role="tab" aria-selected="true">Shelf</button>
-            <button type="button" class="reading-mode-btn" data-mode="list" role="tab" aria-selected="false">List</button>
           </div>
         </div>
       </div>
@@ -370,4 +374,4 @@ permalink: /reading/
 <aside class="reading-mobile-sheet" id="reading-mobile-sheet" aria-label="Book notes" hidden></aside>
 </article>
 
-<script src="{{ '/assets/js/reading-ui.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/reading-ui.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
