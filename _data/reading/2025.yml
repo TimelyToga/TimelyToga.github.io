@@ -38,7 +38,7 @@ sections:
       - book_id: "zero-to-ipo"
         title: "Zero to IPO"
         author: "Frederic Kerrest"
-        cover: "https://covers.openlibrary.org/b/isbn/9781400219155-M.jpg"
+        cover: "/assets/img/covers/zero-to-ipo.svg"
       - book_id: "the-quants"
         title: "The Quants"
         author: "Scott Patterson"
@@ -62,7 +62,7 @@ sections:
       - book_id: "house-of-huawei"
         title: "House of Huawei"
         author: "Eva Dou"
-        cover: "https://covers.openlibrary.org/b/isbn/9780593654392-M.jpg"
+        cover: "/assets/img/covers/house-of-huawei.svg"
         notes:
           - "Extremely interesting company, but ultimately this book is insanely incomplete. Felt like the author did about 1/4 of the research that they should have for this book. Spent most of the time weaving narratives that were not justified at all by the facts presented. She spent a very long time on the court case against Meng Wanzhou for extradition to the US, but failed to actually bring the reader through the main points of the trial. For example, \"The Coup at Caesar's Palace\" has a much more boring court case that it steps through in fantastic detail and actually brings the reader along through the main sticking point of the trial. Very disappointing book."
       - book_id: "empire-of-silence"
@@ -154,7 +154,7 @@ sections:
         audible_rating: 1
         title: "Flybot"
         author: "Dennis E. Taylor"
-        cover: "https://covers.openlibrary.org/b/isbn/9781680573312-M.jpg"
+        cover: "/assets/img/covers/flybot.svg"
         notes:
           - "Eh. Not really worth your time. Silly premise, bad characters, and very poorly motivated drama."
       - book_id: "the-light-brigade"
@@ -167,7 +167,7 @@ sections:
       - book_id: "the-object"
         title: "The Object"
         author: "Joshua T. Calvert"
-        cover: "https://covers.openlibrary.org/b/isbn/9798888550793-M.jpg"
+        cover: "/assets/img/covers/the-object.svg"
         notes:
           - "This is a nice first-contact style story, told through the eyes of a protagonist scientist that makes the initial discovery of a craft flying through the solar system. I feel like generally science-fiction books make the mistake of assuming that we'll have incontrovertible evidence of an alien craft. In this novel Calvert nicely plays with the incredible uncertainty and reluctance of the scientific community to actually admit that the measurements indicate that the object is actually a spacecraft. Ultimately I think this book falls flat in the final act as they go to investigate the object with a ship. Too many unrealistic leaps, but overall quite enjoyable."
       - book_id: "china-s-world-view"

@@ -19,7 +19,7 @@ sections:
       - book_id: "build"
         title: "Build"
         author: "Tony Fadell"
-        cover: "https://covers.openlibrary.org/b/isbn/9780063046061-M.jpg"
+        cover: "/assets/img/covers/build.svg"
         number: 3
         notes:
           - "One of the best books about building hardware companies I have ever read. Really enjoyed this. Would recommend to anyone building a hardware business."
@@ -67,7 +67,7 @@ sections:
       - book_id: "beyond-the-blue-event-horizon"
         title: "Beyond the Blue Event Horizon"
         author: "Frederick Pohl"
-        cover: "https://covers.openlibrary.org/b/isbn/9780345296122-M.jpg"
+        cover: "/assets/img/covers/beyond-the-blue-event-horizon.svg"
         notes:
           - "Choppy start, didn't finish."
         outcome: "dnf"
@@ -103,14 +103,14 @@ sections:
       - book_id: "distress"
         title: "Distress"
         author: "Greg Egan"
-        cover: "https://covers.openlibrary.org/b/isbn/9780061053443-M.jpg"
+        cover: "/assets/img/covers/distress.svg"
         notes:
           - "Interesting concept that discovering a comprehensive theory of everything will cause the universe to unravel."
       - book_id: "the-last-emperox"
         audible_rating: 2
         title: "The Last Emperox"
         author: "John Scalzi"
-        cover: "https://covers.openlibrary.org/b/isbn/9780765389152-M.jpg"
+        cover: "/assets/img/covers/the-last-emperox.svg"
         notes:
           - "Fumbled the concept from The Collapsing Empire; I quit halfway through."
         outcome: "dnf"
@@ -154,7 +154,7 @@ sections:
       - book_id: "build"
         title: "Build"
         author: "Tony Fadell"
-        cover: "https://covers.openlibrary.org/b/isbn/9780063046061-M.jpg"
+        cover: "/assets/img/covers/build.svg"
         notes:
           - "One of the best books about building hardware companies I have ever read. Really enjoyed this. Would recommend to anyone building a hardware business."
       - book_id: "elon-musk"
@@ -184,7 +184,7 @@ sections:
       - book_id: "transformer"
         title: "Transformer"
         author: "Nick Lane"
-        cover: "https://covers.openlibrary.org/b/isbn/9781324006480-M.jpg"
+        cover: "/assets/img/covers/transformer.svg"
         notes:
           - "The Krebs Cycle has never been more interesting! A great history of science book leading you through the discoveries that guided our understanding of the Krebs Cycle. Hard to tell if the author is promulgating their own pet theory or if this is the new accepted conception of how critical the Krebs Cycle is to evolution."
       - book_id: "red-rising"

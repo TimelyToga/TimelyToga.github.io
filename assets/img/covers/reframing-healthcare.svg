@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-labelledby="dc-rfh-title dc-rfh-desc">
+<title id="dc-rfh-title">Reframing Healthcare: A Roadmap for Creating Disruptive Change — Zeev E. Neuwirth MD</title>
+<desc id="dc-rfh-desc">A broken rose-colored heartbeat enters a gilt golden-ratio frame and leaves it as a clean, glowing gold rhythm over a dark teal ground.</desc>
+<defs><filter id="dc-rfh-grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="61" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0.480 -0.192"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+<linearGradient id="dc-rfh-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d2226"/><stop offset="0.6" stop-color="#0b1a1d"/><stop offset="1" stop-color="#071012"/></linearGradient>
+<radialGradient id="dc-rfh-dawn" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#f6d48a" stop-opacity="0.45"/><stop offset="0.5" stop-color="#e2bd6e" stop-opacity="0.12"/><stop offset="1" stop-color="#e2bd6e" stop-opacity="0"/></radialGradient>
+<clipPath id="dc-rfh-frame"><rect x="52" y="187.43" width="196" height="121.13"/></clipPath>
+<filter id="dc-rfh-glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="2"/></filter>
+</defs>
+<rect width="300" height="450" fill="url(#dc-rfh-bg)"/>
+<ellipse cx="173.52" cy="254.06" rx="117.6" ry="90.85" fill="url(#dc-rfh-dawn)" clip-path="url(#dc-rfh-frame)"/>
+<path d="M173.13 187.43V308.57M173.13 262.3H248M201.73 262.3V308.57M173.13 279.97H201.73M190.81 262.3V279.97M190.81 273.22H201.73M194.98 273.22V279.97" stroke="#e2bd6e" stroke-width="0.5" opacity="0.4" fill="none"/>
+<path d="M52 308.57 A121.13 121.13 0 0 1 173.13 187.43M173.13 187.43 A74.87 74.87 0 0 1 248 262.3M248 262.3 A46.27 46.27 0 0 1 201.73 308.57M201.73 308.57 A28.6 28.6 0 0 1 173.13 279.97M173.13 279.97 A17.67 17.67 0 0 1 190.81 262.3M190.81 262.3 A10.92 10.92 0 0 1 201.73 273.22M201.73 273.22 A6.75 6.75 0 0 1 194.98 279.97" stroke="#e2bd6e" stroke-width="0.9" opacity="0.55" fill="none"/>
+<path d="M14 262.54 H24 L27 256.54 L30 266.54 L32 262.54 H36 M40 262.54 L42 248.54 L44 271.54 L46 259.54 M49 264.54 L50 262.54" fill="none" stroke="#c4675a" stroke-width="1.4" stroke-linejoin="round" opacity="0.9"/>
+<path d="M52 262.54 L62 262.54 L66 259.54 L70 262.54 L74 262.54 L76 267.54 L80 214.54 L84 271.54 L87 262.54 L94 262.54 Q99 255.54 104 262.54 L126 262.54 L130 259.54 L134 262.54 L138 262.54 L140 267.54 L144 214.54 L148 271.54 L151 262.54 L158 262.54 Q163 255.54 168 262.54 L190 262.54 L194 259.54 L198 262.54 L202 262.54 L204 267.54 L208 214.54 L212 271.54 L215 262.54 L222 262.54 Q227 255.54 232 262.54 L286 262.54" fill="none" stroke="#e2bd6e" stroke-width="4" opacity="0.5" filter="url(#dc-rfh-glow)"/>
+<path d="M52 262.54 L62 262.54 L66 259.54 L70 262.54 L74 262.54 L76 267.54 L80 214.54 L84 271.54 L87 262.54 L94 262.54 Q99 255.54 104 262.54 L126 262.54 L130 259.54 L134 262.54 L138 262.54 L140 267.54 L144 214.54 L148 271.54 L151 262.54 L158 262.54 Q163 255.54 168 262.54 L190 262.54 L194 259.54 L198 262.54 L202 262.54 L204 267.54 L208 214.54 L212 271.54 L215 262.54 L222 262.54 Q227 255.54 232 262.54 L286 262.54" fill="none" stroke="#fbe3a6" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="52" y="187.43" width="196" height="121.13" fill="none" stroke="#e2bd6e" stroke-width="2.6"/>
+<rect x="47" y="182.43" width="206" height="131.13" fill="none" stroke="#e2bd6e" stroke-width="0.6" opacity="0.7"/>
+<path d="M41 182.43 H53 M47 176.43 V188.43" stroke="#e2bd6e" stroke-width="0.5" opacity="0.8"/>
+<path d="M247 182.43 H259 M253 176.43 V188.43" stroke="#e2bd6e" stroke-width="0.5" opacity="0.8"/>
+<path d="M41 313.57 H53 M47 307.57 V319.57" stroke="#e2bd6e" stroke-width="0.5" opacity="0.8"/>
+<path d="M247 313.57 H259 M253 307.57 V319.57" stroke="#e2bd6e" stroke-width="0.5" opacity="0.8"/>
+<text x="248" y="324.57" font-family="'JetBrains Mono', 'Menlo', 'Courier New', monospace" font-size="5.5" fill="#e2bd6e" text-anchor="end" font-weight="normal" letter-spacing="0.8" opacity="0.8">1 : 1.618</text>
+<text x="52" y="177.43" font-family="'JetBrains Mono', 'Menlo', 'Courier New', monospace" font-size="5" fill="#c4675a" text-anchor="start" font-weight="normal" letter-spacing="0.8" opacity="0.9">72 BPM · SINUS</text>
+<text x="150" y="82" font-family="'Playfair Display', 'Bodoni 72', 'Didot', 'Baskerville', 'Georgia', serif" font-size="34" fill="#eee6d6" text-anchor="middle" font-weight="bold" letter-spacing="2">REFRAMING</text>
+<text x="150" y="120" font-family="'Playfair Display', 'Bodoni 72', 'Didot', 'Baskerville', 'Georgia', serif" font-size="30" fill="#e2bd6e" text-anchor="middle" font-weight="normal" letter-spacing="3">HEALTHCARE</text>
+<path d="M120 352 H180" stroke="#e2bd6e" stroke-width="0.8"/>
+<text x="150" y="372" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="11.5" fill="#cfd8d2" text-anchor="middle" font-weight="normal" font-style="italic">A Roadmap for Creating</text>
+<text x="150" y="387" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="11.5" fill="#cfd8d2" text-anchor="middle" font-weight="normal" font-style="italic">Disruptive Change</text>
+<text x="150" y="420" font-family="'Inter', 'Avenir Next', 'Futura', 'Helvetica Neue', sans-serif" font-size="11" fill="#eee6d6" text-anchor="middle" font-weight="600" letter-spacing="2.8">ZEEV E. NEUWIRTH, MD</text>
+<rect x="0" y="0" width="300" height="450" fill="#808080" filter="url(#dc-rfh-grain)" style="mix-blend-mode:overlay"/>
+
+<defs>
+  <linearGradient id="dc-rfh-hinge" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity="0.55"/>
+    <stop offset="0.35" stop-color="#000" stop-opacity="0.193"/>
+    <stop offset="0.72" stop-color="#fff" stop-opacity="0.060"/>
+    <stop offset="0.86" stop-color="#000" stop-opacity="0.303"/>
+    <stop offset="1" stop-color="#000" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="dc-rfh-falloff" cx="0.58" cy="0.36" r="0.85">
+    <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+    <stop offset="1" stop-color="#000" stop-opacity="0.38"/>
+  </radialGradient>
+</defs>
+<rect x="0" y="0" width="300" height="450" fill="url(#dc-rfh-falloff)"/>
+<rect x="0" y="0" width="17" height="450" fill="url(#dc-rfh-hinge)"/>
+<rect x="0" y="0" width="300" height="450" fill="none" stroke="#000" stroke-opacity="0.55" stroke-width="1.6"/>
+<rect x="1.2" y="1.2" width="297.6" height="447.6" fill="none" stroke="#fff" stroke-opacity="0.100" stroke-width="0.6"/>
+<path d="M300 0 V450" stroke="#000" stroke-opacity="0.35" stroke-width="2.2"/>
+<path d="M0 449 H300" stroke="#000" stroke-opacity="0.4" stroke-width="2"/>
+
+</svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 450" width="300" height="450" role="img" aria-labelledby="dc-non-title dc-non-desc">
+<title id="dc-non-title">Notes on Nursing — Florence Nightingale</title>
+<desc id="dc-non-desc">Victorian green cloth stamped in gilt, framing Nightingale's polar-area rose diagram of army deaths at Scutari, with a small oil lamp beneath.</desc>
+<defs><filter id="dc-non-grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9 0.04" numOctaves="2" seed="18" result="n1"/><feTurbulence type="fractalNoise" baseFrequency="0.04 0.9" numOctaves="2" seed="19" result="n2"/><feBlend in="n1" in2="n2" mode="multiply" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0 0.5  0 0 0 0.480 -0.192"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+<radialGradient id="dc-non-cloth" cx="0.5" cy="0.42" r="0.8">
+ <stop offset="0" stop-color="#20402f"/><stop offset="0.6" stop-color="#15291e"/><stop offset="1" stop-color="#0b1610"/></radialGradient>
+<linearGradient id="dc-non-gilt" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0" stop-color="#f6e0a0"/><stop offset="0.5" stop-color="#d1a650"/><stop offset="1" stop-color="#9a7228"/></linearGradient>
+<radialGradient id="dc-non-paper" cx="0.5" cy="0.45" r="0.6">
+ <stop offset="0" stop-color="#f2e8cf"/><stop offset="1" stop-color="#d9c9a2"/></radialGradient>
+<radialGradient id="dc-non-lamp" cx="0.5" cy="0.5" r="0.5">
+ <stop offset="0" stop-color="#ffd27a" stop-opacity="0.5"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+</defs><rect width="300" height="450" fill="url(#dc-non-cloth)"/>
+<rect x="28" y="18" width="256" height="414" fill="none" stroke="url(#dc-non-gilt)" stroke-width="1.6"/>
+<rect x="33" y="23" width="246" height="404" fill="none" stroke="url(#dc-non-gilt)" stroke-width="0.6"/>
+<path d="M33 39 q10 -2 10 -10 q2 10 12 10 M49 23 q-2 10 -10 10" fill="none" stroke="url(#dc-non-gilt)" stroke-width="0.9"/><circle cx="39" cy="29" r="1.6" fill="url(#dc-non-gilt)"/>
+<path d="M279 39 q-10 -2 -10 -10 q-2 10 -12 10 M263 23 q2 10 10 10" fill="none" stroke="url(#dc-non-gilt)" stroke-width="0.9"/><circle cx="273" cy="29" r="1.6" fill="url(#dc-non-gilt)"/>
+<path d="M33 411 q10 2 10 10 q2 -10 12 -10 M49 427 q-2 -10 -10 -10" fill="none" stroke="url(#dc-non-gilt)" stroke-width="0.9"/><circle cx="39" cy="421" r="1.6" fill="url(#dc-non-gilt)"/>
+<path d="M279 411 q-10 2 -10 10 q-2 -10 -12 -10 M263 427 q2 -10 10 -10" fill="none" stroke="url(#dc-non-gilt)" stroke-width="0.9"/><circle cx="273" cy="421" r="1.6" fill="url(#dc-non-gilt)"/>
+<text x="156" y="68" text-anchor="middle" font-family="'Playfair Display', 'Bodoni 72', 'Didot', 'Baskerville', 'Georgia', serif" font-size="42" letter-spacing="6" fill="url(#dc-non-gilt)">NOTES</text>
+<text x="156" y="102" text-anchor="middle" font-family="'Playfair Display', 'Bodoni 72', 'Didot', 'Baskerville', 'Georgia', serif" font-size="25" letter-spacing="4" fill="url(#dc-non-gilt)">ON NURSING</text>
+<text x="156" y="122" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-style="italic" font-size="9" fill="#e9d6a4" opacity="0.9">What it is, and what it is not.</text>
+<circle cx="156" cy="238" r="96" fill="url(#dc-non-paper)" stroke="url(#dc-non-gilt)" stroke-width="2"/>
+<circle cx="156" cy="238" r="92" fill="none" stroke="#7a5a1e" stroke-width="0.4"/>
+<circle cx="156" cy="238" r="21" fill="none" stroke="#a8946a" stroke-width="0.3" stroke-dasharray="1 2"/>
+<circle cx="156" cy="238" r="42" fill="none" stroke="#a8946a" stroke-width="0.3" stroke-dasharray="1 2"/>
+<circle cx="156" cy="238" r="63" fill="none" stroke="#a8946a" stroke-width="0.3" stroke-dasharray="1 2"/>
+<path d="M156 238 L149.05 238 A6.95 6.95 0 0 1 149.98 234.53 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L152.89 238 A3.11 3.11 0 0 1 153.31 236.45 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+
+<path d="M156 238 L150.34 234.73 A6.54 6.54 0 0 1 152.73 232.34 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L151.12 235.18 A5.63 5.63 0 0 1 153.18 233.12 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+
+<path d="M156 238 L153.15 233.07 A5.69 5.69 0 0 1 156 232.31 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L153.92 234.4 A4.15 4.15 0 0 1 156 233.85 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+
+<path d="M156 238 L156 205.83 A32.17 32.17 0 0 1 172.08 210.14 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L156 229.86 A8.14 8.14 0 0 1 160.07 230.95 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+
+<path d="M156 238 L179.8 196.77 A47.6 47.6 0 0 1 197.23 214.2 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L160.53 230.15 A9.06 9.06 0 0 1 163.85 233.47 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L156.83 236.56 A1.66 1.66 0 0 1 157.44 237.17 Z" fill="#c25a48" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L196.19 214.8 A46.41 46.41 0 0 1 202.41 238 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L168.89 230.56 A14.88 14.88 0 0 1 170.88 238 Z" fill="#c25a48" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L167.97 231.09 A13.82 13.82 0 0 1 169.82 238 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L192.87 238 A36.87 36.87 0 0 1 187.93 256.43 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L174.89 238 A18.89 18.89 0 0 1 172.36 247.44 Z" fill="#c25a48" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L174.59 238 A18.59 18.59 0 0 1 172.1 247.3 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L197.98 262.24 A48.47 48.47 0 0 1 180.24 279.98 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L180.48 252.13 A28.26 28.26 0 0 1 170.13 262.48 Z" fill="#c25a48" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L170.88 246.59 A17.18 17.18 0 0 1 164.59 252.88 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L189 295.16 A66 66 0 0 1 156 304 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L165.1 253.76 A18.2 18.2 0 0 1 156 256.2 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L164.48 252.69 A16.96 16.96 0 0 1 156 254.96 Z" fill="#c25a48" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L156 322 A84 84 0 0 1 114 310.75 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L156 266.77 A28.77 28.77 0 0 1 141.61 262.92 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L156 252.55 A14.55 14.55 0 0 1 148.72 250.6 Z" fill="#c25a48" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L118.33 303.25 A75.34 75.34 0 0 1 90.75 275.67 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L140.46 264.92 A31.09 31.09 0 0 1 129.08 253.54 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L150.7 247.18 A10.6 10.6 0 0 1 146.82 243.3 Z" fill="#c25a48" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L106.15 266.78 A57.56 57.56 0 0 1 98.44 238 Z" fill="#7a9cb8" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L137.16 248.88 A21.75 21.75 0 0 1 134.25 238 Z" fill="#2d2a26" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<path d="M156 238 L147.86 242.7 A9.4 9.4 0 0 1 146.6 238 Z" fill="#c25a48" fill-opacity="1" stroke="#3a2e1c" stroke-width="0.45"/>
+<text x="140.55" y="235.66" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">APR</text>
+<text x="144.69" y="228.49" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">MAY</text>
+<text x="151.86" y="224.35" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">JUN</text>
+<text x="165.88" y="202.93" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">JUL</text>
+<text x="193.9" y="201.9" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">AUG</text>
+<text x="206.62" y="226.24" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">SEP</text>
+<text x="197.4" y="250.89" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">OCT</text>
+<text x="194.52" y="278.32" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">NOV</text>
+<text x="174.64" y="309.35" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">DEC</text>
+<text x="136.85" y="311.28" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#f2e8cf">JAN</text>
+<text x="98.48" y="297.32" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">FEB</text>
+<text x="94.6" y="256.25" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="5" fill="#4a3c26">MAR</text>
+<text x="156" y="352" text-anchor="middle" font-family="'Merriweather', 'Baskerville', 'Hoefler Text', 'Georgia', serif" font-size="6.5" letter-spacing="2.5" fill="#e9d6a4">SCUTARI · APRIL 1854 – MARCH 1855</text>
+<ellipse cx="166" cy="370" rx="16" ry="10" fill="url(#dc-non-lamp)"/>
+<path d="M142 377 Q150 368 162 371 Q168 373 172 369 L168 375 Q156 381 142 377 Z" fill="url(#dc-non-gilt)"/><path d="M142 375 q-7 -2 -6 -8 q3 4 6 3" fill="none" stroke="url(#dc-non-gilt)" stroke-width="1"/><path d="M154 369 q2 -5 0 -7 q4 2 2 7" fill="url(#dc-non-gilt)"/><path d="M172 369 q2 -7 -1 -10 q5 3 3 9" fill="#ffe2a0"/>
+<text x="156" y="410" text-anchor="middle" font-family="'Playfair Display', 'Bodoni 72', 'Didot', 'Baskerville', 'Georgia', serif" font-size="13" letter-spacing="2.4" fill="url(#dc-non-gilt)">FLORENCE NIGHTINGALE</text>
+<rect x="0" y="0" width="300" height="450" fill="#808080" filter="url(#dc-non-grain)" style="mix-blend-mode:overlay"/>
+
+<defs>
+  <linearGradient id="dc-non-hinge" x1="0" x2="1" y1="0" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity="0.55"/>
+    <stop offset="0.35" stop-color="#000" stop-opacity="0.193"/>
+    <stop offset="0.72" stop-color="#fff" stop-opacity="0.060"/>
+    <stop offset="0.86" stop-color="#000" stop-opacity="0.303"/>
+    <stop offset="1" stop-color="#000" stop-opacity="0"/>
+  </linearGradient>
+  <radialGradient id="dc-non-falloff" cx="0.58" cy="0.36" r="0.85">
+    <stop offset="0.55" stop-color="#000" stop-opacity="0"/>
+    <stop offset="1" stop-color="#000" stop-opacity="0.38"/>
+  </radialGradient>
+</defs>
+<rect x="0" y="0" width="300" height="450" fill="url(#dc-non-falloff)"/>
+<rect x="0" y="0" width="17" height="450" fill="url(#dc-non-hinge)"/>
+<rect x="0" y="0" width="300" height="450" fill="none" stroke="#000" stroke-opacity="0.55" stroke-width="1.6"/>
+<rect x="1.2" y="1.2" width="297.6" height="447.6" fill="none" stroke="#fff" stroke-opacity="0.100" stroke-width="0.6"/>
+<path d="M300 0 V450" stroke="#000" stroke-opacity="0.35" stroke-width="2.2"/>
+<path d="M0 449 H300" stroke="#000" stroke-opacity="0.4" stroke-width="2"/>
+
+</svg>

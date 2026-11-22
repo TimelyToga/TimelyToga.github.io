@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Reading
 permalink: /reading/
 ---
@@ -7,79 +7,367 @@ permalink: /reading/
 {% assign sorted_reading = site.reading | sort: 'date' | reverse %}
 {% assign chron_reading = site.reading | sort: 'date' %}
 {% assign grand_total_books = 0 %}
+{% assign grand_total_noted = 0 %}
+{% assign grand_total_favs = 0 %}
 {% assign max_books_in_year = 1 %}
 
 {% for post in sorted_reading %}
-    {% assign yk = post.date | date: "%Y" %}
-    {% assign ry = site.data.reading[yk] %}
-    {% assign yc = 0 %}
-    {% for section in ry.sections %}
-        {% if section.key == "books" %}
-            {% for ent in section.entries %}
-                {% assign yc = yc | plus: 1 %}
-                {% assign grand_total_books = grand_total_books | plus: 1 %}
-            {% endfor %}
-        {% endif %}
-    {% endfor %}
-    {% if yc > max_books_in_year %}
-        {% assign max_books_in_year = yc %}
+  {% assign yk = post.date | date: "%Y" %}
+  {% assign ry = site.data.reading[yk] %}
+  {% assign yc = 0 %}
+  {% assign y_fav_ids = "|" %}
+  {% for section in ry.sections %}
+    {% if section.key == "favorites" %}
+      {% for fav in section.entries %}
+        {% assign fid = fav.book_id | default: fav.title %}
+        {% assign y_fav_ids = y_fav_ids | append: fid | append: "|" %}
+      {% endfor %}
     {% endif %}
+  {% endfor %}
+  {% for section in ry.sections %}
+    {% if section.key == "books" %}
+      {% for ent in section.entries %}
+        {% assign yc = yc | plus: 1 %}
+        {% assign grand_total_books = grand_total_books | plus: 1 %}
+        {% assign has_n = false %}
+        {% if ent.notes %}
+          {% assign first_n = ent.notes | first %}
+          {% if first_n != nil %}
+            {% for n_item in ent.notes %}
+              {% assign n_trim = n_item | strip %}
+              {% if n_trim != "" %}{% assign has_n = true %}{% endif %}
+            {% endfor %}
+          {% else %}
+            {% assign n_trim = ent.notes | strip %}
+            {% if n_trim != "" %}{% assign has_n = true %}{% endif %}
+          {% endif %}
+        {% endif %}
+        {% if has_n %}{% assign grand_total_noted = grand_total_noted | plus: 1 %}{% endif %}
+        {% assign bid_check = "|" | append: ent.book_id | append: "|" %}
+        {% assign title_check = "|" | append: ent.title | append: "|" %}
+        {% if y_fav_ids contains bid_check or y_fav_ids contains title_check %}
+          {% assign grand_total_favs = grand_total_favs | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  {% if yc > max_books_in_year %}
+    {% assign max_books_in_year = yc %}
+  {% endif %}
 {% endfor %}
 
-<p>Yearly reading lists with notes on the books that stood out.</p>
+<article class="reading-page">
+<header class="reading-page-header">
+  <h1 class="page-title">Reading</h1>
+  <div class="reading-intro">
+    <p>Eleven years on one shelf: beginning in deep-time hard science fiction, pivoting sharply into company-building and Wall Street blowups around Throne, and widening into supply chains, raw materials, and statecraft.</p>
+    <p class="reading-intro-note">Hover any book to read notes in the rail; click to pin. Some Iain M. Banks Culture novels were also read before 2022; their exact reading years are unknown.</p>
+  </div>
+</header>
 
-<p>Some Culture novels were also read before 2022; their individual reading years are unknown.</p>
-
-<div class="reading-telemetry-card" aria-label="Reading archive overview">
-    <div class="reading-stats-row">
-        <div class="reading-stat">
-            <span class="stat-value">{{ grand_total_books }}</span>
-            <span class="stat-label">Books Logged</span>
+<div class="reading-archive" id="reading-archive" data-view-mode="shelf">
+  <aside class="reading-rail" aria-label="Reading telemetry and notes reader">
+    <div class="reading-rail-card">
+      <div class="reading-rail-top">
+        <div class="reading-rail-kicker">
+          <span class="reading-live-dot" aria-hidden="true"></span>
+          <span>Archive · {{ grand_total_books }} books · {{ sorted_reading | size }} yrs</span>
         </div>
-        <div class="reading-stat">
-            <span class="stat-value">{{ sorted_reading | size }}</span>
-            <span class="stat-label">Years Tracked</span>
-        </div>
-    </div>
 
-    <div class="reading-cadence-chart" role="navigation" aria-label="Books per year chart">
-        {% for post in chron_reading %}
+        <div class="reading-rail-year-row">
+          <span class="reading-rail-year" id="rail-active-year">{{ sorted_reading.first.date | date: "%Y" }}</span>
+          <span class="reading-rail-year-meta" id="rail-active-meta"></span>
+        </div>
+
+        <div class="reading-cadence-chart" id="reading-cadence-chart" role="navigation" aria-label="Books per year chart">
+          {% for post in chron_reading %}
             {% assign c_year = post.date | date: "%Y" %}
             {% assign c_data = site.data.reading[c_year] %}
             {% assign c_count = 0 %}
             {% for section in c_data.sections %}
-                {% if section.key == "books" %}
-                    {% assign sc = section.entries | size %}
-                    {% assign c_count = c_count | plus: sc %}
-                {% endif %}
+              {% if section.key == "books" %}
+                {% assign sc = section.entries | size %}
+                {% assign c_count = c_count | plus: sc %}
+              {% endif %}
             {% endfor %}
-            {% assign bar_pct = c_count | times: 100 | divided_by: max_books_in_year | at_least: 8 %}
-            <a href="{{ post.url | relative_url }}" class="cadence-col" data-year-target="{{ c_year }}" title="{{ c_year }}: {{ c_count }} {% if c_count == 1 %}book{% else %}books{% endif %}">
-                <span class="cadence-val">{{ c_count }}</span>
-                <span class="cadence-track">
-                    <span class="cadence-bar" style="height: {{ bar_pct }}%"></span>
-                </span>
-                <span class="cadence-yr">'{{ c_year | slice: 2, 2 }}</span>
-            </a>
-        {% endfor %}
+            {% assign bar_pct = c_count | times: 100 | divided_by: max_books_in_year | at_least: 10 %}
+            <button type="button" class="cadence-col{% if forloop.last %} is-active{% endif %}" data-year-target="{{ c_year }}" title="{{ c_year }}: {{ c_count }} {% if c_count == 1 %}book{% else %}books{% endif %}" aria-label="Jump to {{ c_year }} ({{ c_count }} {% if c_count == 1 %}book{% else %}books{% endif %})">
+              <span class="cadence-val">{{ c_count }}</span>
+              <span class="cadence-track">
+                <span class="cadence-bar" style="height: {{ bar_pct }}%"></span>
+              </span>
+              <span class="cadence-yr">&rsquo;{{ c_year | slice: 2, 2 }}</span>
+            </button>
+          {% endfor %}
+        </div>
+
+        <div class="reading-rail-controls">
+          <div class="reading-filter-pills" id="reading-filter-pills" role="group" aria-label="Filter books">
+            <button type="button" class="reading-pill is-active" data-filter="all">All <span class="reading-pill-cnt">{{ grand_total_books }}</span></button>
+            <button type="button" class="reading-pill" data-filter="noted">Noted <span class="reading-pill-cnt">{{ grand_total_noted }}</span></button>
+            <button type="button" class="reading-pill" data-filter="fav">&#9733; Fav <span class="reading-pill-cnt">{{ grand_total_favs }}</span></button>
+          </div>
+          <div class="reading-mode-switch" role="tablist" aria-label="Display layout">
+            <button type="button" class="reading-mode-btn is-active" data-mode="shelf" role="tab" aria-selected="true">Shelf</button>
+            <button type="button" class="reading-mode-btn" data-mode="list" role="tab" aria-selected="false">List</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="reading-rail-body" id="reading-rail-body" aria-live="polite">
+        <div class="reading-era-card">
+          <div class="reading-era-tag">2024–2026 · Power &amp; Materials</div>
+          <p class="reading-era-prose">Zooming out to how the physical world actually runs—China, semiconductors, shipping, energy, raw commodities, and institutional power—alongside first-contact hard SF.</p>
+          <p class="reading-era-hint">Hover any cover on the shelf to preview notes here. Click a cover to pin it.</p>
+        </div>
+      </div>
     </div>
+  </aside>
+
+  <div class="reading-shelf-stream" id="reading-shelf-stream">
+    {% for post in sorted_reading %}
+      {% assign yk = post.date | date: "%Y" %}
+      {% assign ry = site.data.reading[yk] %}
+      {% assign y_fav_ids = "|" %}
+      {% for section in ry.sections %}
+        {% if section.key == "favorites" %}
+          {% for fav in section.entries %}
+            {% assign fid = fav.book_id | default: fav.title %}
+            {% assign y_fav_ids = y_fav_ids | append: fid | append: "|" %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign y_books = "" | split: "" %}
+      {% for section in ry.sections %}
+        {% if section.key == "books" %}
+          {% assign y_books = section.entries %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign y_count = y_books | size %}
+      {% assign y_noted = 0 %}
+      {% assign y_rereads = 0 %}
+      {% assign y_dnfs = 0 %}
+      {% assign y_reading = 0 %}
+      {% for ent in y_books %}
+        {% assign has_n = false %}
+        {% if ent.notes %}
+          {% assign first_n = ent.notes | first %}
+          {% if first_n != nil %}
+            {% for n_item in ent.notes %}
+              {% assign n_trim = n_item | strip %}
+              {% if n_trim != "" %}{% assign has_n = true %}{% endif %}
+            {% endfor %}
+          {% else %}
+            {% assign n_trim = ent.notes | strip %}
+            {% if n_trim != "" %}{% assign has_n = true %}{% endif %}
+          {% endif %}
+        {% endif %}
+        {% if has_n %}{% assign y_noted = y_noted | plus: 1 %}{% endif %}
+        {% if ent.attempt == "reread" %}{% assign y_rereads = y_rereads | plus: 1 %}{% endif %}
+        {% if ent.outcome == "dnf" %}{% assign y_dnfs = y_dnfs | plus: 1 %}{% endif %}
+        {% if ent.outcome == "in_progress" %}{% assign y_reading = y_reading | plus: 1 %}{% endif %}
+      {% endfor %}
+
+      <section
+        class="reading-year-section{% if forloop.first %} is-active-year{% endif %}"
+        id="year-{{ yk }}"
+        data-year="{{ yk }}"
+        data-count="{{ y_count }}"
+        data-noted="{{ y_noted }}"
+        data-rereads="{{ y_rereads }}"
+        data-dnfs="{{ y_dnfs }}"
+        data-reading="{{ y_reading }}"
+      >
+        <div class="reading-year-header">
+          <div class="reading-year-header-left">
+            <h2 class="reading-year-heading">{{ yk }}</h2>
+            <span class="reading-year-count" data-year-count-label>{{ y_count }} {% if y_count == 1 %}book{% else %}books{% endif %}{% if y_noted > 0 %} · {{ y_noted }} noted{% endif %}</span>
+          </div>
+          <a class="reading-year-permalink" href="{{ post.url | relative_url }}" title="Open standalone {{ yk }} page">{{ yk }} list &nearr;</a>
+        </div>
+
+        <div class="reading-shelf-grid">
+          {% for entry in y_books %}
+            {% assign attempt = entry.attempt | default: "first_read" %}
+            {% assign outcome = entry.outcome | default: "finished" %}
+            {% assign book_key = yk | append: "-" | append: forloop.index0 | append: "-" | append: entry.book_id %}
+
+            {% assign is_fav = false %}
+            {% assign bid_check = "|" | append: entry.book_id | append: "|" %}
+            {% assign title_check = "|" | append: entry.title | append: "|" %}
+            {% if y_fav_ids contains bid_check or y_fav_ids contains title_check %}
+              {% assign is_fav = true %}
+            {% endif %}
+
+            {% assign has_notes = false %}
+            {% assign notes_is_array = false %}
+            {% if entry.notes %}
+              {% assign first_n = entry.notes | first %}
+              {% if first_n != nil %}
+                {% assign notes_is_array = true %}
+                {% for n_item in entry.notes %}
+                  {% assign n_trim = n_item | strip %}
+                  {% if n_trim != "" %}{% assign has_notes = true %}{% endif %}
+                {% endfor %}
+              {% else %}
+                {% assign n_trim = entry.notes | strip %}
+                {% if n_trim != "" %}{% assign has_notes = true %}{% endif %}
+              {% endif %}
+            {% endif %}
+
+            {% assign stopped_label = "" %}
+            {% if outcome == "dnf" and entry.stopped_at %}
+              {% assign stopped = entry.stopped_at %}
+              {% capture stopped_label -%}
+                {%- if stopped.estimated and stopped.kind != "note" -%}~{%- endif -%}
+                {%- case stopped.kind -%}
+                  {%- when "percent" -%}{{ stopped.value }}%
+                  {%- when "page" -%}page {{ stopped.value }}
+                  {%- when "chapter" -%}chapter {{ stopped.value }}
+                  {%- when "note" -%}{{ stopped.value }}
+                  {%- else -%}{{ stopped.value }}
+                {%- endcase -%}
+              {%- endcapture %}
+              {% assign stopped_label = stopped_label | strip %}
+            {% endif %}
+
+            {% assign cover_src = entry.cover %}
+            {% if cover_src and cover_src contains "://" %}
+              {% assign resolved_cover = cover_src %}
+            {% elsif cover_src %}
+              {% assign resolved_cover = cover_src | relative_url %}
+            {% else %}
+              {% assign resolved_cover = "" %}
+            {% endif %}
+
+            {% assign is_eager = false %}
+            {% if forloop.parentloop.first and forloop.index0 < 12 %}
+              {% assign is_eager = true %}
+            {% endif %}
+
+            <article
+              class="shelf-book-card"
+              id="book-{{ book_key }}"
+              data-book-key="{{ book_key }}"
+              data-book-id="{{ entry.book_id }}"
+              data-year="{{ yk }}"
+              data-title="{{ entry.title | escape }}"
+              data-author="{{ entry.author | escape }}"
+              data-cover="{{ resolved_cover | escape }}"
+              data-has-notes="{{ has_notes }}"
+              data-is-fav="{{ is_fav }}"
+              data-attempt="{{ attempt }}"
+              data-outcome="{{ outcome }}"
+              tabindex="0"
+              role="button"
+              aria-label="{{ entry.title | escape }} by {{ entry.author | escape }}"
+            >
+              <div class="shelf-cover-box">
+                <div class="shelf-cover-fallback" aria-hidden="true">
+                  <div class="shelf-cover-fallback-top">
+                    <span class="shelf-cover-fallback-rule"></span>
+                    <span class="shelf-cover-fallback-title">{{ entry.title }}</span>
+                  </div>
+                  <span class="shelf-cover-fallback-author">{{ entry.author }}</span>
+                </div>
+                {% if resolved_cover != "" %}
+                  <img
+                    class="shelf-cover-img"
+                    src="{{ resolved_cover }}"
+                    alt="{{ entry.alt | default: entry.title | escape }}"
+                    loading="{% if is_eager %}eager{% else %}lazy{% endif %}"
+                    decoding="async"
+                  >
+                {% endif %}
+
+                {% if outcome == "in_progress" %}
+                  <span class="shelf-cover-badge is-reading">Reading</span>
+                {% elsif outcome == "dnf" %}
+                  <span class="shelf-cover-badge is-dnf">DNF</span>
+                {% elsif attempt == "reread" %}
+                  <span class="shelf-cover-badge">Reread</span>
+                {% elsif attempt == "restart" %}
+                  <span class="shelf-cover-badge">Restart</span>
+                {% elsif is_fav %}
+                  <span class="shelf-cover-badge is-fav">&#9733; Fav</span>
+                {% endif %}
+
+                {% if has_notes %}
+                  <span class="shelf-note-dot" title="Has reading notes" aria-hidden="true"></span>
+                {% endif %}
+              </div>
+
+              <div class="shelf-book-meta">
+                <h3 class="shelf-book-title">{{ entry.title }}</h3>
+                <div class="shelf-book-author">{{ entry.author }}</div>
+
+                <div class="shelf-list-badges">
+                  {% if entry.audible_rating %}<span class="reader-pill is-accent">{{ entry.audible_rating }}/5</span>{% endif %}
+                  {% if is_fav %}<span class="reader-pill is-accent">&#9733; Favorite</span>{% endif %}
+                  {% if outcome == "in_progress" %}<span class="reader-pill is-teal">Currently Reading</span>{% endif %}
+                  {% if attempt == "reread" %}<span class="reader-pill">Reread</span>{% endif %}
+                  {% if attempt == "restart" %}<span class="reader-pill">Restarted DNF</span>{% endif %}
+                  {% if outcome == "dnf" %}<span class="reader-pill">DNF{% if stopped_label != "" %} · {{ stopped_label }}{% endif %}</span>{% endif %}
+                </div>
+
+                {% if has_notes %}
+                  <div class="shelf-list-notes">
+                    {% if notes_is_array %}
+                      {% for note in entry.notes %}
+                        {% assign n_trim = note | strip %}
+                        {% unless n_trim == "" %}
+                          <p>{{ note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+                        {% endunless %}
+                      {% endfor %}
+                    {% else %}
+                      <p>{{ entry.notes | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
+
+              <div class="shelf-book-payload" hidden>
+                <div class="payload-pills">
+                  <span class="reader-pill">{{ yk }}</span>
+                  {% if entry.audible_rating %}<span class="reader-pill is-accent">{{ entry.audible_rating }}/5</span>{% endif %}
+                  {% if is_fav %}<span class="reader-pill is-accent">&#9733; Favorite</span>{% endif %}
+                  {% if outcome == "in_progress" %}<span class="reader-pill is-teal">Currently Reading</span>{% endif %}
+                  {% if attempt == "reread" %}<span class="reader-pill">Reread</span>{% endif %}
+                  {% if attempt == "restart" %}<span class="reader-pill">Restarted DNF</span>{% endif %}
+                  {% if outcome == "dnf" %}<span class="reader-pill">DNF{% if stopped_label != "" %} · {{ stopped_label }}{% endif %}</span>{% endif %}
+                </div>
+                <div class="payload-notes">
+                  {% if has_notes %}
+                    {% if notes_is_array %}
+                      {% for note in entry.notes %}
+                        {% assign n_trim = note | strip %}
+                        {% unless n_trim == "" %}
+                          <p>{{ note | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+                        {% endunless %}
+                      {% endfor %}
+                    {% else %}
+                      <p>{{ entry.notes | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+                    {% endif %}
+                  {% endif %}
+                </div>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endfor %}
+
+    <div class="reading-empty-state" id="reading-empty-state" hidden>
+      No books match this filter.
+    </div>
+  </div>
 </div>
 
-{% for post in sorted_reading %}
-{% assign reading_year_key = post.date | date: "%Y" %}
-{% assign display_book_count = 0 %}
-{% assign reading_year = site.data.reading[reading_year_key] %}
-{% for section in reading_year.sections %}
-    {% if section.key == "books" %}
-        {% assign section_count = section.entries | size %}
-        {% assign display_book_count = display_book_count | plus: section_count %}
-    {% endif %}
-{% endfor %}
-<div class="story-item reading-year-item" data-year-card="{{ reading_year_key }}">
-    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-    <div class="story-meta">{{ reading_year_key }} &middot; {{ display_book_count }} {% if display_book_count == 1 %}book{% else %}books{% endif %}</div>
-    <p class="story-description">{{ post.description }}</p>
-</div>
-{% endfor %}
+<!-- Mobile Review Sheet (used below 900px where the left rail collapses to a top bar) -->
+<div class="reading-sheet-backdrop" id="reading-sheet-backdrop" hidden></div>
+<aside class="reading-mobile-sheet" id="reading-mobile-sheet" aria-label="Book notes" hidden></aside>
+</article>
 
 <script src="{{ '/assets/js/reading-ui.js' | relative_url }}" defer></script>

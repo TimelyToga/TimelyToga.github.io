@@ -82,14 +82,14 @@ sections:
       - book_id: "barbarians-at-the-gate"
         title: "Barbarians at the Gate"
         author: "Bryan Burrough, John Helyar"
-        cover: "https://covers.openlibrary.org/b/isbn/9780061655555-M.jpg"
+        cover: "/assets/img/covers/barbarians-at-the-gate.svg"
         number: 12
         notes:
           - "Ross Johnson of RJR Nabisco sure can spend money; as soon as I realized this book was telling the origin story of KKR, I knew it wouldn't end well for Johnson."
       - book_id: "the-dealmaker"
         title: "The Dealmaker"
         author: "Guy Hands"
-        cover: "https://covers.openlibrary.org/b/isbn/9780241357866-M.jpg"
+        cover: "/assets/img/covers/the-dealmaker.svg"
         number: 13
         notes:
           - "Lessons from a life in private equity. Hands doesn't pull any punches when he tells about his failures. Career went off with a bang, then seemed to falter."
@@ -120,7 +120,7 @@ sections:
       - book_id: "reframing-healthcare"
         title: "Reframing Healthcare: A Roadmap for Creating Disruptive Change"
         author: "Zeev E. Neuwirth MD"
-        cover: "https://covers.openlibrary.org/b/isbn/9781260455380-M.jpg"
+        cover: "/assets/img/covers/reframing-healthcare.svg"
         alt: "Reframing Healthcare"
         notes:
           - "Did not finish."
@@ -185,7 +185,7 @@ sections:
       - book_id: "the-dealmaker"
         title: "The Dealmaker"
         author: "Guy Hands"
-        cover: "https://covers.openlibrary.org/b/isbn/9780241357866-M.jpg"
+        cover: "/assets/img/covers/the-dealmaker.svg"
         number: 7
         notes:
           - "Lessons from a life in private equity."
@@ -219,7 +219,7 @@ sections:
       - book_id: "so-you-want-to-start-a-hedge-fund"
         title: "So You Want to Start a Hedge Fund"
         author: "Ted Seides"
-        cover: "https://covers.openlibrary.org/b/isbn/9781118428719-M.jpg"
+        cover: "/assets/img/covers/so-you-want-to-start-a-hedge-fund.svg"
         number: 12
       - book_id: "the-outsiders"
         title: "The Outsiders"
@@ -231,7 +231,7 @@ sections:
       - book_id: "anomaly"
         title: "Anomaly"
         author: "Peter Cawdron"
-        cover: "https://covers.openlibrary.org/b/isbn/9780316399845-M.jpg"
+        cover: "/assets/img/covers/anomaly.svg"
         number: 14
       - book_id: "the-name-of-the-wind"
         title: "The Name of the Wind"
@@ -253,12 +253,12 @@ sections:
       - book_id: "notes-on-nursing"
         title: "Notes On Nursing"
         author: "Florence Nightingale"
-        cover: "https://covers.openlibrary.org/b/isbn/9781979723367-M.jpg"
+        cover: "/assets/img/covers/notes-on-nursing.svg"
         number: 18
       - book_id: "reframing-healthcare"
         title: "Reframing Healthcare"
         author: "Zeev E. Neuwirth MD"
-        cover: "https://covers.openlibrary.org/b/isbn/9781260455380-M.jpg"
+        cover: "/assets/img/covers/reframing-healthcare.svg"
         number: 19
         notes:
           - "Did not finish."
@@ -330,7 +330,7 @@ sections:
       - book_id: "barbarians-at-the-gate"
         title: "Barbarians at the Gate"
         author: "Bryan Burrough, John Helyar"
-        cover: "https://covers.openlibrary.org/b/isbn/9780061655555-M.jpg"
+        cover: "/assets/img/covers/barbarians-at-the-gate.svg"
         number: 30
         notes:
           - "The origin story of KKR."

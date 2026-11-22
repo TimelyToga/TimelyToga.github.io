@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Cover"
+  short_description: "Hand-design bespoke SVG book covers"
+  default_prompt: "Use $design-cover to hand-design a bespoke, regal SVG book cover in assets/img/covers/<book_id>.svg when no verified external cover is available."

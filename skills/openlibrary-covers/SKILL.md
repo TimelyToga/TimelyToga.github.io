@@ -124,6 +124,6 @@ done
 - Prefer a `cover_i` from the matching work or edition when the current ISBN returns the wrong cover.
 - If search returns multiple plausible works, verify using the Open Library work page (`https://openlibrary.org/works/OL...W`) or edition page (`https://openlibrary.org/books/OL...M`) before editing files.
 - Keep `alt` text as the local book title, not the Open Library result title, if the local title is intentionally styled or expanded.
-- If no matching cover is found after these searches, leave the field absent and report the title, sources searched, and the specific obstacle. Do not imply a cover is unavailable solely because Open Library or one search failed.
+- If no matching cover is found after these searches (or an existing external cover URL fails to load), hand-design a bespoke static SVG cover at `assets/img/covers/<book_id>.svg` using `skills/design-cover/SKILL.md` and point the entry's `cover:` field at `/assets/img/covers/<book_id>.svg`. Report the title, sources searched, and why a bespoke cover was generated. Do not imply a cover is unavailable solely because Open Library or one search failed.
 - Do not crawl or bulk-download covers. The Covers API is rate-limited for non-cover-ID lookups and intended for public page display.
 - Include a courtesy link to Open Library when adding broader attribution surfaces; for simple existing reading-list image fixes, keep the established site style unless asked to redesign attribution.
