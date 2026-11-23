@@ -56,6 +56,15 @@ sections:
         cover: 'https://covers.openlibrary.org/b/id/8748478-M.jpg'
         notes:
           - >-
+            "False Memory Syndrome" is a terrifying affliction. You wake up one day and you are suddenly flooded with memories of a path and a life not taken. Children, husband, people experiences that never happened.
+
+          - >-
+            I found Blake Crouch after I watched the great show "Dark Matter" and then Andy Weir said Recursion was his favorite work by Crouch, so I wanted to give him a try.
+
+          - >-
+            The prose is tight and extremely engaging. The author is phenomenal and spinning you off into a world that you wholly believe. It has some horrific depictions of suicide in this book that I found astonishingly unsettling, but overall I did thoroughly enjoy the narrative and the detective's chase to answers.
+
+          - >-
             In an interview for _Project Hail Mary_ Andy Weir recommended Blake Crouch as his favorite author and Recursion as his favorite work of Crouch's over _Dark Matter_.
 
           - >-
@@ -151,6 +160,16 @@ sections:
         title: 'The World for Sale'
         author: 'Javier Blas and Jack Farchy'
         cover: 'https://covers.openlibrary.org/b/id/13466631-M.jpg'
+      - book_id: carpathians
+        title: Carpathians
+        author: Paul Dixon
+        cover: 'https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1695984454i/199222725.jpg'
+        source: audible
+      - book_id: leviathan-wakes
+        title: Leviathan Wakes
+        author: James S. A. Corey
+        cover: 'https://covers.openlibrary.org/b/id/7314237-M.jpg'
+        source: audible
       - book_id: 'amusing-ourselves-to-death'
         title: 'Amusing Ourselves to Death'
         author: 'Neil Postman'
@@ -164,16 +183,6 @@ sections:
 
           - >-
             Overall I find Postman pretty hopeless when it comes to the marching forward of technology. There are many aspects of learning that are substantially less with consuming video content. My screentime on YouTube has certainly decreased since I finished this book.
-      - book_id: carpathians
-        title: Carpathians
-        author: Paul Dixon
-        cover: 'https://m.media-amazon.com/images/S/compressed.photo.goodreads.com/books/1695984454i/199222725.jpg'
-        source: audible
-      - book_id: leviathan-wakes
-        title: Leviathan Wakes
-        author: James S. A. Corey
-        cover: 'https://covers.openlibrary.org/b/id/7314237-M.jpg'
-        source: audible
       - book_id: 'ufos-and-nukes'
         title: 'UFOs and Nukes'
         author: 'Robert L. Hastings'

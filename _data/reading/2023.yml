@@ -178,7 +178,7 @@ sections:
       - book_id: "look-to-windward"
         title: "Look to Windward"
         author: "Iain M. Banks"
-        cover: "https://covers.openlibrary.org/b/isbn/9781857239980-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/476421-M.jpg"
         notes:
           - "A severely underrated Culture novel that I hadn't read before. Protagonist is an assassin whose memories of the mission are slowly fading in to prevent detection by the superintelligent mind that runs a huge superstructure orbital."
       - book_id: "transformer"

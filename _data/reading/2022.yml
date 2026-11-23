@@ -12,7 +12,7 @@ sections:
       - book_id: "the-first-90-days"
         title: "The First 90 Days"
         author: "Michael Watkins"
-        cover: "https://covers.openlibrary.org/b/isbn/9781591391821-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/863960-M.jpg"
         number: 2
         notes:
           - "A playbook for effective leadership. Identifies the common failure modes of new executives. Biggest takeaway: what made you successful in your last job will definitely not make you successful in your next one."
@@ -40,14 +40,14 @@ sections:
       - book_id: "the-shift"
         title: "The Shift"
         author: "Theresa Brown"
-        cover: "https://covers.openlibrary.org/b/isbn/9781616202811-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/11712988-M.jpg"
         number: 6
         notes:
           - "Wasn't expecting to find a book about a single nurse's shift at a hospital to be so touching and beautiful, but I ripped through this book in only a few days. Nurses are heroes."
       - book_id: "the-outsiders"
         title: "The Outsiders"
         author: "William N. Thorndike"
-        cover: "https://covers.openlibrary.org/b/isbn/9781591845638-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/9145342-M.jpg"
         number: 7
         notes:
           - "Portraits of iconoclasts innovating business. Great long-term looks at excellent businessmen executing at incredibly high levels (without the support of their contemporaries)."
@@ -152,7 +152,7 @@ sections:
       - book_id: "the-freeze-frame-revolution"
         title: "The Freeze Frame Revolution"
         author: "Peter Watts"
-        cover: "https://covers.openlibrary.org/b/isbn/9780765379528-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/8474622-M.jpg"
         number: 2
       - book_id: "the-gripping-hand"
         title: "The Gripping Hand"
@@ -192,7 +192,7 @@ sections:
       - book_id: "the-first-90-days"
         title: "The First 90 Days"
         author: "Michael Watkins"
-        cover: "https://covers.openlibrary.org/b/isbn/9781591391821-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/863960-M.jpg"
         number: 8
         notes:
           - "A playbook for effective leadership."
@@ -224,7 +224,7 @@ sections:
       - book_id: "the-outsiders"
         title: "The Outsiders"
         author: "William N. Thorndike"
-        cover: "https://covers.openlibrary.org/b/isbn/9781591845638-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/9145342-M.jpg"
         number: 13
         notes:
           - "Portraits of iconoclasts innovating business."
@@ -266,14 +266,14 @@ sections:
       - book_id: "the-shift"
         title: "The Shift"
         author: "Theresa Brown"
-        cover: "https://covers.openlibrary.org/b/isbn/9781616202811-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/11712988-M.jpg"
         number: 20
         notes:
           - "Beautiful book about a nurse's shift at a hospital."
       - book_id: "founders-pocket-guide-convertible-debt"
         title: "Founders Pocket Guide: Convertible Debt"
         author: "Stephen R. Poland"
-        cover: "https://covers.openlibrary.org/b/isbn/9780991183579-M.jpg"
+        cover: "https://is1-ssl.mzstatic.com/image/thumb/Publication128/v4/3a/82/15/3a821504-2327-a996-bda1-3e2a03b0ea12/Founders_Pocket_Guide_Convertible_Debt_Nov_2018.jpg/600x600bb.jpg"
         number: 21
       - book_id: "hardball"
         title: "Hardball"
