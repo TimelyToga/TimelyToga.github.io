@@ -88,6 +88,23 @@
     wireCoverImage(card.querySelector(".shelf-cover-img"));
   });
 
+  // Start nearby covers before native lazy loading would normally fetch them.
+  // Without IntersectionObserver the browser's native lazy loading still works.
+  if ("IntersectionObserver" in window) {
+    var coverObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.loading = "eager";
+        coverObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: "3000px 0px" });
+
+    allCards.forEach(function (card) {
+      var img = card.querySelector('.shelf-cover-img[loading="lazy"]');
+      if (img) coverObserver.observe(img);
+    });
+  }
+
   function getVisibleCards() {
     return allCards.filter(function (c) {
       return !c.hidden;
