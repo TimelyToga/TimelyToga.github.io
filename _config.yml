@@ -75,6 +75,10 @@ sass:
   style: compressed
 
 exclude:
+  - AGENTS.md
+  - README.md
+  - Makefile
+  - skills/
   - vendor/
   - Gemfile
   - Gemfile.lock
