@@ -191,3 +191,8 @@ sections:
         notes:
           - >-
             Unsettling accounts from hundreds of members of US military about UAPs being seen around nuclear sites in the united states since the 1940s.
+      - book_id: 'how-asia-works'
+        title: 'How Asia Works'
+        author: 'Joe Studwell'
+        cover: 'https://covers.openlibrary.org/b/id/7651497-M.jpg'
+        outcome: 'in_progress'
