@@ -129,9 +129,28 @@ body[data-page-kind="home"] .phase-atmosphere {
   text-decoration: none;
   letter-spacing: -0.02em;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
 
   &:hover {
     color: $accent-color;
+  }
+
+  .site-logo {
+    width: 2em;
+    height: 2em;
+    flex: none;
+    overflow: visible;
+    color: $text-color;
+  }
+
+  .site-logo-star {
+    fill: $accent-color;
+  }
+
+  .site-logo-gap {
+    stroke: $bg-color;
   }
 
   .chinese-name {

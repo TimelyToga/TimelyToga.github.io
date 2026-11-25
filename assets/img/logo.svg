@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .ring{stroke:#ece4da}.gap{stroke:#11100e}.star{fill:#d98757}
+    @media (prefers-color-scheme: light){.ring{stroke:#1c1916}.gap{stroke:#ffffff}.star{fill:#c4683a}}
+  </style>
+  <g transform="rotate(-18 32 32)" fill="none" stroke-linecap="round">
+    <path class="ring" d="M5 32 A27 9.5 0 0 1 59 32" stroke-width="4" opacity=".55"/>
+    <circle class="star" cx="32" cy="32" r="7" stroke="none"/>
+    <path class="gap" d="M59 32 A27 9.5 0 0 1 5 32" stroke-width="9" stroke-linecap="butt"/>
+    <path class="ring" d="M59 32 A27 9.5 0 0 1 5 32" stroke-width="4.6"/>
+  </g>
+</svg>
