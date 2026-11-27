@@ -130,6 +130,21 @@ sections:
         title: 'Titan'
         author: 'Ron Chernow'
         cover: 'https://covers.openlibrary.org/b/id/12373738-M.jpg'
+        notes:
+          - >-
+            A constant frustration I have with books about the so-called robber barons is that the authors are usually historians who aren't financially minded. _The First Tycoon_ and _Titan_ both gave me the feeling that their authors were vaguely aware of how a corporation worked but really wanted to spend as much time as possible discussing how their subjects felt about things.
+
+          - >-
+            These are some of the most successful capitalists in the history of the game, and I'm left rather disappointed by how little detail the authors provide about how these men managed their businesses. There are a few snippets of information tucked away every 50 pages, but that's a far cry from the blow-by-blows in books like _Barbarians at the Gate_, _Den of Thieves_, or _The Caesars Palace Coup_.
+
+          - >-
+            Perhaps this is an artifact of the information that was left behind and accessible (letters, journals, etc.), but Rockefeller kept fastidious records of his time and money allocations.
+
+          - >-
+            I do feel that you come to appreciate the grand repression that Rockefeller placed upon himself. Another rather sordid detail in the book is that three separate women had severe emotional breakdowns and were institutionalized as a result.
+
+          - >-
+            Reading this book is great if you want to get a sense of what kind of man Rockefeller was, but it's frustrating if you want to understand how he built and managed his business. Of course, many details are in there, but it's a disjointed tale, with the details separated by dozens of pages of discussion about how he developed his golf habit and a fascination with homeopathic medicine.
       - book_id: 'timelike-infinity'
         title: 'Timelike Infinity'
         author: 'Stephen Baxter'
