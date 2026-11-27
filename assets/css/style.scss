@@ -333,6 +333,19 @@ img {
   padding: $spacing-unit * 2 0;
 }
 
+.home-hero--minimal {
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-motto {
+  margin: 0;
+  font-size: clamp(2.5rem, 9vw, 5rem);
+  letter-spacing: -0.02em;
+}
+
 .profile-photo {
   width: 160px;
   height: 160px;
