@@ -155,7 +155,14 @@ sections:
         title: 'Flux'
         author: 'Stephen Baxter'
         cover: 'https://covers.openlibrary.org/b/id/4727-M.jpg'
-        outcome: 'in_progress'
+        outcome: 'dnf'
+        stopped_at: null
+        notes:
+          - >-
+            This is surprisingly not the first book I've read about a species living on the surface of a neutron star. _Dragon's Egg_ by Forward has a very similar premise. The beginning of this book is quite confusing if you are not aware (as I was not) that this book is set on a neutron star.
+
+          - >-
+            It is very alien and interesting scientifically, but I ultimately gave up as the storyline never succeeded in pulling me in completely.
       - book_id: 'the-world-for-sale'
         title: 'The World for Sale'
         author: 'Javier Blas and Jack Farchy'
