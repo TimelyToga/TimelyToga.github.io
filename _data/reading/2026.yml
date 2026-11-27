@@ -196,3 +196,8 @@ sections:
         author: 'Joe Studwell'
         cover: 'https://covers.openlibrary.org/b/id/7651497-M.jpg'
         outcome: 'in_progress'
+      - book_id: 'infinity-gate'
+        title: 'Infinity Gate'
+        author: 'M. R. Carey'
+        cover: 'https://covers.openlibrary.org/b/id/15206744-M.jpg'
+        outcome: 'in_progress'
