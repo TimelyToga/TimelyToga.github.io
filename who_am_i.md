@@ -8,19 +8,14 @@ permalink: /about/
     <img src="/assets/img/profile/face.jpg" alt="Timothy Blumberg" class="about-photo">
     <div class="about-intro">
         <p>I'm Timothy Blumberg (杜君伟). I'm a software engineer and founder based in Austin, TX.</p>
+        <ul class="profile-links">
+            <li><a href="https://github.com/timelytoga" target="_blank" rel="noopener">{% include social-icon.html name="github" size=18 %}<span>GitHub</span></a></li>
+            <li><a href="https://linkedin.com/in/timothy-blumberg-72489589" target="_blank" rel="noopener">{% include social-icon.html name="linkedin" size=18 %}<span>LinkedIn</span></a></li>
+            <li><a href="https://twitter.com/tim_blumberg" target="_blank" rel="noopener">{% include social-icon.html name="twitter" size=18 %}<span>Twitter</span></a></li>
+            <li><a href="https://www.goodreads.com/user/show/7414236-tim-blumberg" target="_blank" rel="noopener">{% include social-icon.html name="goodreads" size=18 %}<span>Goodreads</span></a></li>
+        </ul>
     </div>
 </div>
-
-## Throne
-
-I founded [Throne](https://www.thronescience.com/) in 2023. We built smart health monitoring technology that used AI-powered sensors to track gut health and hydration, with a privacy-first approach. I stopped working on Throne in August 2026.
-
-## Connect
-
-- [GitHub](https://github.com/timelytoga)
-- [LinkedIn](https://linkedin.com/in/timothy-blumberg-72489589)
-- [Twitter](https://twitter.com/tim_blumberg)
-- [Goodreads](https://www.goodreads.com/user/show/7414236-tim-blumberg)
 
 ---
 

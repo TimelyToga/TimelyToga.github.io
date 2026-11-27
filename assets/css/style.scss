@@ -1952,6 +1952,50 @@ img {
   }
 }
 
+.profile-links {
+  list-style: none;
+  margin: $spacing-unit * 0.75 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.85rem;
+    font-family: $font-sans;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: $text-muted;
+    text-decoration: none;
+    background: $surface-color;
+    border: 1px solid $border-color;
+    border-radius: 999px;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+
+    &:hover,
+    &:focus-visible {
+      color: $link-hover;
+      border-color: $accent-color;
+      background: $surface-hover;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+
 .about-life-map {
   position: relative;
   width: min(1120px, calc(100vw - 2rem));
