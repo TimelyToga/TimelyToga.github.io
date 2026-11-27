@@ -109,7 +109,7 @@ sections:
       - book_id: "more-money-than-god"
         title: "More Money Than God"
         author: "Sebastian Mallaby"
-        cover: "https://covers.openlibrary.org/b/id/7608213-M.jpg"
+        cover: "https://covers.openlibrary.org/b/id/12634714-M.jpg"
         notes:
           - "Another really great read. This one picks out hedge fund managers through the decades since the 1960s. For each of the managers that feature as the focus of each chapter, Mallaby provides a detailed account of the character and the strategic innovation that defined their success. He also does a great job of weaving a narrative between the chapters. Painting a picture of the shifting sands of the financial markets and how the best hedge fund managers were forced to find a new seam in the market to exploit. Fantastic read."
       - book_id: "the-box"
